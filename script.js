@@ -215,4 +215,90 @@ document.addEventListener('DOMContentLoaded', function() {
         background.style.height = `${containerHeight}px`;
         background.parentElement.style.height = `${containerHeight}px`;
     }
+
+    // Setup the profile parallax effect
+    setupProfileParallax();
 });
+
+// Enhanced profile parallax effect with more dramatic movement
+function setupProfileParallax() {
+    const floatingProfile = document.querySelector('.floating-profile');
+    const aboutSection = document.getElementById('about');
+    if (!floatingProfile || !aboutSection) return;
+    
+    // Flag to track if profile has been revealed
+    let profileRevealed = false;
+    
+    // Function to check if element is in viewport
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight * 0.7) && // Reveal when 70% of the way down viewport
+            rect.bottom >= 0
+        );
+    }
+    
+    window.addEventListener('scroll', function() {
+        // Check if about section is in view and reveal profile if needed
+        if (!profileRevealed && isElementInViewport(aboutSection)) {
+            floatingProfile.style.opacity = '1';
+            profileRevealed = true;
+        }
+        
+        // Only apply parallax if on desktop
+        if (window.innerWidth <= 768) return;
+        
+        const aboutRect = aboutSection.getBoundingClientRect();
+        
+        // Enhanced parallax effect when about section is in view
+        if (aboutRect.top < window.innerHeight && aboutRect.bottom > 0) {
+            // Calculate a more dramatic scroll progress value
+            const scrollProgress = (window.innerHeight - aboutRect.top) / (window.innerHeight + aboutRect.height);
+            
+            // Enhanced transformations for more noticeable effect:
+            
+            // 1. Larger vertical movement (up to 60px instead of 40px)
+            const verticalMove = (scrollProgress - 0.5) * 60;
+            
+            // 2. Add horizontal movement component (up to 25px)
+            const horizontalMove = Math.sin(scrollProgress * Math.PI) * 25;
+            
+            // 3. More pronounced rotation (up to 8 degrees instead of 3)
+            const rotationChange = (scrollProgress - 0.5) * 8;
+            
+            // 4. More dramatic scaling (between 0.92 and 1.08 instead of 0.95 and 1.05)
+            const scaleChange = 1 + (scrollProgress - 0.5) * 0.16;
+            
+            // 5. Add a perspective rotation for 3D effect
+            const perspectiveRotateX = Math.sin(scrollProgress * Math.PI) * 5;
+            
+            // Apply the combined transformations
+            const baseTransform = `
+                translateY(calc(-50% + ${verticalMove}px)) 
+                translateX(${horizontalMove}px)
+                rotate(${-5 + rotationChange}deg) 
+                scale(${scaleChange})
+                rotateX(${perspectiveRotateX}deg)
+            `;
+            
+            floatingProfile.style.transform = baseTransform;
+            
+            // 6. Dynamically adjust shadow intensity based on movement
+            const shadowBlur = 10 + Math.abs(verticalMove) / 2;
+            const glowOpacity = 0.5 + Math.abs(scrollProgress - 0.5) * 0.5;
+            
+            // Apply shadow and glow effects
+            floatingProfile.querySelector('.profile-image').style.boxShadow = 
+                `0 ${10 + Math.abs(verticalMove)/3}px ${shadowBlur}px rgba(0, 0, 0, 0.3), 
+                 0 0 ${15 + Math.abs(verticalMove)/2}px rgba(255, 128, 171, ${glowOpacity})`;
+        }
+    });
+    
+    // Initial check in case the user starts with the about section in view
+    if (isElementInViewport(aboutSection)) {
+        setTimeout(() => {
+            floatingProfile.style.opacity = '1';
+            profileRevealed = true;
+        }, 500);
+    }
+}
