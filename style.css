@@ -868,6 +868,9 @@ nav li {
     padding: 20px;
     position: relative;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .achievement-item:hover {
@@ -875,12 +878,19 @@ nav li {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
+.achievement-title {
+    font-weight: 600;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
 .year {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: static;
+    top: auto;
+    right: auto;
     color: #ff80ab;
     font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 /* Skills Section */
@@ -1486,6 +1496,5 @@ footer {
     color: #ff80ab; /* Changed from #bbb to the pink accent color */
     margin: 15px 0 5px 0;
     font-family: 'Inter', sans-serif;
-    font-style: italic;
     font-weight: 500; /* Added slightly bolder font weight for better visibility */
 }
