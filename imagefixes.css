@@ -44,6 +44,8 @@
     margin: 0 auto 30px !important; /* Add bottom margin to prevent overlap */
     position: relative !important;
     background: transparent !important;
+    animation: none !important; /* No animation for containers */
+    z-index: 1 !important;
 }
 
 .floating-profile {
@@ -55,17 +57,32 @@
     position: relative !important;
 }
 
-/* Fixed border-radius for images with more aggressive styling */
+/* Make sure all hobby images have animations, each with different movement */
 .hobby-card:nth-child(1) .hobby-image {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+    animation: floatHobby1 8s ease-in-out infinite !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; /* Base transform that will be animated */
 }
 
 .hobby-card:nth-child(2) .hobby-image {
     border-radius: 60% 40% 30% 70% / 50% 60% 40% 50% !important;
+    animation: floatHobby2 9s ease-in-out infinite 0.5s !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
 }
 
 .hobby-card:nth-child(3) .hobby-image {
     border-radius: 50% 50% 35% 65% / 65% 35% 50% 50% !important;
+    animation: floatHobby3 7.5s ease-in-out infinite 1s !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
 }
 
 .profile-image {
@@ -78,6 +95,19 @@
     margin-bottom: 20px !important;
     background-color: #2a2a30 !important;
     overflow: visible !important;
+    animation: none !important; /* Ensure no animation on cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important; /* Add transition for hover */
+}
+
+/* Add hover effect to hobby cards similar to achievement items */
+.hobby-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Remove all animations from containers */
+.hobby-image-container {
+    animation: none !important;
 }
 
 /* Make sure glows follow the same shape */
@@ -95,6 +125,172 @@
 
 .profile-glow {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+}
+
+/* Define card floating animations */
+@keyframes floatCard1 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    30% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+    60% {
+        transform: translateY(-15px) rotate(-0.5deg);
+    }
+    80% {
+        transform: translateY(-5px) rotate(0.2deg);
+    }
+}
+
+@keyframes floatCard2 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-12px) rotate(-0.3deg);
+    }
+    70% {
+        transform: translateY(-6px) rotate(0.3deg);
+    }
+}
+
+@keyframes floatCard3 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(0.2deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(-0.2deg);
+    }
+    75% {
+        transform: translateY(-7px) rotate(0.1deg);
+    }
+}
+
+/* Define container floating animations */
+@keyframes floatContainer1 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    30% {
+        transform: translateY(-8px) rotate(0.5deg);
+    }
+    60% {
+        transform: translateY(-15px) rotate(-0.5deg);
+    }
+    80% {
+        transform: translateY(-5px) rotate(0.2deg);
+    }
+}
+
+@keyframes floatContainer2 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    40% {
+        transform: translateY(-12px) rotate(-0.3deg);
+    }
+    70% {
+        transform: translateY(-6px) rotate(0.3deg);
+    }
+}
+
+@keyframes floatContainer3 {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    25% {
+        transform: translateY(-10px) rotate(0.2deg);
+    }
+    50% {
+        transform: translateY(-18px) rotate(-0.2deg);
+    }
+    75% {
+        transform: translateY(-7px) rotate(0.1deg);
+    }
+}
+
+/* Define image floating animations - similar to profile image but with different movements */
+@keyframes floatImage1 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-2deg);
+    }
+    30% {
+        transform: translate(-45%, -55%) rotate(1deg);
+    }
+    70% {
+        transform: translate(-52%, -48%) rotate(-1deg);
+    }
+}
+
+@keyframes floatImage2 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    40% {
+        transform: translate(-55%, -52%) rotate(-2deg);
+    }
+    70% {
+        transform: translate(-45%, -55%) rotate(2deg);
+    }
+}
+
+@keyframes floatImage3 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(-48%, -55%) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-52%, -46%) rotate(1deg);
+    }
+    85% {
+        transform: translate(-53%, -52%) rotate(0deg);
+    }
+}
+
+/* Define more prominent floating animations for the hobby images (similar to profile) */
+@keyframes floatHobby1 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(-2deg) !important;
+    }
+    30% {
+        transform: translate(-48%, -53%) rotate(1deg) !important;
+    }
+    70% {
+        transform: translate(-52%, -47%) rotate(-1deg) !important;
+    }
+}
+
+@keyframes floatHobby2 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg) !important;
+    }
+    40% {
+        transform: translate(-53%, -52%) rotate(-2deg) !important;
+    }
+    70% {
+        transform: translate(-47%, -53%) rotate(2deg) !important;
+    }
+}
+
+@keyframes floatHobby3 {
+    0%, 100% {
+        transform: translate(-50%, -50%) rotate(0deg) !important;
+    }
+    25% {
+        transform: translate(-48%, -55%) rotate(-1deg) !important;
+    }
+    60% {
+        transform: translate(-52%, -46%) rotate(1deg) !important;
+    }
+    85% {
+        transform: translate(-53%, -48%) rotate(0deg) !important;
+    }
 }
 
 /* Responsive adjustments */

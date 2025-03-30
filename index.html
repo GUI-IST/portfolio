@@ -366,7 +366,7 @@
                     </div>
                     <div class="hobby-card">
                         <div class="hobby-image-container">
-                            <img src="./gym.jpg" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
+                            <img src="./gym.JPG" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Physical Exercise" data-pt="Exercício Físico">Physical Exercise</h3>
@@ -453,5 +453,82 @@
             console.log('Emergency image size fix applied');
         });
     </script>
+    <script>
+    // Force floating animations on all hobby images
+    window.addEventListener('load', function() {
+        // Wait a moment to ensure other scripts have run
+        setTimeout(function() {
+            const animations = [
+                'floatHobby1 8s ease-in-out infinite',
+                'floatHobby2 9s ease-in-out infinite 0.5s',
+                'floatHobby3 7.5s ease-in-out infinite 1s'
+            ];
+            
+            document.querySelectorAll('.hobby-image').forEach((img, index) => {
+                img.style.animation = animations[index % 3];
+                img.style.position = 'absolute';
+                img.style.top = '50%';
+                img.style.left = '50%';
+                img.style.transform = 'translate(-50%, -50%)';
+                
+                console.log(`Force-applied animation to hobby image ${index + 1}`);
+            });
+        }, 1000);
+    });
+    </script>
+    <!-- Add a dedicated script to force floating animations on hobby images -->
+<script>
+    // Force floating animations on all hobby images with direct styling
+    function forceHobbyImageAnimations() {
+        // Animations similar to profile image but with different timing and movement
+        const hobbyImages = document.querySelectorAll('.hobby-image');
+        
+        // Guitar image (first hobby)
+        if (hobbyImages[0]) {
+            hobbyImages[0].style.borderRadius = '40% 60% 70% 30% / 40% 50% 60% 50%';
+            hobbyImages[0].style.animation = 'floatHobby1 8s ease-in-out infinite';
+            hobbyImages[0].style.position = 'absolute';
+            hobbyImages[0].style.top = '50%';
+            hobbyImages[0].style.left = '50%';
+            hobbyImages[0].style.transform = 'translate(-50%, -50%)';
+        }
+        
+        // Travel image (second hobby)
+        if (hobbyImages[1]) {
+            hobbyImages[1].style.borderRadius = '60% 40% 30% 70% / 50% 60% 40% 50%';
+            hobbyImages[1].style.animation = 'floatHobby2 9s ease-in-out infinite 0.5s';
+            hobbyImages[1].style.position = 'absolute';
+            hobbyImages[1].style.top = '50%';
+            hobbyImages[1].style.left = '50%';
+            hobbyImages[1].style.transform = 'translate(-50%, -50%)';
+        }
+        
+        // Gym image (third hobby)
+        if (hobbyImages[2]) {
+            hobbyImages[2].style.borderRadius = '50% 50% 35% 65% / 65% 35% 50% 50%';
+            hobbyImages[2].style.animation = 'floatHobby3 7.5s ease-in-out infinite 1s';
+            hobbyImages[2].style.position = 'absolute';
+            hobbyImages[2].style.top = '50%';
+            hobbyImages[2].style.left = '50%';
+            hobbyImages[2].style.transform = 'translate(-50%, -50%)';
+        }
+        
+        console.log('Forced hobby image animations directly');
+    }
+    
+    // Apply immediately
+    forceHobbyImageAnimations();
+    
+    // Also apply after a delay to ensure it works after other scripts
+    setTimeout(forceHobbyImageAnimations, 500);
+    setTimeout(forceHobbyImageAnimations, 1000);
+    setTimeout(forceHobbyImageAnimations, 2000);
+    
+    // Apply on load
+    window.addEventListener('load', function() {
+        forceHobbyImageAnimations();
+        setTimeout(forceHobbyImageAnimations, 500);
+    });
+</script>
 </body>
 </html>
