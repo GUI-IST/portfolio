@@ -1641,6 +1641,40 @@ footer {
     width: 100%;
 }
 
+/* Add styling for course link */
+.course-link {
+    margin-top: 10px;
+}
+
+.course-link a {
+    display: inline-block;
+    color: #ff80ab;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.course-link a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff80ab;
+    transition: width 0.3s ease;
+}
+
+.course-link a:hover {
+    text-shadow: 0 0 8px rgba(255, 128, 171, 0.5);
+}
+
+.course-link a:hover:after {
+    width: 100%;
+}
+
 /* Mobile Navigation */
 .mobile-menu-toggle {
     display: none;
