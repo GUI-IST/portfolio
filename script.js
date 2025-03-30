@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
             langEN.classList.remove('active');
         }
         
-        // Update all elements with data-en and data-pt attributes
+        // Update all elements with data-en and data-pt attributes - use innerHTML instead of textContent
         document.querySelectorAll('[data-en]').forEach(element => {
             if (lang === 'en') {
-                element.textContent = element.getAttribute('data-en');
+                element.innerHTML = element.getAttribute('data-en');
             } else {
-                element.textContent     = element.getAttribute('data-pt');
+                element.innerHTML = element.getAttribute('data-pt');
             }
         });
         

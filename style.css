@@ -1558,3 +1558,47 @@ footer {
 .contact-link:hover:after {
     width: 100%;
 }
+
+/* Accent text - highlighted terms */
+.accent-text {
+    color: #ff80ab;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.accent-text:hover {
+    text-shadow: 0 0 8px rgba(255, 128, 171, 0.5);
+}
+
+/* Project link styling */
+.project-link {
+    margin-top: 15px;
+}
+
+.project-link a {
+    display: inline-block;
+    color: #ff80ab;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.project-link a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff80ab;
+    transition: width 0.3s ease;
+}
+
+.project-link a:hover {
+    text-shadow: 0 0 8px rgba(255, 128, 171, 0.5);
+}
+
+.project-link a:hover:after {
+    width: 100%;
+}
