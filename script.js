@@ -1,4 +1,19 @@
+// Force scroll to top on page reload
+window.onload = function() {
+    window.scrollTo(0, 0);
+};
+
+// Alternative method that works in some browsers that might ignore the onload method
+window.addEventListener('beforeunload', function() {
+    window.setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 0);
+});
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Immediately scroll to top when DOM content is loaded
+    window.scrollTo(0, 0);
+    
     // Enhanced mobile menu functionality
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const mobileMenu = document.querySelector('.mobile-menu');
