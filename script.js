@@ -1,4 +1,74 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Enhanced mobile menu functionality
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenuBtn = document.querySelector('.close-menu-btn');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileLangEN = document.getElementById('mobile-lang-en');
+    const mobileLangPT = document.getElementById('mobile-lang-pt');
+    
+    if (mobileMenuToggle && mobileMenu) {
+        // Toggle menu open
+        mobileMenuToggle.addEventListener('click', function() {
+            mobileMenuToggle.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+            
+            // Prevent body scrolling when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Close menu with dedicated button
+        if (closeMenuBtn) {
+            closeMenuBtn.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.body.style.overflow = '';
+            });
+        }
+        
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Mobile language buttons
+        if (mobileLangEN && mobileLangPT) {
+            mobileLangEN.addEventListener('click', () => {
+                switchLanguage('en');
+                updateMobileLanguageButtons('en');
+            });
+            
+            mobileLangPT.addEventListener('click', () => {
+                switchLanguage('pt');
+                updateMobileLanguageButtons('pt');
+            });
+        }
+    }
+    
+    // Function to update mobile language buttons
+    function updateMobileLanguageButtons(lang) {
+        if (mobileLangEN && mobileLangPT) {
+            if (lang === 'en') {
+                mobileLangEN.classList.add('active');
+                mobileLangPT.classList.remove('active');
+            } else {
+                mobileLangPT.classList.add('active');
+                mobileLangEN.classList.remove('active');
+            }
+        }
+    }
+    
     // Language switching functionality
     const langEN = document.getElementById('lang-en');
     const langPT = document.getElementById('lang-pt');
@@ -18,6 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
             langPT.classList.add('active');
             langEN.classList.remove('active');
         }
+        
+        // Also update mobile buttons
+        updateMobileLanguageButtons(lang);
         
         // Update all elements with data-en and data-pt attributes - use innerHTML instead of textContent
         document.querySelectorAll('[data-en]').forEach(element => {
@@ -218,6 +291,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Setup the profile parallax effect
     setupProfileParallax();
+
+    // Properly handle name container on mobile
+    function adjustNameForMobile() {
+        const nameContainer = document.querySelector('.assembled-name');
+        if (!nameContainer) return;
+        
+        // Add line break for very small screens
+        if (window.innerWidth < 380 && nameContainer.innerHTML.indexOf('<br>') === -1) {
+            const nameParts = nameContainer.innerHTML.split(' ');
+            if (nameParts.length >= 3) {
+                const firstPart = nameParts.slice(0, 2).join(' ');
+                const secondPart = nameParts.slice(2).join(' ');
+                nameContainer.innerHTML = `${firstPart}<br>${secondPart}`;
+            }
+        } else if (window.innerWidth >= 380 && nameContainer.innerHTML.indexOf('<br>') !== -1) {
+            // Remove line break for larger screens
+            nameContainer.innerHTML = nameContainer.innerHTML.replace('<br>', ' ');
+        }
+    }
+    
+    // Run on load and resize
+    adjustNameForMobile();
+    window.addEventListener('resize', adjustNameForMobile);
 });
 
 // Enhanced profile parallax effect with more dramatic movement
@@ -246,7 +342,11 @@ function setupProfileParallax() {
         }
         
         // Only apply parallax if on desktop
-        if (window.innerWidth <= 768) return;
+        if (window.innerWidth <= 768) {
+            // Ensure profile is visible on mobile regardless of scroll position
+            floatingProfile.style.opacity = '1';
+            return;
+        }
         
         const aboutRect = aboutSection.getBoundingClientRect();
         
@@ -295,7 +395,7 @@ function setupProfileParallax() {
     });
     
     // Initial check in case the user starts with the about section in view
-    if (isElementInViewport(aboutSection)) {
+    if (isElementInViewport(aboutSection) || window.innerWidth <= 768) {
         setTimeout(() => {
             floatingProfile.style.opacity = '1';
             profileRevealed = true;
