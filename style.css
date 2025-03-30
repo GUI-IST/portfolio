@@ -1699,43 +1699,97 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Reduced from 20px to take up less vertical space */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+    width: 100%;
+    padding: 10px 0;
+    max-height: 70vh; /* Limit maximum height */
+    overflow-y: auto; /* Add scrolling if needed */
+}
+
+.mobile-menu.active .mobile-menu-links {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
 }
 
 .mobile-menu-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 4vmin, 1.6rem); /* Responsive font size based on viewport */
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
     position: relative;
+    padding: 6px 15px; /* Reduced from 8px to take up less vertical space */
+    letter-spacing: 1px;
 }
 
-.mobile-menu-links a:after {
+.close-menu-btn {
+    position: absolute;
+    top: 15px; /* Slightly reduced from 20px */
+    right: 15px; /* Slightly reduced from 20px */
+    width: 36px; /* Reduced from 40px */
+    height: 36px; /* Reduced from 40px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(255, 128, 171, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 0 15px rgba(255, 128, 171, 0.3);
+}
+
+.mobile-menu.active .close-menu-btn {
+    transform: scale(1);
+    transition-delay: 0.3s;
+}
+
+.close-menu-btn span {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.close-menu-btn span::before,
+.close-menu-btn span::after {
     content: '';
     position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #ff80ab;
-    transition: width 0.3s ease;
-}
-
-.mobile-menu-links a:hover {
-    color: #ff80ab;
-}
-
-.mobile-menu-links a:hover:after {
+    top: 50%;
+    left: 0;
     width: 100%;
+    height: 2px;
+    background-color: #ff80ab;
+    transition: all 0.3s ease;
+}
+
+.close-menu-btn span::before {
+    transform: rotate(45deg);
+}
+
+.close-menu-btn span::after {
+    transform: rotate(-45deg);
+}
+
+.close-menu-btn:hover {
+    background: rgba(255, 128, 171, 0.3);
+    transform: scale(1.1);
 }
 
 .mobile-language-toggle {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px; /* Reduced from 60px to take up less space at bottom */
     display: flex;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
 
 /* Enhanced Mobile Responsiveness */
@@ -1955,10 +2009,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Reduced from 20px to take up less vertical space */
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease;
+    width: 100%;
+    padding: 10px 0;
+    max-height: 70vh; /* Limit maximum height */
+    overflow-y: auto; /* Add scrolling if needed */
 }
 
 .mobile-menu.active .mobile-menu-links {
@@ -1970,13 +2028,13 @@ footer {
 .mobile-menu-links a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.6rem;
+    font-size: clamp(1.2rem, 4vmin, 1.6rem); /* Responsive font size based on viewport */
     font-weight: 600;
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(20px);
     position: relative;
-    padding: 8px 15px;
+    padding: 6px 15px; /* Reduced from 8px to take up less vertical space */
     letter-spacing: 1px;
 }
 
@@ -2018,7 +2076,7 @@ footer {
 
 .mobile-language-toggle {
     position: absolute;
-    bottom: 60px;
+    bottom: 40px; /* Reduced from 60px to take up less space at bottom */
     display: flex;
     align-items: center;
     opacity: 0;
@@ -2198,6 +2256,45 @@ footer {
         width: 100%;
         max-width: 300px;
         margin-bottom: 30px;
+    }
+}
+
+@media (max-height: 700px) {
+    .mobile-menu-links {
+        gap: 10px; /* Even smaller gap for very small screens */
+    }
+    
+    .mobile-menu-links a {
+        font-size: 1.1rem; /* Smaller font size for small screens */
+        padding: 4px 10px;
+    }
+    
+    .mobile-language-toggle {
+        bottom: 25px;
+    }
+    
+    .close-menu-btn {
+        top: 10px;
+        right: 10px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* For extremely small screens */
+@media (max-height: 500px) {
+    .mobile-menu {
+        overflow-y: auto; /* Allow scrolling if needed */
+    }
+    
+    .mobile-menu-links {
+        padding: 40px 0 20px; /* Add more padding at top to account for close button */
+        gap: 8px;
+    }
+    
+    .mobile-menu-links a {
+        font-size: 1rem;
+        padding: 3px 8px;
     }
 }
 
