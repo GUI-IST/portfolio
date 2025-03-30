@@ -977,15 +977,15 @@ nav li {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px; /* Increased from 30px for better spacing with images */
+    gap: 50px; /* Increased from 40px for better spacing with larger images */
 }
 
 .hobby-card {
     background-color: #2a2a30;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
-    padding: 30px;
-    width: 280px; /* Increased from 250px to accommodate images */
+    padding: 45px 30px; /* Increased padding for larger images */
+    width: 320px; /* Increased from 280px to accommodate larger images */
     text-align: center;
     transition: transform 0.3s ease;
     overflow: visible !important; /* Force overflow to be visible */
@@ -999,9 +999,9 @@ nav li {
 
 .hobby-image-container {
     position: relative;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto 20px;
+    width: 220px; /* Will be overridden by inline styles */
+    height: 220px;
+    margin: 0 auto 30px;
     perspective: 1000px;
     /* Add additional container constraints */
     max-width: 100%;
@@ -1018,8 +1018,8 @@ nav li {
     will-change: transform, box-shadow;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4);
     /* Force max dimensions */
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 200px; /* Increased from 180px */
+    max-height: 200px; /* Increased from 180px */
 }
 
 /* Unique shape and animation for each hobby image */

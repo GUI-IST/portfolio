@@ -58,21 +58,21 @@
         
         /* Fix for blob-shaped images to prevent square clipping */
         .hobby-image-container {
-            width: 220px !important; /* Much larger than the images to avoid clipping */
-            height: 220px !important;
-            max-width: 220px !important;
-            max-height: 220px !important;
+            width: 260px !important; /* Increased from 220px for larger images */
+            height: 260px !important;
+            max-width: 260px !important;
+            max-height: 260px !important;
             overflow: visible !important; /* Must be visible to prevent clipping */
             position: relative !important;
-            margin: 0 auto 30px !important; /* Add more bottom margin */
+            margin: 0 auto 40px !important; /* Increased bottom margin */
             background: transparent !important;
         }
         
         .hobby-image {
-            width: 160px !important; /* Smaller than the container */
-            height: 160px !important;
-            max-width: 160px !important;
-            max-height: 160px !important;
+            width: 200px !important; /* Increased from 160px */
+            height: 200px !important;
+            max-width: 200px !important;
+            max-height: 200px !important;
             position: absolute !important;
             top: 50% !important;
             left: 50% !important;
@@ -107,8 +107,8 @@
         
         /* Hobby card needs more space */
         .hobby-card {
-            padding: 35px 25px !important;
-            margin-bottom: 20px !important;
+            padding: 45px 25px !important; /* Increased top padding from 35px to 45px */
+            margin-bottom: 30px !important; /* Increased from 20px */
             overflow: visible !important;
         }
         
@@ -475,13 +475,13 @@
         window.addEventListener('load', function() {
             // Fix all hobby images
             document.querySelectorAll('.hobby-image').forEach(img => {
-                img.style.width = '180px';
-                img.style.height = '180px';
-                img.style.maxWidth = '180px';
-                img.style.maxHeight = '180px';
+                img.style.width = '200px'; // Increased from 180px
+                img.style.height = '200px'; // Increased from 180px
+                img.style.maxWidth = '200px'; // Increased from 180px
+                img.style.maxHeight = '200px'; // Increased from 180px
                 img.style.objectFit = 'cover';
-                img.setAttribute('width', '180');
-                img.setAttribute('height', '180');
+                img.setAttribute('width', '200'); // Increased from 180
+                img.setAttribute('height', '200'); // Increased from 180
             });
             
             // Fix profile image

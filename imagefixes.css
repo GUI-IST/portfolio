@@ -5,10 +5,10 @@
 }
 
 .hobby-image {
-    width: 160px !important; /* Slightly smaller than container */
-    height: 160px !important;
-    max-width: 160px !important;
-    max-height: 160px !important;
+    width: 200px !important; /* Increased from 160px */
+    height: 200px !important;
+    max-width: 200px !important;
+    max-height: 200px !important;
     object-fit: cover !important;
     display: block !important;
     border: 3px solid rgba(255, 255, 255, 0.2) !important;
@@ -36,12 +36,12 @@
 }
 
 .hobby-image-container {
-    width: 220px !important; /* Significantly larger than image to allow for any border-radius */
-    height: 220px !important;
-    max-width: 220px !important;
-    max-height: 220px !important;
+    width: 260px !important; /* Increased from 220px */
+    height: 260px !important;
+    max-width: 260px !important;
+    max-height: 260px !important;
     overflow: visible !important; /* Changed from hidden to visible */
-    margin: 0 auto 30px !important; /* Add bottom margin to prevent overlap */
+    margin: 0 auto 40px !important; /* Increased bottom margin */
     position: relative !important;
     background: transparent !important;
     animation: none !important; /* No animation for containers */
@@ -91,8 +91,8 @@
 
 /* Override hobby-card styling to avoid container interference */
 .hobby-card {
-    padding: 35px 25px !important; /* Add extra padding at top for the image */
-    margin-bottom: 20px !important;
+    padding: 45px 25px !important; /* Increased top padding for larger images */
+    margin-bottom: 30px !important; /* Increased bottom margin */
     background-color: #2a2a30 !important;
     overflow: visible !important;
     animation: none !important; /* Ensure no animation on cards */

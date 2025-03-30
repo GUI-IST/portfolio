@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Apply size constraints even for successfully loaded images
             if (img.classList.contains('hobby-image')) {
-                img.style.width = '180px';
-                img.style.height = '180px';
-                img.style.maxWidth = '180px';
-                img.style.maxHeight = '180px';
+                img.style.width = '200px'; // Increased from 180px to 200px
+                img.style.height = '200px'; // Increased from 180px to 200px
+                img.style.maxWidth = '200px'; // Increased from 180px to 200px
+                img.style.maxHeight = '200px'; // Increased from 180px to 200px
                 img.style.objectFit = 'cover';
-                img.setAttribute('width', '180');
-                img.setAttribute('height', '180');
+                img.setAttribute('width', '200'); // Increased from 180px to 200px
+                img.setAttribute('height', '200'); // Increased from 180px to 200px
             } else if (img.classList.contains('profile-image')) {
                 img.style.width = '280px';
                 img.style.height = '280px';
@@ -60,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             img.style.borderRadius = borderRadiuses[index % 3];
             
-            // Apply the floating animations
+            // Apply the floating animations similar to profile image
             const animationNames = [
-                'floatHobby1 8s ease-in-out infinite',
-                'floatHobby2 9s ease-in-out infinite 0.5s',
-                'floatHobby3 7.5s ease-in-out infinite 1s'
+                'profileStyleFloat1 8s ease-in-out infinite',
+                'profileStyleFloat2 9s ease-in-out infinite 0.5s',
+                'profileStyleFloat3 7.5s ease-in-out infinite 1s'
             ];
             
             img.style.animation = animationNames[index % 3];
@@ -78,7 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add shadow effects
             img.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4)';
             
-            console.log(`Applied floating animation to hobby image ${index + 1}`);
+            // Ensure larger size
+            img.style.width = '200px';
+            img.style.height = '200px';
+            img.style.maxWidth = '200px';
+            img.style.maxHeight = '200px';
+            
+            console.log(`Applied larger size and floating animation to hobby image ${index + 1}`);
         });
     }
     
@@ -95,15 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
         clone.style.clipPath = 'none';
         
         // Add width and height attributes
-        clone.setAttribute('width', '160');
-        clone.setAttribute('height', '160');
+        clone.setAttribute('width', '200'); // Increased from 160px to 200px
+        clone.setAttribute('height', '200'); // Increased from 160px to 200px
         
         // Add inline styles to force smooth shapes and animations
         const styles = [
-            'width: 160px !important;',
-            'height: 160px !important;',
-            'max-width: 160px !important;',
-            'max-height: 160px !important;',
+            'width: 200px !important;', // Increased from 160px to 200px
+            'height: 200px !important;', // Increased from 160px to 200px
+            'max-width: 200px !important;', // Increased from 160px to 200px
+            'max-height: 200px !important;', // Increased from 160px to 200px
             'object-fit: cover !important;',
             'position: absolute !important;',
             'top: 50% !important;',
@@ -118,11 +124,11 @@ document.addEventListener('DOMContentLoaded', function() {
             'border-radius: 50% 50% 35% 65% / 65% 35% 50% 50% !important;'
         ];
         
-        // Apply different animations to each hobby image
+        // Apply different animations to each hobby image - use profile-style floating
         const animations = [
-            'animation: floatImage1 8s ease-in-out infinite !important;',
-            'animation: floatImage2 9s ease-in-out infinite 0.5s !important;',
-            'animation: floatImage3 7.5s ease-in-out infinite 1s !important;'
+            'animation: profileStyleFloat1 8s ease-in-out infinite !important;',
+            'animation: profileStyleFloat2 9s ease-in-out infinite 0.5s !important;',
+            'animation: profileStyleFloat3 7.5s ease-in-out infinite 1s !important;'
         ];
         
         clone.style.cssText += styles.join(' ') + shapes[index % 3] + animations[index % 3];
@@ -132,18 +138,71 @@ document.addEventListener('DOMContentLoaded', function() {
             parent.removeChild(img);
             
             // Adjust container size to be larger than the image's blob shape
-            parent.style.width = '220px';
-            parent.style.height = '220px';
-            parent.style.maxWidth = '220px';
-            parent.style.maxHeight = '220px';
+            parent.style.width = '260px'; // Increased from 220px
+            parent.style.height = '260px'; // Increased from 220px
+            parent.style.maxWidth = '260px'; // Increased from 220px
+            parent.style.maxHeight = '260px'; // Increased from 220px
             parent.style.overflow = 'visible';
             parent.style.position = 'relative';
-            parent.style.margin = '0 auto 30px';
+            parent.style.margin = '0 auto 40px'; // Increased bottom margin
             parent.style.animation = 'none'; // Ensure no animation on containers
             
             setTimeout(() => parent.appendChild(clone), 100);
         }
     });
+    
+    // Add keyframes for profile-style floating animations if they don't exist
+    const styleElement = document.createElement('style');
+    styleElement.textContent = `
+        @keyframes profileStyleFloat1 {
+            0%, 100% {
+                transform: translate(-50%, -50%) rotate(-2deg) translateY(0px);
+            }
+            25% {
+                transform: translate(-48%, -55%) rotate(-1deg) translateY(-5px);
+            }
+            50% {
+                transform: translate(-52%, -52%) rotate(1deg) translateY(-8px);
+            }
+            75% {
+                transform: translate(-50%, -48%) rotate(-1deg) translateY(-3px);
+            }
+        }
+        
+        @keyframes profileStyleFloat2 {
+            0%, 100% {
+                transform: translate(-50%, -50%) rotate(0deg) translateY(0px);
+            }
+            30% {
+                transform: translate(-53%, -52%) rotate(-2deg) translateY(-7px);
+            }
+            60% {
+                transform: translate(-47%, -55%) rotate(2deg) translateY(-10px);
+            }
+            85% {
+                transform: translate(-50%, -53%) rotate(-1deg) translateY(-5px);
+            }
+        }
+        
+        @keyframes profileStyleFloat3 {
+            0%, 100% {
+                transform: translate(-50%, -50%) rotate(0deg) translateY(0px);
+            }
+            20% {
+                transform: translate(-48%, -53%) rotate(-1deg) translateY(-6px);
+            }
+            45% {
+                transform: translate(-52%, -48%) rotate(1deg) translateY(-9px);
+            }
+            70% {
+                transform: translate(-49%, -52%) rotate(0deg) translateY(-4px);
+            }
+            90% {
+                transform: translate(-51%, -49%) rotate(-1deg) translateY(-2px);
+            }
+        }
+    `;
+    document.head.appendChild(styleElement);
     
     // Fix the profile image - make sure it's not polygonal but a smooth blob
     const profileImg = document.querySelector('.profile-image');
@@ -179,22 +238,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Force animations ONLY on the travel image container (index 1)
-    document.querySelectorAll('.hobby-image-container').forEach((container, index) => {
-        // Clear any existing animations
+    // Clear any existing animations from containers
+    document.querySelectorAll('.hobby-image-container').forEach((container) => {
         container.style.animation = 'none';
-        
-        // Only apply animation to the travel container (index 1)
-        if (index === 1) {
-            container.style.animation = 'floatContainer2 18s ease-in-out infinite 2s';
-        }
-        
-        // Make sure container is properly positioned
-        container.style.position = 'relative';
         container.style.overflow = 'visible';
+        container.style.position = 'relative';
         container.style.zIndex = '1';
         
-        console.log('Applied animation settings to hobby image container:', index + 1);
+        // Update container size to match the larger images
+        container.style.width = '260px'; // Increased from 220px
+        container.style.height = '260px'; // Increased from 220px
+        container.style.maxWidth = '260px'; // Increased from 220px
+        container.style.maxHeight = '260px'; // Increased from 220px
+        
+        console.log('Applied size adjustments to hobby image container');
     });
     
     // Ensure all hobby cards have NO animations but do have hover effects
@@ -202,26 +259,12 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.animation = 'none';
         card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
         card.style.overflow = 'visible';
+        card.style.padding = '45px 25px'; // Increased padding for larger images
     });
     
-    // Do not remove animations from hobby images when adjusting containers
-    document.querySelectorAll('.hobby-image-container').forEach((container) => {
-        container.style.overflow = 'visible';
-        container.style.position = 'relative';
-        
-        // Make sure child image animation is preserved
-        const img = container.querySelector('.hobby-image');
-        if (img) {
-            // Just ensure proper positioning without changing animation
-            img.style.position = 'absolute';
-            img.style.top = '50%';
-            img.style.left = '50%';
-        }
-    });
+    console.log('Enhanced image fixes applied with larger sizes and profile-style floating');
     
-    console.log('Enhanced image fixes applied');
-    
-    // Force animations on hobby images
+    // Force animations on hobby images with larger size
     forceAnimationsOnHobbyImages();
 });
 
@@ -229,31 +272,38 @@ document.addEventListener('DOMContentLoaded', function() {
 function forceAnimationsOnHobbyImages() {
     const hobbyImages = document.querySelectorAll('.hobby-image');
     
-    // Make sure all containers are properly set up
+    // Make sure all containers are properly set up with larger sizes
     document.querySelectorAll('.hobby-image-container').forEach(container => {
+        container.style.width = '260px'; // Increased from 220px
+        container.style.height = '260px'; // Increased from 220px
+        container.style.maxWidth = '260px'; // Increased from 220px
+        container.style.maxHeight = '260px'; // Increased from 220px
         container.style.overflow = 'visible';
         container.style.position = 'relative';
         container.style.zIndex = '1';
         container.style.animation = 'none'; // No animation on container
     });
     
-    // Define the animations inline to ensure they're applied
+    // Define the animations inline to ensure they're applied - profile-style floating
     const animations = [
-        `@keyframes floatHobby1Direct {
-            0%, 100% { transform: translate(-50%, -50%) rotate(-2deg); }
-            30% { transform: translate(-48%, -53%) rotate(1deg); }
-            70% { transform: translate(-52%, -47%) rotate(-1deg); }
+        `@keyframes profileFloatHobby1 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(-2deg) translateY(0px); }
+            25% { transform: translate(-48%, -55%) rotate(-1deg) translateY(-5px); }
+            50% { transform: translate(-52%, -52%) rotate(1deg) translateY(-8px); }
+            75% { transform: translate(-50%, -48%) rotate(-1deg) translateY(-3px); }
         }`,
-        `@keyframes floatHobby2Direct {
-            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-            40% { transform: translate(-53%, -52%) rotate(-2deg); }
-            70% { transform: translate(-47%, -53%) rotate(2deg); }
+        `@keyframes profileFloatHobby2 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg) translateY(0px); }
+            30% { transform: translate(-53%, -52%) rotate(-2deg) translateY(-7px); }
+            60% { transform: translate(-47%, -55%) rotate(2deg) translateY(-10px); }
+            85% { transform: translate(-50%, -53%) rotate(-1deg) translateY(-5px); }
         }`,
-        `@keyframes floatHobby3Direct {
-            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
-            25% { transform: translate(-48%, -55%) rotate(-1deg); }
-            60% { transform: translate(-52%, -46%) rotate(1deg); }
-            85% { transform: translate(-53%, -48%) rotate(0deg); }
+        `@keyframes profileFloatHobby3 {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg) translateY(0px); }
+            20% { transform: translate(-48%, -53%) rotate(-1deg) translateY(-6px); }
+            45% { transform: translate(-52%, -48%) rotate(1deg) translateY(-9px); }
+            70% { transform: translate(-49%, -52%) rotate(0deg) translateY(-4px); }
+            90% { transform: translate(-51%, -49%) rotate(-1deg) translateY(-2px); }
         }`
     ];
     
@@ -262,70 +312,66 @@ function forceAnimationsOnHobbyImages() {
     styleElement.textContent = animations.join('\n');
     document.head.appendChild(styleElement);
     
-    // Apply to each hobby image with individual settings
+    // Apply to each hobby image with individual settings and larger size
     hobbyImages.forEach((img, index) => {
-        // Force the correct styling for floating
+        // Force the correct styling for floating and size
         const styles = {
             position: 'absolute',
             top: '50%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
+            width: '200px', // Increased from 160px/180px to 200px
+            height: '200px', // Increased from 160px/180px to 200px
+            maxWidth: '200px', // Increased from 160px/180px to 200px
+            maxHeight: '200px', // Increased from 160px/180px to 200px
+            objectFit: 'cover',
             borderRadius: [
                 '40% 60% 70% 30% / 40% 50% 60% 50%',
                 '60% 40% 30% 70% / 50% 60% 40% 50%',
                 '50% 50% 35% 65% / 65% 35% 50% 50%'
             ][index % 3],
             animation: [
-                'floatHobby1Direct 8s ease-in-out infinite',
-                'floatHobby2Direct 9s ease-in-out infinite 0.5s',
-                'floatHobby3Direct 7.5s ease-in-out infinite 1s'
+                'profileFloatHobby1 8s ease-in-out infinite',
+                'profileFloatHobby2 9s ease-in-out infinite 0.5s',
+                'profileFloatHobby3 7.5s ease-in-out infinite 1s'
             ][index % 3],
-            clipPath: 'none'
+            clipPath: 'none',
+            boxShadow: '0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4)'
         };
         
-        // Apply all styles directly
-        Object.assign(img.style, styles);
+        // Apply all styles directly with !important
+        Object.keys(styles).forEach(key => {
+            img.style.setProperty(key, styles[key], 'important');
+        });
         
-        console.log(`Applied direct animation to hobby image ${index + 1}`);
+        // Also set element attributes for extra reliability
+        img.setAttribute('width', '200'); // Increased from 160px/180px to 200px
+        img.setAttribute('height', '200'); // Increased from 160px/180px to 200px
+        
+        console.log(`Applied direct larger size and profile-style animation to hobby image ${index + 1}`);
     });
 }
 
-// Run image fixes again after full page load to catch any lazy-loaded images
+// Run image fixes again after full page load with larger sizes
 window.addEventListener('load', function() {
-    console.log('Running additional image fixes after page load');
+    console.log('Running additional image fixes after page load with larger sizes');
     
-    // Apply size constraints to all images
+    // Apply size constraints to all images - larger than before
     document.querySelectorAll('.hobby-image').forEach(img => {
-        img.style.width = '180px';
-        img.style.height = '180px';
-        img.style.maxWidth = '180px';
-        img.style.maxHeight = '180px';
-        img.style.objectFit = 'cover';
+        img.style.setProperty('width', '200px', 'important'); // Increased from 180px to 200px
+        img.style.setProperty('height', '200px', 'important'); // Increased from 180px to 200px
+        img.style.setProperty('max-width', '200px', 'important'); // Increased from 180px to 200px
+        img.style.setProperty('max-height', '200px', 'important'); // Increased from 180px to 200px
+        img.style.setProperty('object-fit', 'cover', 'important');
+        img.setAttribute('width', '200'); // Increased from 180px to 200px
+        img.setAttribute('height', '200'); // Increased from 180px to 200px
     });
     
-    const profileImg = document.querySelector('.profile-image');
-    if (profileImg) {
-        profileImg.style.width = '280px';
-        profileImg.style.height = '280px';
-        profileImg.style.maxWidth = '280px';
-        profileImg.style.maxHeight = '280px';
-        profileImg.style.objectFit = 'cover';
-    }
-    
-    // Re-apply the animations to ensure they stick
-    document.querySelectorAll('.hobby-image').forEach((img, index) => {
-        const animationNames = [
-            'floatHobby1 8s ease-in-out infinite',
-            'floatHobby2 9s ease-in-out infinite 0.5s',
-            'floatHobby3 7.5s ease-in-out infinite 1s'
-        ];
-        
-        img.style.animation = animationNames[index % 3];
-    });
-    
-    console.log('Re-applied hobby image animations after full page load');
-    
-    // Force animations on hobby images again
+    // Re-apply the animations to ensure they stick with larger sizes
     forceAnimationsOnHobbyImages();
-    setTimeout(forceAnimationsOnHobbyImages, 500); // Try again after a delay
+    
+    // Apply multiple times to make sure it sticks
+    setTimeout(forceAnimationsOnHobbyImages, 500);
+    setTimeout(forceAnimationsOnHobbyImages, 1000);
+    setTimeout(forceAnimationsOnHobbyImages, 2000);
 });
