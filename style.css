@@ -1236,6 +1236,17 @@ nav li {
     color: #ff80ab;
 }
 
+.linkedin-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover .linkedin-icon {
+    filter: drop-shadow(0 0 3px rgba(255, 128, 171, 0.5));
+    transform: scale(1.1);
+}
+
 .contact-form h3 {
     margin-bottom: 20px;
     color: #fff;
@@ -2414,3 +2425,43 @@ footer {
         font-size: 2rem;
     }
 }
+
+/* ...existing code... */
+
+.contact-item .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.contact-item .contact-link:hover {
+    color: #ff80ab;
+}
+
+.contact-item .contact-link:after {
+    display: none; /* Remove the underline that would appear after the entire link */
+}
+
+.contact-item .detail {
+    position: relative;
+}
+
+.contact-item .detail:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff80ab;
+    transition: width 0.3s ease;
+}
+
+.contact-item .contact-link:hover .detail:after {
+    width: 100%;
+}
+
+/* ...existing code... */
