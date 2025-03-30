@@ -51,17 +51,25 @@ document.addEventListener('DOMContentLoaded', function() {
         const parent = img.parentNode;
         const clone = img.cloneNode(true);
         
-        // Add width and height attributes
-        clone.setAttribute('width', '180');
-        clone.setAttribute('height', '180');
+        // Remove any clip-path that might be making images look polygonal
+        clone.style.clipPath = 'none';
         
-        // Add inline styles to force shapes, animations and size
+        // Add width and height attributes
+        clone.setAttribute('width', '160');
+        clone.setAttribute('height', '160');
+        
+        // Add inline styles to force smooth shapes and animations
         const styles = [
-            'width: 180px !important;',
-            'height: 180px !important;',
-            'max-width: 180px !important;',
-            'max-height: 180px !important;',
+            'width: 160px !important;',
+            'height: 160px !important;',
+            'max-width: 160px !important;',
+            'max-height: 160px !important;',
             'object-fit: cover !important;',
+            'position: absolute !important;',
+            'top: 50% !important;',
+            'left: 50% !important;',
+            'transform: translate(-50%, -50%) !important;',
+            'box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4) !important;'
         ];
         
         const shapes = [
@@ -81,23 +89,52 @@ document.addEventListener('DOMContentLoaded', function() {
         // Replace the original with the clone
         if (parent) {
             parent.removeChild(img);
+            
+            // Adjust container size to be larger than the image's blob shape
+            parent.style.width = '220px';
+            parent.style.height = '220px';
+            parent.style.maxWidth = '220px';
+            parent.style.maxHeight = '220px';
+            parent.style.overflow = 'visible';
+            parent.style.position = 'relative';
+            parent.style.margin = '0 auto 30px';
+            
             setTimeout(() => parent.appendChild(clone), 100);
         }
     });
     
-    // Fix the profile image as well
+    // Fix the profile image - make sure it's not polygonal but a smooth blob
     const profileImg = document.querySelector('.profile-image');
     if (profileImg) {
-        profileImg.style.width = '280px';
-        profileImg.style.height = '280px';
-        profileImg.style.maxWidth = '280px';
-        profileImg.style.maxHeight = '280px';
-        profileImg.style.objectFit = 'cover';
-        profileImg.setAttribute('width', '280');
-        profileImg.setAttribute('height', '280');
+        // Remove any clip-path properties
+        profileImg.style.clipPath = 'none';
         
-        // Extra fix for border radius
+        profileImg.style.width = '260px';
+        profileImg.style.height = '260px';
+        profileImg.style.maxWidth = '260px';
+        profileImg.style.maxHeight = '260px';
+        profileImg.style.objectFit = 'cover';
+        profileImg.setAttribute('width', '260');
+        profileImg.setAttribute('height', '260');
+        profileImg.style.position = 'absolute';
+        profileImg.style.top = '50%';
+        profileImg.style.left = '50%';
+        profileImg.style.transform = 'translate(-50%, -50%)';
+        
+        // Keep the smooth border-radius for blob shape
         profileImg.style.borderRadius = '40% 60% 70% 30% / 40% 50% 60% 50%';
+        profileImg.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 128, 171, 0.5)';
+        
+        // Adjust the container
+        const profileContainer = profileImg.closest('.floating-profile');
+        if (profileContainer) {
+            profileContainer.style.width = '320px';
+            profileContainer.style.height = '320px';
+            profileContainer.style.maxWidth = '320px';
+            profileContainer.style.maxHeight = '320px';
+            profileContainer.style.overflow = 'visible';
+            profileContainer.style.position = 'relative';
+        }
     }
     
     console.log('Enhanced image fixes applied');

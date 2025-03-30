@@ -55,7 +55,78 @@
                 max-height: 220px !important;
             }
         }
+        
+        /* Fix for blob-shaped images to prevent square clipping */
+        .hobby-image-container {
+            width: 220px !important; /* Much larger than the images to avoid clipping */
+            height: 220px !important;
+            max-width: 220px !important;
+            max-height: 220px !important;
+            overflow: visible !important; /* Must be visible to prevent clipping */
+            position: relative !important;
+            margin: 0 auto 30px !important; /* Add more bottom margin */
+            background: transparent !important;
+        }
+        
+        .hobby-image {
+            width: 160px !important; /* Smaller than the container */
+            height: 160px !important;
+            max-width: 160px !important;
+            max-height: 160px !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            object-fit: cover !important;
+            margin: 0 !important;
+            border: 3px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4) !important;
+        }
+        
+        .floating-profile {
+            width: 320px !important;
+            height: 320px !important;
+            max-width: 320px !important;
+            max-height: 320px !important;
+            overflow: visible !important;
+        }
+        
+        .profile-image {
+            width: 260px !important;
+            height: 260px !important;
+            max-width: 260px !important;
+            max-height: 260px !important;
+            position: absolute !important;
+            top: 50% !important;
+            left: 50% !important;
+            transform: translate(-50%, -50%) !important;
+            object-fit: cover !important;
+            border: 3px solid rgba(255, 255, 255, 0.2) !important;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 128, 171, 0.5) !important;
+        }
+        
+        /* Hobby card needs more space */
+        .hobby-card {
+            padding: 35px 25px !important;
+            margin-bottom: 20px !important;
+            overflow: visible !important;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-profile {
+                width: 260px !important;
+                height: 260px !important;
+            }
+            
+            .profile-image {
+                width: 220px !important;
+                height: 220px !important;
+            }
+        }
     </style>
+    
+    <!-- Link to external imagefixes CSS -->
+    <link rel="stylesheet" href="imagefixes.css">
 </head>
 <body>
     <div class="background-container">
@@ -279,7 +350,7 @@
                     <div class="hobby-card">
                         <div class="hobby-image-container">
                             <!-- Fix image paths with proper relative URLs for GitHub Pages -->
-                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="180" height="180">
+                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="160" height="160">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Guitarist" data-pt="Guitarrista">Guitarist</h3>
@@ -295,7 +366,7 @@
                     </div>
                     <div class="hobby-card">
                         <div class="hobby-image-container">
-                            <img src="./gym.JPG" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
+                            <img src="./gym.jpg" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Physical Exercise" data-pt="Exercício Físico">Physical Exercise</h3>

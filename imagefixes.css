@@ -1,39 +1,61 @@
 /* Emergency image fixes for GitHub Pages */
+/* Reset any clip-path properties that might be making images look polygonal */
+.hobby-image, .profile-image {
+    clip-path: none !important;
+}
+
 .hobby-image {
-    width: 180px !important;
-    height: 180px !important;
-    max-width: 180px !important;
-    max-height: 180px !important;
+    width: 160px !important; /* Slightly smaller than container */
+    height: 160px !important;
+    max-width: 160px !important;
+    max-height: 160px !important;
     object-fit: cover !important;
     display: block !important;
+    border: 3px solid rgba(255, 255, 255, 0.2) !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    /* Keep the smooth organic shapes using border-radius */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4) !important;
 }
 
 .profile-image {
-    width: 280px !important;
-    height: 280px !important;
-    max-width: 280px !important;
-    max-height: 280px !important;
+    width: 260px !important; /* Slightly smaller than container */
+    height: 260px !important;
+    max-width: 260px !important;
+    max-height: 260px !important;
     object-fit: cover !important;
     display: block !important;
+    border: 3px solid rgba(255, 255, 255, 0.2) !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 128, 171, 0.5) !important;
 }
 
 .hobby-image-container {
-    width: 180px !important;
-    height: 180px !important;
-    max-width: 180px !important;
-    max-height: 180px !important;
-    overflow: hidden !important;
-    margin: 0 auto !important;
+    width: 220px !important; /* Significantly larger than image to allow for any border-radius */
+    height: 220px !important;
+    max-width: 220px !important;
+    max-height: 220px !important;
+    overflow: visible !important; /* Changed from hidden to visible */
+    margin: 0 auto 30px !important; /* Add bottom margin to prevent overlap */
+    position: relative !important;
+    background: transparent !important;
 }
 
 .floating-profile {
-    width: 280px !important;
-    height: 280px !important;
-    max-width: 280px !important;
-    max-height: 280px !important;
+    width: 320px !important; /* Larger than profile image */
+    height: 320px !important;
+    max-width: 320px !important;
+    max-height: 320px !important;
+    overflow: visible !important;
+    position: relative !important;
 }
 
-/* Fixed border-radius for images */
+/* Fixed border-radius for images with more aggressive styling */
 .hobby-card:nth-child(1) .hobby-image {
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
 }
@@ -50,9 +72,41 @@
     border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
 }
 
+/* Override hobby-card styling to avoid container interference */
+.hobby-card {
+    padding: 35px 25px !important; /* Add extra padding at top for the image */
+    margin-bottom: 20px !important;
+    background-color: #2a2a30 !important;
+    overflow: visible !important;
+}
+
+/* Make sure glows follow the same shape */
+.hobby-card:nth-child(1) .hobby-glow {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+}
+
+.hobby-card:nth-child(2) .hobby-glow {
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50% !important;
+}
+
+.hobby-card:nth-child(3) .hobby-glow {
+    border-radius: 50% 50% 35% 65% / 65% 35% 50% 50% !important;
+}
+
+.profile-glow {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .floating-profile, .profile-image {
+    .floating-profile {
+        width: 260px !important;
+        height: 260px !important;
+        max-width: 260px !important;
+        max-height: 260px !important;
+    }
+    
+    .profile-image {
         width: 220px !important;
         height: 220px !important;
         max-width: 220px !important;
