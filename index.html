@@ -13,6 +13,49 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    
+    <!-- Add emergency image size fix stylesheet -->
+    <style>
+        .hobby-image, .profile-image {
+            max-width: 180px !important;
+            max-height: 180px !important;
+            width: 180px !important;
+            height: 180px !important;
+            object-fit: cover !important;
+            overflow: hidden !important;
+        }
+        
+        .profile-image {
+            max-width: 280px !important;
+            max-height: 280px !important;
+            width: 280px !important;
+            height: 280px !important;
+        }
+        
+        .hobby-image-container, .floating-profile {
+            width: 180px !important;
+            height: 180px !important;
+            max-width: 180px !important;
+            max-height: 180px !important;
+            overflow: hidden !important;
+        }
+        
+        .floating-profile {
+            width: 280px !important;
+            height: 280px !important;
+            max-width: 280px !important;
+            max-height: 280px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .floating-profile, .profile-image {
+                width: 220px !important;
+                height: 220px !important;
+                max-width: 220px !important;
+                max-height: 220px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="background-container">
@@ -67,7 +110,7 @@
             <div class="content-wrap">
                 <div class="floating-profile-container">
                     <div class="floating-profile">
-                        <img src="./perfil.jpg" alt="Guilherme Martins" class="profile-image">
+                        <img src="./perfil.jpg" alt="Guilherme Martins" class="profile-image" width="280" height="280">
                         <div class="profile-glow"></div>
                     </div>
                 </div>
@@ -236,7 +279,7 @@
                     <div class="hobby-card">
                         <div class="hobby-image-container">
                             <!-- Fix image paths with proper relative URLs for GitHub Pages -->
-                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image">
+                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="180" height="180">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Guitarist" data-pt="Guitarrista">Guitarist</h3>
@@ -244,7 +287,7 @@
                     </div>
                     <div class="hobby-card">
                         <div class="hobby-image-container">
-                            <img src="./travel.png" alt="Guilherme traveling" class="hobby-image">
+                            <img src="./travel.png" alt="Guilherme traveling" class="hobby-image" width="180" height="180">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Traveler" data-pt="Viajante">Traveler</h3>
@@ -252,7 +295,7 @@
                     </div>
                     <div class="hobby-card">
                         <div class="hobby-image-container">
-                            <img src="./gym.jpg" alt="Guilherme fitness" class="hobby-image">
+                            <img src="./gym.jpg" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
                             <div class="hobby-glow"></div>
                         </div>
                         <h3 data-en="Physical Exercise" data-pt="Exercício Físico">Physical Exercise</h3>
@@ -309,5 +352,35 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="debug.js"></script>
+    <script>
+        // Force image size fix after page load
+        window.addEventListener('load', function() {
+            // Fix all hobby images
+            document.querySelectorAll('.hobby-image').forEach(img => {
+                img.style.width = '180px';
+                img.style.height = '180px';
+                img.style.maxWidth = '180px';
+                img.style.maxHeight = '180px';
+                img.style.objectFit = 'cover';
+                img.setAttribute('width', '180');
+                img.setAttribute('height', '180');
+            });
+            
+            // Fix profile image
+            const profileImg = document.querySelector('.profile-image');
+            if (profileImg) {
+                profileImg.style.width = '280px';
+                profileImg.style.height = '280px';
+                profileImg.style.maxWidth = '280px';
+                profileImg.style.maxHeight = '280px';
+                profileImg.style.objectFit = 'cover';
+                profileImg.setAttribute('width', '280');
+                profileImg.setAttribute('height', '280');
+            }
+            
+            console.log('Emergency image size fix applied');
+        });
+    </script>
 </body>
 </html>

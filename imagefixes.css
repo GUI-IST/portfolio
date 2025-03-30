@@ -1,0 +1,61 @@
+/* Emergency image fixes for GitHub Pages */
+.hobby-image {
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.profile-image {
+    width: 280px !important;
+    height: 280px !important;
+    max-width: 280px !important;
+    max-height: 280px !important;
+    object-fit: cover !important;
+    display: block !important;
+}
+
+.hobby-image-container {
+    width: 180px !important;
+    height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+    overflow: hidden !important;
+    margin: 0 auto !important;
+}
+
+.floating-profile {
+    width: 280px !important;
+    height: 280px !important;
+    max-width: 280px !important;
+    max-height: 280px !important;
+}
+
+/* Fixed border-radius for images */
+.hobby-card:nth-child(1) .hobby-image {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+}
+
+.hobby-card:nth-child(2) .hobby-image {
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50% !important;
+}
+
+.hobby-card:nth-child(3) .hobby-image {
+    border-radius: 50% 50% 35% 65% / 65% 35% 50% 50% !important;
+}
+
+.profile-image {
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .floating-profile, .profile-image {
+        width: 220px !important;
+        height: 220px !important;
+        max-width: 220px !important;
+        max-height: 220px !important;
+    }
+}
