@@ -1498,3 +1498,38 @@ footer {
     font-family: 'Inter', sans-serif;
     font-weight: 500; /* Added slightly bolder font weight for better visibility */
 }
+
+/* Update contact container to be centered now that the form is removed */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact link styling */
+.contact-link {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.contact-link:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #ff80ab;
+    transition: width 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #ff80ab;
+}
+
+.contact-link:hover:after {
+    width: 100%;
+}
