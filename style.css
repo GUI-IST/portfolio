@@ -954,7 +954,7 @@ nav li {
     width: 280px; /* Increased from 250px to accommodate images */
     text-align: center;
     transition: transform 0.3s ease;
-    overflow: visible; /* Allow image to overflow for shapes */
+    overflow: visible !important; /* Force overflow to be visible */
     position: relative;
 }
 
@@ -969,6 +969,9 @@ nav li {
     height: 180px;
     margin: 0 auto 20px;
     perspective: 1000px;
+    /* Add additional container constraints */
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .hobby-image {
@@ -980,22 +983,25 @@ nav li {
     filter: brightness(1.05) contrast(1.05);
     will-change: transform, box-shadow;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4);
+    /* Force max dimensions */
+    max-width: 180px;
+    max-height: 180px;
 }
 
 /* Unique shape and animation for each hobby image */
 .hobby-card:nth-child(1) .hobby-image {
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
     animation: floatHobby1 7s ease-in-out infinite;
 }
 
 .hobby-card:nth-child(2) .hobby-image {
-    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; /* Inverted pattern */
-    animation: floatHobby2 8.5s ease-in-out infinite 0.5s; /* Different duration and delay */
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50% !important;
+    animation: floatHobby2 8.5s ease-in-out infinite 0.5s;
 }
 
 .hobby-card:nth-child(3) .hobby-image {
-    border-radius: 50% 50% 35% 65% / 65% 35% 50% 50%; /* Different pattern */
-    animation: floatHobby3 9s ease-in-out infinite 1s; /* Different duration and delay */
+    border-radius: 50% 50% 35% 65% / 65% 35% 50% 50% !important;
+    animation: floatHobby3 9s ease-in-out infinite 1s;
 }
 
 .hobby-card .hobby-glow {
@@ -1279,19 +1285,22 @@ footer {
     opacity: 0; /* Start hidden, will be revealed on scroll */
     will-change: transform, box-shadow; /* Optimize more properties for animations */
     transition: opacity 1s ease, transform 0.3s ease; /* Smoother transitions */
+    max-width: 100%;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50% !important;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
                 0 0 20px rgba(255, 128, 171, 0.5);
     transform: rotate(5deg);
     transition: all 0.5s ease;
     border: 3px solid rgba(255, 255, 255, 0.2);
     filter: brightness(1.05) contrast(1.05);
+    max-width: 280px;
+    max-height: 280px;
 }
 
 .profile-glow {
