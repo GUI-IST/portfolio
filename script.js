@@ -1,11 +1,6 @@
 // Force scroll to top on page reload
 window.onload = function() {
     window.scrollTo(0, 0);
-    
-    // Extra check to remove preloader if it's still visible after 5 seconds
-    setTimeout(function() {
-        document.body.classList.add('loaded');
-    }, 5000);
 };
 
 // Alternative method that works in some browsers that might ignore the onload method
@@ -147,10 +142,14 @@ document.addEventListener('DOMContentLoaded', function() {
         switchLanguage(storedLang);
     }
     
-    // Show header after orbital animation completes
+    // Show header but only after preloader is done (now handled by imageloader.js)
+    // No need for this timeout anymore as it's coordinated with image loading
+    // Remove or comment out the following:
+    /*
     setTimeout(() => {
         document.querySelector('header').classList.add('visible');
-    }, 4000); // Reduced from 6000 to match faster animation
+    }, 4000);
+    */
 
     // Animate sections when they come into view
     const observer = new IntersectionObserver((entries) => {

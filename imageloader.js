@@ -1,6 +1,6 @@
 /**
  * Image Loader for GitHub Pages
- * Ensures images load properly on first visit
+ * Coordinates with name animation to serve as preloader
  */
 
 // Run both at DOMContentLoaded and window.load events 
@@ -11,6 +11,7 @@ window.addEventListener('load', finalizeImageLoading);
 let allImagesLoaded = false;
 let domContentLoaded = false;
 let windowLoaded = false;
+let nameAnimationCompleted = false;
 
 // Main initialization
 function initImageLoader() {
@@ -29,6 +30,14 @@ function initImageLoader() {
     
     // Check if all images are already loaded
     checkImagesLoaded(images);
+    
+    // Listen for when the name animation completes
+    // This is based on the CSS animation timing from the stylesheet (around 5.8s total)
+    setTimeout(() => {
+        nameAnimationCompleted = true;
+        console.log('Name animation completed');
+        tryRevealContent();
+    }, 6000); // Set to match the end of the full name animation plus buffer
 }
 
 // Fix GitHub Pages path issues if necessary
@@ -147,10 +156,8 @@ function applyImageStyles() {
         container.style.overflow = 'visible';
     });
     
-    // If window has already loaded, remove preloader
-    if (windowLoaded) {
-        removePreloader();
-    }
+    // Try to reveal content if the animation is also complete
+    tryRevealContent();
 }
 
 // Final steps when window is fully loaded
@@ -158,12 +165,15 @@ function finalizeImageLoading() {
     windowLoaded = true;
     console.log('Window loaded event fired');
     
-    // If all images are loaded, remove preloader
+    // If all conditions are met, reveal content
     if (allImagesLoaded) {
-        removePreloader();
+        tryRevealContent();
     } else {
-        // Set a timeout to remove preloader even if some images are still loading
-        setTimeout(removePreloader, 3000);
+        // Force reveal after timeout even if some images aren't loaded
+        setTimeout(() => {
+            allImagesLoaded = true;
+            tryRevealContent();
+        }, 8000);
     }
 }
 
@@ -176,4 +186,55 @@ function removePreloader() {
     setTimeout(() => {
         forceHobbyImageAnimations();
     }, 500);
+}
+
+// New function to handle the transition from preloader to content
+function tryRevealContent() {
+    // Check if both conditions are met:
+    // 1. Name animation has completed
+    // 2. Images are loaded (or timeout reached)
+    if (nameAnimationCompleted && (allImagesLoaded || windowLoaded)) {
+        console.log('Revealing content - animation done and images loaded');
+        
+        // Fade out loading indicator
+        const loadingIndicator = document.querySelector('.loading-indicator');
+        if (loadingIndicator) {
+            loadingIndicator.style.display = 'none';
+        }
+        
+        // Reveal main content with slight delay after name animation
+        setTimeout(() => {
+            // Remove loading class from body
+            document.body.classList.remove('loading');
+            
+            // Show content sections with staggered timing
+            const contentReveal = document.querySelector('.content-reveal');
+            if (contentReveal) {
+                contentReveal.classList.add('visible');
+            }
+            
+            // Show header with slight delay
+            setTimeout(() => {
+                const header = document.querySelector('header');
+                if (header) {
+                    header.style.opacity = '1';
+                    header.style.pointerEvents = 'auto';
+                    header.classList.add('visible');
+                }
+            }, 300);
+            
+            // Show scroll indicator with animation
+            setTimeout(() => {
+                const scrollIndicator = document.querySelector('.scroll-indicator');
+                if (scrollIndicator) {
+                    scrollIndicator.style.opacity = '1';
+                }
+            }, 600);
+            
+            // Apply hobby image animations after reveal
+            setTimeout(forceHobbyImageAnimations, 800);
+        }, 500);
+    } else {
+        console.log('Waiting for name animation or images to complete...');
+    }
 }

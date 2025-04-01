@@ -17,22 +17,24 @@ document.addEventListener('DOMContentLoaded', function() {
             // Try to fix with absolute URL if running on GitHub Pages
             if (window.location.hostname.includes('github.io')) {
                 const repoName = window.location.pathname.split('/')[1];
-                const newSrc = `/${repoName}/${img.getAttribute('src').replace(/^\.\//, '')}`;
-                console.log('Attempting to fix image path:', newSrc);
-                img.setAttribute('src', newSrc);
+                if (repoName) {
+                    const newSrc = `/${repoName}/${img.getAttribute('src').replace(/^\.\//, '')}`;
+                    console.log('Attempting to fix image path:', newSrc);
+                    img.setAttribute('src', newSrc);
+                }
             }
         } else {
             console.log('Image loaded successfully:', img.src);
             
             // Apply size constraints even for successfully loaded images
             if (img.classList.contains('hobby-image')) {
-                img.style.width = '200px'; // Increased from 180px to 200px
-                img.style.height = '200px'; // Increased from 180px to 200px
-                img.style.maxWidth = '200px'; // Increased from 180px to 200px
-                img.style.maxHeight = '200px'; // Increased from 180px to 200px
+                img.style.width = '200px';
+                img.style.height = '200px';
+                img.style.maxWidth = '200px';
+                img.style.maxHeight = '200px';
                 img.style.objectFit = 'cover';
-                img.setAttribute('width', '200'); // Increased from 180px to 200px
-                img.setAttribute('height', '200'); // Increased from 180px to 200px
+                img.setAttribute('width', '200');
+                img.setAttribute('height', '200');
             } else if (img.classList.contains('profile-image')) {
                 img.style.width = '280px';
                 img.style.height = '280px';
