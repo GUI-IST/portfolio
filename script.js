@@ -142,14 +142,10 @@ document.addEventListener('DOMContentLoaded', function() {
         switchLanguage(storedLang);
     }
     
-    // Show header but only after preloader is done (now handled by imageloader.js)
-    // No need for this timeout anymore as it's coordinated with image loading
-    // Remove or comment out the following:
-    /*
+    // Show header after orbital animation completes
     setTimeout(() => {
         document.querySelector('header').classList.add('visible');
-    }, 4000);
-    */
+    }, 4000); // Reduced from 6000 to match faster animation
 
     // Animate sections when they come into view
     const observer = new IntersectionObserver((entries) => {
@@ -309,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Setup the profile parallax effect
-    setTimeout(setupProfileParallax, 300);
+    setupProfileParallax();
 
     // Properly handle name container on mobile
     function adjustNameForMobile() {
@@ -340,14 +336,6 @@ function setupProfileParallax() {
     const floatingProfile = document.querySelector('.floating-profile');
     const aboutSection = document.getElementById('about');
     if (!floatingProfile || !aboutSection) return;
-    
-    // Add additional check for image loading
-    const profileImg = document.querySelector('.profile-image');
-    if (profileImg && !profileImg.complete) {
-        console.log('Profile image not yet loaded, retrying parallax setup...');
-        setTimeout(setupProfileParallax, 300);
-        return;
-    }
     
     // Flag to track if profile has been revealed
     let profileRevealed = false;

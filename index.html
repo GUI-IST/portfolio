@@ -127,77 +127,8 @@
     
     <!-- Link to external imagefixes CSS -->
     <link rel="stylesheet" href="imagefixes.css">
-
-    <!-- Add preload directives for critical images -->
-    <link rel="preload" href="./perfil.jpg" as="image">
-    <link rel="preload" href="./guitar.jpg" as="image">
-    <link rel="preload" href="./travel.png" as="image">
-    <link rel="preload" href="./gym.JPG" as="image">
-    <link rel="preload" href="./IST_Logo.png" as="image">
-    <link rel="preload" href="./AEIST.png" as="image">
-    <link rel="preload" href="./it.png" as="image">
-
-    <!-- Remove the spinner preloader style -->
-    <!-- Add animation/transition for content reveal after name animation -->
-    <style>
-        /* Rest of the emergency styles remain unchanged */
-        
-        /* New preloader setup using the hero section */
-        body.loading {
-            overflow: hidden;
-        }
-        
-        body.loading main > section:not(#hero) {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        body.loading header,
-        body.loading footer {
-            opacity: 0;
-            pointer-events: none;
-        }
-        
-        .loading-indicator {
-            position: absolute;
-            bottom: 15vh;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #ff80ab;
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: 2px;
-            text-align: center;
-            opacity: 0;
-            animation: fadeInOut 2s ease infinite;
-        }
-        
-        @keyframes fadeInOut {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-        
-        /* Adjust main content for smooth reveal */
-        main {
-            transition: opacity 0.8s ease;
-        }
-        
-        .content-reveal {
-            transition: opacity 0.8s ease, transform 0.8s ease;
-            transform: translateY(20px);
-            opacity: 0;
-        }
-        
-        .content-reveal.visible {
-            transform: translateY(0);
-            opacity: 1;
-        }
-    </style>
-    
-    <!-- Link to external imagefixes CSS -->
-    <link rel="stylesheet" href="imagefixes.css">
 </head>
-<body class="loading">
+<body>
     <div class="background-container">
         <div class="background-image" id="background"></div>
         <div class="overlay"></div>
@@ -263,7 +194,6 @@
     </div>
 
     <main>
-        <!-- Hero section now acts as preloader -->
         <section id="hero" class="fullscreen">
             <div class="content-wrap">
                 <div class="name-3d-container">
@@ -278,268 +208,262 @@
                 <div class="location-details">
                     <span>Cascais, Portugal</span>
                 </div>
-                
-                <!-- Add loading indicator text to hero section -->
-                <div class="loading-indicator">Loading content...</div>
-                
                 <div class="scroll-indicator">
                     <span data-en="Scroll to explore" data-pt="Scroll para explorar">Scroll to explore</span>
                     <div class="arrow">↓</div>
                 </div>
             </div>
         </section>
-        
-        <!-- Mark other sections for reveal after loading -->
-        <div class="content-reveal">
-            <section id="about" class="fullscreen">
-                <div class="content-wrap">
-                    <div class="floating-profile-container">
-                        <div class="floating-profile">
-                            <img src="./perfil.jpg" alt="Guilherme Martins" class="profile-image" width="280" height="280">
-                            <div class="profile-glow"></div>
-                        </div>
-                    </div>
-                    <h2 class="section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
-                    <div class="about-content">
-                        <p data-en="I am a 20-year-old student at Instituto Superior Técnico, currently in my third year of the Bachelor's degree in Electrical and Computer Engineering. I have a strong passion for learning and am always seeking new challenges that allow me to expand my skills." data-pt="Sou um estudante de 20 anos no Instituto Superior Técnico, atualmente no terceiro ano do curso de Licenciatura em Engenharia Eletrotécnica e de Computadores. Tenho uma forte paixão por aprender e estou sempre em busca de novos desafios que me permitam expandir minhas habilidades.">I am a 20-year-old student at Instituto Superior Técnico, currently in my third year of the Bachelor's degree in Electrical and Computer Engineering. I have a strong passion for learning and am always seeking new challenges that allow me to expand my skills.</p>
-                        
-                        <p data-en="With a natural inclination for teamwork, I believe in the power of collaboration to achieve outstanding results. My genuine interest in research drives me to explore fields such as <span class='accent-text'>Quantum Engineering</span> and <span class='accent-text'>Microprocessors</span>, where I see exciting opportunities to contribute to innovative discoveries." data-pt="Com uma inclinação natural para o trabalho em equipe, acredito no poder da colaboração para alcançar resultados excepcionais. O meu genuíno interesse em pesquisa impulsiona-me a explorar campos como <span class='accent-text'>Engenharia Quântica</span> e <span class='accent-text'>Microprocessadores</span>, onde vejo oportunidades empolgantes para contribuir com descobertas inovadoras.">With a natural inclination for teamwork, I believe in the power of collaboration to achieve outstanding results. My genuine interest in research drives me to explore fields such as <span class='accent-text'>Quantum Engineering</span> and <span class='accent-text'>Microprocessors</span>, where I see exciting opportunities to contribute to innovative discoveries.</p>
-                        
-                        <p data-en="I am eager to apply my skills and enthusiasm in a dynamic engineering environment that fosters innovation and professional growth." data-pt="Estou ansioso para aplicar minhas habilidades e entusiasmo num ambiente de engenharia dinâmico que fomente inovação e crescimento profissional.">I am eager to apply my skills and enthusiasm in a dynamic engineering environment that fosters innovation and professional growth.</p>
+
+        <section id="about" class="fullscreen">
+            <div class="content-wrap">
+                <div class="floating-profile-container">
+                    <div class="floating-profile">
+                        <img src="./perfil.jpg" alt="Guilherme Martins" class="profile-image" width="280" height="280">
+                        <div class="profile-glow"></div>
                     </div>
                 </div>
-            </section>
+                <h2 class="section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
+                <div class="about-content">
+                    <p data-en="I am a 20-year-old student at Instituto Superior Técnico, currently in my third year of the Bachelor's degree in Electrical and Computer Engineering. I have a strong passion for learning and am always seeking new challenges that allow me to expand my skills." data-pt="Sou um estudante de 20 anos no Instituto Superior Técnico, atualmente no terceiro ano do curso de Licenciatura em Engenharia Eletrotécnica e de Computadores. Tenho uma forte paixão por aprender e estou sempre em busca de novos desafios que me permitam expandir minhas habilidades.">I am a 20-year-old student at Instituto Superior Técnico, currently in my third year of the Bachelor's degree in Electrical and Computer Engineering. I have a strong passion for learning and am always seeking new challenges that allow me to expand my skills.</p>
+                    
+                    <p data-en="With a natural inclination for teamwork, I believe in the power of collaboration to achieve outstanding results. My genuine interest in research drives me to explore fields such as <span class='accent-text'>Quantum Engineering</span> and <span class='accent-text'>Microprocessors</span>, where I see exciting opportunities to contribute to innovative discoveries." data-pt="Com uma inclinação natural para o trabalho em equipe, acredito no poder da colaboração para alcançar resultados excepcionais. O meu genuíno interesse em pesquisa impulsiona-me a explorar campos como <span class='accent-text'>Engenharia Quântica</span> e <span class='accent-text'>Microprocessadores</span>, onde vejo oportunidades empolgantes para contribuir com descobertas inovadoras.">With a natural inclination for teamwork, I believe in the power of collaboration to achieve outstanding results. My genuine interest in research drives me to explore fields such as <span class='accent-text'>Quantum Engineering</span> and <span class='accent-text'>Microprocessors</span>, where I see exciting opportunities to contribute to innovative discoveries.</p>
+                    
+                    <p data-en="I am eager to apply my skills and enthusiasm in a dynamic engineering environment that fosters innovation and professional growth." data-pt="Estou ansioso para aplicar minhas habilidades e entusiasmo num ambiente de engenharia dinâmico que fomente inovação e crescimento profissional.">I am eager to apply my skills and enthusiasm in a dynamic engineering environment that fosters innovation and professional growth.</p>
+                </div>
+            </div>
+        </section>
 
-            <section id="education" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Education" data-pt="Educação">Education</h2>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="date" data-en="Sep 2022 - Present" data-pt="Set 2022 - Presente">Sep 2022 - Present</div>
-                            <div class="institution-container">
-                                <img src="IST_Logo.png" alt="IST Logo" class="org-logo">
-                                <div class="institution">Instituto Superior Técnico</div>
-                            </div>
-                            <div class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</div>
-                            <div class="description" data-en="BSc in Electrical and Computer Engineering | Grade: 16/20" data-pt="BSc em Engenharia Eletrotécnica e de Computadores | Média: 16">BSc in Electrical and Computer Engineering | Grade: 16/20</div>
-                            <div class="course-link"><a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/electrical-and-computer-engineering/" target="_blank" class="contact-link" data-en="Course Information" data-pt="Informação do Curso">Course Information</a></div>
+        <section id="education" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Education" data-pt="Educação">Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="date" data-en="Sep 2022 - Present" data-pt="Set 2022 - Presente">Sep 2022 - Present</div>
+                        <div class="institution-container">
+                            <img src="IST_Logo.png" alt="IST Logo" class="org-logo">
+                            <div class="institution">Instituto Superior Técnico</div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="date">2019 - 2022</div>
-                            <div class="institution" data-en="São João do Estoril High School" data-pt="Liceu de São João do Estoril">São João do Estoril High School</div>
-                            <div class="location">Cascais, Portugal</div>
-                            <div class="description" data-en="Class Representative & Honor Student | Grade: 19/20" data-pt="Delegado de turma & Aluno de Honra | Média: 19">Class Representative & Honor Student | Grade: 19/20</div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="date">Before 2019</div>
-                            <div class="institution" data-en="Amor de Deus School" data-pt="Colégio Amor de Deus">Amor de Deus School</div>
-                            <div class="location">Cascais, Portugal</div>
-                            <div class="description" data-en="Honor Student" data-pt="Aluno de Honra">Honor Student</div>
-                        </div>
+                        <div class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</div>
+                        <div class="description" data-en="BSc in Electrical and Computer Engineering | Grade: 16/20" data-pt="BSc em Engenharia Eletrotécnica e de Computadores | Média: 16">BSc in Electrical and Computer Engineering | Grade: 16/20</div>
+                        <div class="course-link"><a href="https://tecnico.ulisboa.pt/en/education/courses/masters-programmes/electrical-and-computer-engineering/" target="_blank" class="contact-link" data-en="Course Information" data-pt="Informação do Curso">Course Information</a></div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">2019 - 2022</div>
+                        <div class="institution" data-en="São João do Estoril High School" data-pt="Liceu de São João do Estoril">São João do Estoril High School</div>
+                        <div class="location">Cascais, Portugal</div>
+                        <div class="description" data-en="Class Representative & Honor Student | Grade: 19/20" data-pt="Delegado de turma & Aluno de Honra | Média: 19">Class Representative & Honor Student | Grade: 19/20</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date">Before 2019</div>
+                        <div class="institution" data-en="Amor de Deus School" data-pt="Colégio Amor de Deus">Amor de Deus School</div>
+                        <div class="location">Cascais, Portugal</div>
+                        <div class="description" data-en="Honor Student" data-pt="Aluno de Honra">Honor Student</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="experience" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Experience" data-pt="Experiência">Experience</h2>
-                    <div class="experience-grid">
-                        <div class="experience-card">
-                            <h3>
-                                <img src="it.png" alt="IT Logo" class="org-logo">
-                                Instituto de Telecomunicações
-                            </h3>
-                            <p class="period" data-en="Feb 2025 - Present" data-pt="Fev 2025 - Presente">Feb 2025 - Present</p>
-                            <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                            <p class="description" data-en="Assisting in the development of an <span class='accent-text'>Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment</span> with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses." data-pt="Auxiliando no desenvolvimento de uma <span class='accent-text'>Câmara Atmosférica para uma experiência de Distribuição de Chaves Quânticas (QKD)</span> com Pedro Mendes, permitindo o estudo dos efeitos de turbulência em sinais quânticos e clássicos. Também participo em reuniões semanais do Departamento de Quântica e Fotônica, acompanhando o progresso de 8 projetos. Tomo notas sobre os desenvolvimentos de cada projeto e aprendo sobre as aplicações práticas das tecnologias quânticas e fotônicas em projetos e teses do mundo real.">Assisting in the development of an Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses.</p>
-                        </div>
-                        <div class="experience-card">
-                            <h3>
-                                <img src="AEIST.png" alt="AEIST Logo" class="org-logo">
-                                <span data-en="IST Student Association (AEIST)" data-pt="Associação de Estudantes do IST (AEIST)">IST Student Association (AEIST)</span>
-                            </h3>
-                            <p class="period" data-en="Oct 2024 - Present" data-pt="Out 2024 - Presente">Oct 2024 - Present</p>
-                            <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                            <p class="description" data-en="Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities." data-pt="Colaborador para Relações Empresariais: Desenvolvi e fomentei relacionamentos com organizações externas, garantindo com sucesso financiamento e patrocínios para apoiar as atividades da AEIST.">Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities.</p>
-                            <p class="skills-gained" data-en="Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation." data-pt="Habilidades adquiridas: Desenvolvimento de Parcerias, Comunicação, Gestão de Projetos, Negociação de Vendas.">Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation.</p>
-                        </div>
-                        <div class="experience-card">
-                            <h3>
-                                <img src="IST_Logo.png" alt="IST Logo" class="org-logo">
-                                IST Management Challenge - "Best of Class"
-                            </h3>
-                            <p class="period">Sep 2022 - Dec 2022</p>
-                            <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                            <div class="description" data-en="High ranking, leading to invitations to two workshops:" data-pt="Alta classificação, levando a convites para dois workshops:">High ranking, leading to invitations to two workshops:</div>
-                            <ul class="workshops-list">
-                                <li data-en="'Ideation, Prioritize, and Design' - Accenture" data-pt="'Ideation, Prioritize, and Design' - Accenture">"Ideation, Prioritize, and Design" - Accenture</li>
-                                <li data-en="'Design Thinking' - EDP" data-pt="'Design Thinking' - EDP">"Design Thinking" - EDP</li>
-                            </ul>
-                            <p class="skills-gained" data-en="Skills gained: Creative problem-solving, idea generation and prioritization, user-centered design, teamwork, and project planning." data-pt="Habilidades adquiridas: Resolução criativa de problemas, geração e priorização de ideias, design centrado no usuário, trabalho em equipe e planejamento de projetos.">Skills gained: Creative problem-solving, idea generation and prioritization, user-centered design, teamwork, and project planning.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="projects" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Projects & Achievements" data-pt="Projetos & Conquistas">Projects & Achievements</h2>
-                    <div class="project-featured">
-                        <h3 data-en="Anti-Drone Detection System" data-pt="Sistema de Detecção Anti-Drone">Anti-Drone Detection System</h3>
-                        <p class="period" data-en="Dec 2024 - Present" data-pt="Dez 2024 - Presente">Dec 2024 - Present</p>
+        <section id="experience" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Experience" data-pt="Experiência">Experience</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <h3>
+                            <img src="it.png" alt="IT Logo" class="org-logo">
+                            Instituto de Telecomunicações
+                        </h3>
+                        <p class="period" data-en="Feb 2025 - Present" data-pt="Fev 2025 - Presente">Feb 2025 - Present</p>
                         <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats." data-pt="Lidero uma equipe que desenvolve um Sistema de Detecção Anti-Drone para Jammers de Comunicação como parte do meu projeto final de licenciatura no Instituto Superior Técnico. O nosso sistema utiliza <span class='accent-text'>machine learning</span> para identificar e distinguir drones de outros objetos voadores com precisão, aumentando a segurança em áreas sensíveis. Este projeto está a ser desenvolvido em colaboração com a <span class='accent-text'>Força Aérea Portuguesa</span>, <span class='accent-text'>Thales</span> e <span class='accent-text'>Mauser</span>, combinando expertise e recursos para alcançar resultados impactantes. O nosso objetivo é fornecer às forças de segurança uma ferramenta confiável e eficiente que fortaleça a sua capacidade de detectar e responder a potenciais ameaças de drones.">I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats.</p>
-                        <p class="project-link"><a href="https://joaofirmino17.github.io/index.html" target="_blank" class="contact-link" data-en="Project Website" data-pt="Website do Projeto">Project Website</a></p>
+                        <p class="description" data-en="Assisting in the development of an <span class='accent-text'>Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment</span> with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses." data-pt="Auxiliando no desenvolvimento de uma <span class='accent-text'>Câmara Atmosférica para uma experiência de Distribuição de Chaves Quânticas (QKD)</span> com Pedro Mendes, permitindo o estudo dos efeitos de turbulência em sinais quânticos e clássicos. Também participo em reuniões semanais do Departamento de Quântica e Fotônica, acompanhando o progresso de 8 projetos. Tomo notas sobre os desenvolvimentos de cada projeto e aprendo sobre as aplicações práticas das tecnologias quânticas e fotônicas em projetos e teses do mundo real.">Assisting in the development of an Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses.</p>
                     </div>
-                    <div class="achievements-grid">
-                        <div class="achievement-item">
-                            <div class="achievement-title" data-en="IST Academic Merit Diploma" data-pt="Diploma de Mérito Acadêmico do IST">IST Academic Merit Diploma</div>
-                            <div class="year">2022/2023</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-title" data-en="BONDALTI & Amélia de Mello Foundation Scholarship" data-pt="Bolsa BONDALTI & Fundação Amélia de Mello">BONDALTI & Amélia de Mello Foundation Scholarship</div>
-                            <div class="year">2023/2024 & 2024/2025</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-title" data-en="Santander Scholarship - Técnico-Santander" data-pt="Bolsa Santander - Técnico-Santander">Santander Scholarship - Técnico-Santander</div>
-                            <div class="year">2022/2023</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-title" data-en="School Merit Scholarship - Alcabideche Parish" data-pt="Bolsa de Mérito Escolar - Freguesia de Alcabideche">School Merit Scholarship - Alcabideche Parish</div>
-                            <div class="year">2022</div>
-                        </div>
-                        <div class="achievement-item">
-                            <div class="achievement-title" data-en="School Merit Award - Cascais City Council" data-pt="Prêmio de Mérito Escolar - Câmara Municipal de Cascais">School Merit Award - Cascais City Council</div>
-                            <div class="year">2022</div>
-                        </div>
+                    <div class="experience-card">
+                        <h3>
+                            <img src="AEIST.png" alt="AEIST Logo" class="org-logo">
+                            <span data-en="IST Student Association (AEIST)" data-pt="Associação de Estudantes do IST (AEIST)">IST Student Association (AEIST)</span>
+                        </h3>
+                        <p class="period" data-en="Oct 2024 - Present" data-pt="Out 2024 - Presente">Oct 2024 - Present</p>
+                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                        <p class="description" data-en="Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities." data-pt="Colaborador para Relações Empresariais: Desenvolvi e fomentei relacionamentos com organizações externas, garantindo com sucesso financiamento e patrocínios para apoiar as atividades da AEIST.">Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities.</p>
+                        <p class="skills-gained" data-en="Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation." data-pt="Habilidades adquiridas: Desenvolvimento de Parcerias, Comunicação, Gestão de Projetos, Negociação de Vendas.">Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>
+                            <img src="IST_Logo.png" alt="IST Logo" class="org-logo">
+                            IST Management Challenge - "Best of Class"
+                        </h3>
+                        <p class="period">Sep 2022 - Dec 2022</p>
+                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                        <div class="description" data-en="High ranking, leading to invitations to two workshops:" data-pt="Alta classificação, levando a convites para dois workshops:">High ranking, leading to invitations to two workshops:</div>
+                        <ul class="workshops-list">
+                            <li data-en="'Ideation, Prioritize, and Design' - Accenture" data-pt="'Ideation, Prioritize, and Design' - Accenture">"Ideation, Prioritize, and Design" - Accenture</li>
+                            <li data-en="'Design Thinking' - EDP" data-pt="'Design Thinking' - EDP">"Design Thinking" - EDP</li>
+                        </ul>
+                        <p class="skills-gained" data-en="Skills gained: Creative problem-solving, idea generation and prioritization, user-centered design, teamwork, and project planning." data-pt="Habilidades adquiridas: Resolução criativa de problemas, geração e priorização de ideias, design centrado no usuário, trabalho em equipe e planejamento de projetos.">Skills gained: Creative problem-solving, idea generation and prioritization, user-centered design, teamwork, and project planning.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="skills" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Skills & Languages" data-pt="Competências & Idiomas">Skills & Languages</h2>
-                    <div class="skills-container">
-                        <div class="skills-column">
-                            <h3 data-en="Technical Skills" data-pt="Competências Técnicas">Technical Skills</h3>
-                            <ul class="skills-list">
-                                <li data-en="Programming: C, C++, Python, Assembly, Java" data-pt="Programação: C, C++, Python, Assembly, Java">Programming: C, C++, Python, Assembly, Java</li>
-                                <li>LaTeX (Overleaf)</li>
-                                <li>Excel</li>
-                                <li>Matlab</li>
-                                <li data-en="Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra" data-pt="Engenharia Eletrotécnica: Propagação e Radiação de Ondas Eletromagnéticas, Telecomunicações, Análise de Circuitos, Arquitetura de Computadores, Algoritmos e Estruturas de Dados, Cálculo Diferencial e Integral, Álgebra Linear">Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra</li>
-                            </ul>
-                        </div>
-                        <div class="skills-column">
-                            <h3 data-en="Soft Skills" data-pt="Competências Pessoais">Personal Skills</h3>
-                            <ul class="skills-list">
-                                <li data-en="Leadership" data-pt="Liderança">Leadership</li>
-                                <li data-en="Communication" data-pt="Comunicação">Communication</li>
-                                <li data-en="Conflict Resolution" data-pt="Resolução de Conflitos">Conflict Resolution</li>
-                                <li data-en="Teamwork" data-pt="Trabalho em Equipe">Teamwork</li>
-                                <li data-en="Proactivity" data-pt="Proatividade">Proactivity</li>
-                                <li data-en="Analytical Thinking" data-pt="Pensamento Analítico">Analytical Thinking</li>
-                                <li data-en="Adaptability and Flexibility" data-pt="Adaptabilidade e Flexibilidade">Adaptability and Flexibility</li>
-                                <li data-en="Problem Solving" data-pt="Resolução de Problemas">Problem Solving</li>
-                                <li data-en="Learning Agility" data-pt="Agilidade de Aprendizagem">Learning Agility</li>
-                            </ul>
-                        </div>
-                        <div class="skills-column">
-                            <h3 data-en="Languages" data-pt="Idiomas">Languages</h3>
-                            <ul class="skills-list">
-                                <li data-en="Portuguese: Native" data-pt="Português: Nativo">Portuguese: Native</li>
-                                <li data-en="English: Proficient (C1)" data-pt="Inglês: Proficiente (C1)">English: Proficient (C1)</li>
-                                <li data-en="Spanish: Basic Fluency" data-pt="Espanhol: Fluência Básica">Spanish: Basic Fluency</li>
-                            </ul>
-                        </div>
+        <section id="projects" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Projects & Achievements" data-pt="Projetos & Conquistas">Projects & Achievements</h2>
+                <div class="project-featured">
+                    <h3 data-en="Anti-Drone Detection System" data-pt="Sistema de Detecção Anti-Drone">Anti-Drone Detection System</h3>
+                    <p class="period" data-en="Dec 2024 - Present" data-pt="Dez 2024 - Presente">Dec 2024 - Present</p>
+                    <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
+                    <p class="description" data-en="I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats." data-pt="Lidero uma equipe que desenvolve um Sistema de Detecção Anti-Drone para Jammers de Comunicação como parte do meu projeto final de licenciatura no Instituto Superior Técnico. O nosso sistema utiliza <span class='accent-text'>machine learning</span> para identificar e distinguir drones de outros objetos voadores com precisão, aumentando a segurança em áreas sensíveis. Este projeto está a ser desenvolvido em colaboração com a <span class='accent-text'>Força Aérea Portuguesa</span>, <span class='accent-text'>Thales</span> e <span class='accent-text'>Mauser</span>, combinando expertise e recursos para alcançar resultados impactantes. O nosso objetivo é fornecer às forças de segurança uma ferramenta confiável e eficiente que fortaleça a sua capacidade de detectar e responder a potenciais ameaças de drones.">I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats.</p>
+                    <p class="project-link"><a href="https://joaofirmino17.github.io/index.html" target="_blank" class="contact-link" data-en="Project Website" data-pt="Website do Projeto">Project Website</a></p>
+                </div>
+                <div class="achievements-grid">
+                    <div class="achievement-item">
+                        <div class="achievement-title" data-en="IST Academic Merit Diploma" data-pt="Diploma de Mérito Acadêmico do IST">IST Academic Merit Diploma</div>
+                        <div class="year">2022/2023</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title" data-en="BONDALTI & Amélia de Mello Foundation Scholarship" data-pt="Bolsa BONDALTI & Fundação Amélia de Mello">BONDALTI & Amélia de Mello Foundation Scholarship</div>
+                        <div class="year">2023/2024 & 2024/2025</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title" data-en="Santander Scholarship - Técnico-Santander" data-pt="Bolsa Santander - Técnico-Santander">Santander Scholarship - Técnico-Santander</div>
+                        <div class="year">2022/2023</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title" data-en="School Merit Scholarship - Alcabideche Parish" data-pt="Bolsa de Mérito Escolar - Freguesia de Alcabideche">School Merit Scholarship - Alcabideche Parish</div>
+                        <div class="year">2022</div>
+                    </div>
+                    <div class="achievement-item">
+                        <div class="achievement-title" data-en="School Merit Award - Cascais City Council" data-pt="Prêmio de Mérito Escolar - Câmara Municipal de Cascais">School Merit Award - Cascais City Council</div>
+                        <div class="year">2022</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="volunteering" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Volunteering" data-pt="Voluntariado">Volunteering</h2>
-                    <div class="volunteering-cards">
-                        <div class="volunteering-card">
-                            <h3>Tutoria</h3>
-                            <p class="period" data-en="May 2024 - Present" data-pt="Maio 2024 - Presente">May 2024 - Present</p>
-                            <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
-                            <p class="description" data-en="I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically." data-pt="Tenho estado ativamente envolvido num projeto de tutoria voluntária, onde forneço apoio educacional a cerca de 15 crianças, desde o pré-escolar até o ensino secundário. Esta experiência tem me desafiado a pensar de diferentes maneiras para explicar eficazmente conceitos fundamentais adaptados à compreensão de cada criança. Ao longo desta jornada, descobri a minha paixão pelo ensino, o que desempenhou um papel significativo na minha decisão de fazer um ano sabático, não apenas para explorar novas experiências, mas também para dedicar tempo a partilhar conhecimento e ajudar outros a crescer academicamente.">I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically.</p>
-                        </div>
-                        <div class="volunteering-card">
-                            <h3>Cascais Jovem</h3>
-                            <p class="period" data-en="2021 - Present" data-pt="2021 - Presente">2021 - Present</p>
-                            <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
-                            <p class="description" data-en="I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement." data-pt="Participei como voluntário em várias iniciativas organizadas pela Cascais Jovem, contribuindo para o bom funcionamento de diversos eventos e programas comunitários. O meu envolvimento incluiu papéis na Conferência de Segurança e Saúde Ocupacional, onde forneci apoio logístico e auxiliei na organização do evento; no Festival das Crianças, interagindo com crianças e famílias para garantir uma experiência positiva; na Iniciativa Praias Seguras, apoiando esforços para promover a segurança nas praias e a consciência ambiental; e nas Eleições Portuguesas, auxiliando na organização e coordenação dos processos eleitorais, entre outros. Através destas iniciativas, desenvolvi fortes competências de trabalho em equipa, comunicação e resolução de problemas, enquanto ganhava experiência valiosa em apoio a eventos e envolvimento comunitário.">I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement.</p>
-                        </div>
+        <section id="skills" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Skills & Languages" data-pt="Competências & Idiomas">Skills & Languages</h2>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <h3 data-en="Technical Skills" data-pt="Competências Técnicas">Technical Skills</h3>
+                        <ul class="skills-list">
+                            <li data-en="Programming: C, C++, Python, Assembly, Java" data-pt="Programação: C, C++, Python, Assembly, Java">Programming: C, C++, Python, Assembly, Java</li>
+                            <li>LaTeX (Overleaf)</li>
+                            <li>Excel</li>
+                            <li>Matlab</li>
+                            <li data-en="Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra" data-pt="Engenharia Eletrotécnica: Propagação e Radiação de Ondas Eletromagnéticas, Telecomunicações, Análise de Circuitos, Arquitetura de Computadores, Algoritmos e Estruturas de Dados, Cálculo Diferencial e Integral, Álgebra Linear">Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <h3 data-en="Soft Skills" data-pt="Competências Pessoais">Personal Skills</h3>
+                        <ul class="skills-list">
+                            <li data-en="Leadership" data-pt="Liderança">Leadership</li>
+                            <li data-en="Communication" data-pt="Comunicação">Communication</li>
+                            <li data-en="Conflict Resolution" data-pt="Resolução de Conflitos">Conflict Resolution</li>
+                            <li data-en="Teamwork" data-pt="Trabalho em Equipe">Teamwork</li>
+                            <li data-en="Proactivity" data-pt="Proatividade">Proactivity</li>
+                            <li data-en="Analytical Thinking" data-pt="Pensamento Analítico">Analytical Thinking</li>
+                            <li data-en="Adaptability and Flexibility" data-pt="Adaptabilidade e Flexibilidade">Adaptability and Flexibility</li>
+                            <li data-en="Problem Solving" data-pt="Resolução de Problemas">Problem Solving</li>
+                            <li data-en="Learning Agility" data-pt="Agilidade de Aprendizagem">Learning Agility</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column">
+                        <h3 data-en="Languages" data-pt="Idiomas">Languages</h3>
+                        <ul class="skills-list">
+                            <li data-en="Portuguese: Native" data-pt="Português: Nativo">Portuguese: Native</li>
+                            <li data-en="English: Proficient (C1)" data-pt="Inglês: Proficiente (C1)">English: Proficient (C1)</li>
+                            <li data-en="Spanish: Basic Fluency" data-pt="Espanhol: Fluência Básica">Spanish: Basic Fluency</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="hobbies" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Hobbies" data-pt="Hobbies">Hobbies</h2>
-                    <div class="hobbies-container">
-                        <div class="hobby-card">
-                            <div class="hobby-image-container">
-                                <!-- Fix image paths with proper relative URLs for GitHub Pages -->
-                                <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="160" height="160">
-                                <div class="hobby-glow"></div>
-                            </div>
-                            <h3 data-en="<span class='accent-text'>Guitarist</span>" data-pt="<span class='accent-text'>Guitarrista</span>">Guitarist</h3>
-                            <p data-en="Own Band - 3 Concerts" data-pt="Banda Própria - 3 Concertos">Own Band - 3 Concerts</p>
-                        </div>
-                        <div class="hobby-card">
-                            <div class="hobby-image-container">
-                                <img src="./travel.png" alt="Guilherme traveling" class="hobby-image" width="180" height="180">
-                                <div class="hobby-glow"></div>
-                            </div>
-                            <h3 data-en="<span class='accent-text'>Traveler</span>" data-pt="<span class='accent-text'>Viajante</span>">Traveler</h3>
-                            <p data-en="Visited 14 countries on 4 different continents" data-pt="Visitei 14 países em 4 continentes diferentes">Visited 14 countries on 4 different continents</p>
-                        </div>
-                        <div class="hobby-card">
-                            <div class="hobby-image-container">
-                                <img src="./gym.JPG" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
-                                <div class="hobby-glow"></div>
-                            </div>
-                            <h3 data-en="<span class='accent-text'>Physical Exercise</span>" data-pt="<span class='accent-text'>Exercício Físico</span>">Physical Exercise</h3>
-                            <p data-en="Gym, Padel, Sailing" data-pt="Ginásio, Padel, Vela">Gym, Padel, Sailing</p>
-                        </div>
+        <section id="volunteering" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Volunteering" data-pt="Voluntariado">Volunteering</h2>
+                <div class="volunteering-cards">
+                    <div class="volunteering-card">
+                        <h3>Tutoria</h3>
+                        <p class="period" data-en="May 2024 - Present" data-pt="Maio 2024 - Presente">May 2024 - Present</p>
+                        <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
+                        <p class="description" data-en="I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically." data-pt="Tenho estado ativamente envolvido num projeto de tutoria voluntária, onde forneço apoio educacional a cerca de 15 crianças, desde o pré-escolar até o ensino secundário. Esta experiência tem me desafiado a pensar de diferentes maneiras para explicar eficazmente conceitos fundamentais adaptados à compreensão de cada criança. Ao longo desta jornada, descobri a minha paixão pelo ensino, o que desempenhou um papel significativo na minha decisão de fazer um ano sabático, não apenas para explorar novas experiências, mas também para dedicar tempo a partilhar conhecimento e ajudar outros a crescer academicamente.">I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically.</p>
+                    </div>
+                    <div class="volunteering-card">
+                        <h3>Cascais Jovem</h3>
+                        <p class="period" data-en="2021 - Present" data-pt="2021 - Presente">2021 - Present</p>
+                        <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
+                        <p class="description" data-en="I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement." data-pt="Participei como voluntário em várias iniciativas organizadas pela Cascais Jovem, contribuindo para o bom funcionamento de diversos eventos e programas comunitários. O meu envolvimento incluiu papéis na Conferência de Segurança e Saúde Ocupacional, onde forneci apoio logístico e auxiliei na organização do evento; no Festival das Crianças, interagindo com crianças e famílias para garantir uma experiência positiva; na Iniciativa Praias Seguras, apoiando esforços para promover a segurança nas praias e a consciência ambiental; e nas Eleições Portuguesas, auxiliando na organização e coordenação dos processos eleitorais, entre outros. Através destas iniciativas, desenvolvi fortes competências de trabalho em equipa, comunicação e resolução de problemas, enquanto ganhava experiência valiosa em apoio a eventos e envolvimento comunitário.">I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="contact" class="fullscreen">
-                <div class="content-wrap">
-                    <h2 class="section-title" data-en="Contact" data-pt="Contacto">Contact</h2>
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <a href="mailto:guimartins2004@gmail.com" class="contact-link">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
-                                            <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
-                                        </svg>
-                                    </span>
-                                    <span class="detail">guimartins2004@gmail.com</span>
-                                </a>
-                            </div>
-                            <div class="contact-item">
-                                <a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" class="contact-link">
-                                    <span class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
-                                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                                        </svg>
-                                    </span>
-                                    <span class="detail">LinkedIn</span>
-                                </a>
-                            </div>
+        <section id="hobbies" class="fullscreen">
+            <div class="content-wrap">
+                <h2 class="section-title" data-en="Hobbies" data-pt="Hobbies">Hobbies</h2>
+                <div class="hobbies-container">
+                    <div class="hobby-card">
+                        <div class="hobby-image-container">
+                            <!-- Fix image paths with proper relative URLs for GitHub Pages -->
+                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="160" height="160">
+                            <div class="hobby-glow"></div>
                         </div>
-                        <!-- Contact form removed as requested -->
+                        <h3 data-en="<span class='accent-text'>Guitarist</span>" data-pt="<span class='accent-text'>Guitarrista</span>">Guitarist</h3>
+                        <p data-en="Own Band - 3 Concerts" data-pt="Banda Própria - 3 Concertos">Own Band - 3 Concerts</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-image-container">
+                            <img src="./travel.png" alt="Guilherme traveling" class="hobby-image" width="180" height="180">
+                            <div class="hobby-glow"></div>
+                        </div>
+                        <h3 data-en="<span class='accent-text'>Traveler</span>" data-pt="<span class='accent-text'>Viajante</span>">Traveler</h3>
+                        <p data-en="Visited 14 countries on 4 different continents" data-pt="Visitei 14 países em 4 continentes diferentes">Visited 14 countries on 4 different continents</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-image-container">
+                            <img src="./gym.JPG" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
+                            <div class="hobby-glow"></div>
+                        </div>
+                        <h3 data-en="<span class='accent-text'>Physical Exercise</span>" data-pt="<span class='accent-text'>Exercício Físico</span>">Physical Exercise</h3>
+                        <p data-en="Gym, Padel, Sailing" data-pt="Ginásio, Padel, Vela">Gym, Padel, Sailing</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
+
+        <section id="contact" class="fullscreen">
+    <div class="content-wrap">
+        <h2 class="section-title" data-en="Contact" data-pt="Contacto">Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="mailto:guimartins2004@gmail.com" class="contact-link">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
+                                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
+                            </svg>
+                        </span>
+                        <span class="detail">guimartins2004@gmail.com</span>
+                    </a>
+                </div>
+                <div class="contact-item">
+                    <a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" class="contact-link">
+                        <span class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </span>
+                        <span class="detail">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Contact form removed as requested -->
         </div>
+    </div>
+</section>
+
     </main>
 
     <footer>
@@ -548,7 +472,6 @@
 
     <script src="script.js"></script>
     <script src="debug.js"></script>
-    <script src="imageloader.js"></script>
     <script>
         // Force image size fix after page load
         window.addEventListener('load', function() {
