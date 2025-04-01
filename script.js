@@ -1,6 +1,11 @@
 // Force scroll to top on page reload
 window.onload = function() {
     window.scrollTo(0, 0);
+    
+    // Extra check to remove preloader if it's still visible after 5 seconds
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+    }, 5000);
 };
 
 // Alternative method that works in some browsers that might ignore the onload method
@@ -305,7 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Setup the profile parallax effect
-    setupProfileParallax();
+    setTimeout(setupProfileParallax, 300);
 
     // Properly handle name container on mobile
     function adjustNameForMobile() {
@@ -336,6 +341,14 @@ function setupProfileParallax() {
     const floatingProfile = document.querySelector('.floating-profile');
     const aboutSection = document.getElementById('about');
     if (!floatingProfile || !aboutSection) return;
+    
+    // Add additional check for image loading
+    const profileImg = document.querySelector('.profile-image');
+    if (profileImg && !profileImg.complete) {
+        console.log('Profile image not yet loaded, retrying parallax setup...');
+        setTimeout(setupProfileParallax, 300);
+        return;
+    }
     
     // Flag to track if profile has been revealed
     let profileRevealed = false;

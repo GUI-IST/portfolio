@@ -127,8 +127,69 @@
     
     <!-- Link to external imagefixes CSS -->
     <link rel="stylesheet" href="imagefixes.css">
+
+    <!-- Add preload directives for critical images -->
+    <link rel="preload" href="./perfil.jpg" as="image">
+    <link rel="preload" href="./guitar.jpg" as="image">
+    <link rel="preload" href="./travel.png" as="image">
+    <link rel="preload" href="./gym.JPG" as="image">
+    <link rel="preload" href="./IST_Logo.png" as="image">
+    <link rel="preload" href="./AEIST.png" as="image">
+    <link rel="preload" href="./it.png" as="image">
+
+    <!-- Add site preloader -->
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid #333;
+            border-top: 4px solid #ff80ab;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        .loading-text {
+            color: #ff80ab;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            letter-spacing: 2px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loaded #preloader {
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body>
+    <!-- Add preloader element -->
+    <div id="preloader">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
     <div class="background-container">
         <div class="background-image" id="background"></div>
         <div class="overlay"></div>
@@ -246,7 +307,7 @@
                         </div>
                         <div class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</div>
                         <div class="description" data-en="BSc in Electrical and Computer Engineering | Grade: 16/20" data-pt="BSc em Engenharia Eletrotécnica e de Computadores | Média: 16">BSc in Electrical and Computer Engineering | Grade: 16/20</div>
-                        <div class="course-link"><a href="https://tecnico.ulisboa.pt/en/education/courses/masters-programmes/electrical-and-computer-engineering/" target="_blank" class="contact-link" data-en="Course Information" data-pt="Informação do Curso">Course Information</a></div>
+                        <div class="course-link"><a href="https://tecnico.ulisboa.pt/en/education/courses/undergraduate-programmes/electrical-and-computer-engineering/" target="_blank" class="contact-link" data-en="Course Information" data-pt="Informação do Curso">Course Information</a></div>
                     </div>
                     <div class="timeline-item">
                         <div class="date">2019 - 2022</div>
@@ -275,7 +336,7 @@
                         </h3>
                         <p class="period" data-en="Feb 2025 - Present" data-pt="Fev 2025 - Presente">Feb 2025 - Present</p>
                         <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="Participating in regular meetings of the Quantum and Photonics Department at Instituto de Telecomunicações, where I track the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses." data-pt="Participo em reuniões regulares do Departamento de Quantum e Fotônica no Instituto de Telecomunicações, onde acompanho o progresso de 8 projetos em andamento. Tomo notas sobre os desenvolvimentos de cada projeto e aprendo sobre as aplicações práticas das tecnologias quânticas e fotônicas em projetos e teses do mundo real.">Participating in regular meetings of the Quantum and Photonics Department at Instituto de Telecomunicações, where I track the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses.</p>
+                        <p class="description" data-en="Assisting in the development of an <span class='accent-text'>Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment</span> with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses." data-pt="Auxiliando no desenvolvimento de uma <span class='accent-text'>Câmara Atmosférica para uma experiência de Distribuição de Chaves Quânticas (QKD)</span> com Pedro Mendes, permitindo o estudo dos efeitos de turbulência em sinais quânticos e clássicos. Também participo em reuniões semanais do Departamento de Quântica e Fotônica, acompanhando o progresso de 8 projetos. Tomo notas sobre os desenvolvimentos de cada projeto e aprendo sobre as aplicações práticas das tecnologias quânticas e fotônicas em projetos e teses do mundo real.">Assisting in the development of an Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses.</p>
                     </div>
                     <div class="experience-card">
                         <h3>
@@ -472,6 +533,7 @@
 
     <script src="script.js"></script>
     <script src="debug.js"></script>
+    <script src="imageloader.js"></script>
     <script>
         // Force image size fix after page load
         window.addEventListener('load', function() {
