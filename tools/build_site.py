@@ -10,6 +10,8 @@ All visible copy below is transcribed verbatim from COPY.md; tools/check_copy.py
 import html, os, shutil, sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Production address. Change this one line when a custom domain is connected, then rebuild.
+SITE = "https://portfolio-guicm.vercel.app"
 EMAIL = "gcandeiasmarti@tudelft.nl"
 LINKEDIN = "https://www.linkedin.com/in/guilherme-candeias-martins/"
 SENTINEL = "https://sentinel-anti-drone.vercel.app/"
@@ -68,8 +70,11 @@ def ghost(url, text, external=True):
     return f'<a class="btn btn-ghost" href="{e(url)}"{extra}>{e(text)}</a>'
 
 
+LOGO_W = {"ist": 23, "it": 24, "aeist": 45, "golp": 90, "silicongate": 72}  # display width at 28px height
+
+
 def logo(name, alt):
-    return f'<span class="logo-tile"><img src="{{A}}img/logo-{name}.png" alt="{e(alt)}" height="28" loading="lazy"></span>'
+    return f'<span class="logo-tile"><img src="{{A}}img/logo-{name}.webp" alt="{e(alt)}" width="{LOGO_W[name]}" height="28" loading="lazy" decoding="async"></span>'
 
 
 def page_head(lang, page, h1, opening):
@@ -109,19 +114,55 @@ def layout(lang, page, depth, title, desc, body):
                 f'<a href="{href(depth, "pt", page)}" hreflang="pt-PT" lang="pt-PT"{pt_cur}>PT</a></nav>')
 
     footer_line = f'© 2026 Guilherme Candeias Martins'
+    def absu(l, pg):
+        return SITE + "/" + page_path(l, pg)
+    def alt(l, pg):
+        return href(depth, l, pg) if ARTIFACT else absu(l, pg)
+    og_img = SITE + ("/assets/img/og-pt.jpg" if lang == "pt" else "/assets/img/og-en.jpg")
+    og_alt = "Guilherme Candeias Martins · " + ("MSc Electrical Engineering, TU Delft" if lang == "en" else "Mestrado em Engenharia Eletrotécnica, TU Delft")
+    jsonld = ""
+    if page == "home":
+        import json
+        jsonld = '<script type="application/ld+json">' + json.dumps({
+            "@context": "https://schema.org", "@type": "Person",
+            "name": "Guilherme Candeias Martins", "url": SITE + "/",
+            "image": SITE + "/assets/img/profile.webp",
+            "jobTitle": "Electrical and Computer Engineer",
+            "email": "mailto:" + EMAIL,
+            "address": {"@type": "PostalAddress", "addressLocality": "Delft", "addressCountry": "NL"},
+            "affiliation": {"@type": "CollegeOrUniversity", "name": "Technische Universiteit Delft"},
+            "alumniOf": {"@type": "CollegeOrUniversity", "name": "Instituto Superior Técnico"},
+            "knowsLanguage": ["pt", "en", "es"],
+            "sameAs": [LINKEDIN],
+        }, ensure_ascii=False) + '</script>'
     head_meta = f'''<title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{absu(lang, page)}">
+<link rel="alternate" hreflang="en" href="{alt("en", page)}">
+<link rel="alternate" hreflang="pt-PT" href="{alt("pt", page)}">
+<link rel="alternate" hreflang="x-default" href="{alt("en", page)}">
 <meta name="theme-color" content="#16100a">
+<meta property="og:site_name" content="Guilherme Candeias Martins">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{"profile" if page == "about" else "website"}">
+<meta property="og:url" content="{absu(lang, page)}">
 <meta property="og:locale" content="{"en_GB" if lang == "en" else "pt_PT"}">
-<link rel="alternate" hreflang="en" href="{href(depth, "en", page)}">
-<link rel="alternate" hreflang="pt-PT" href="{href(depth, "pt", page)}">
-<link rel="alternate" hreflang="x-default" href="{href(depth, "en", page)}">
+<meta property="og:locale:alternate" content="{"pt_PT" if lang == "en" else "en_GB"}">
+<meta property="og:image" content="{og_img}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{e(og_alt)}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{og_img}">
+<link rel="icon" href="{A}img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{A}img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{A}img/apple-touch-icon.png">
 <link rel="preload" href="{A}fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="{A}fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="{A}css/site.css">'''
+<link rel="stylesheet" href="{A}css/site.css">{jsonld}'''
     content = f'''<a class="skip-link" href="#main">{e(SKIP[lang])}</a>
 <header class="site-header"><div class="wrap">
   <a class="wordmark" href="{href(depth, lang, "home")}"><span class="full">Guilherme Candeias Martins</span><span class="short">G. C. Martins</span></a>
@@ -206,7 +247,7 @@ def home(lang, depth):
         f'<a class="arrow-link label" href="{href(depth, lang, p)}">{e(l)} {ICON_ARROW}</a></li>'
         for i, (t, b, l, p) in enumerate(hl))
     body = f'''<section class="hero" aria-labelledby="hero-h">
-  <div class="hero-art"><img src="{A}img/almond-blossoms-1600.webp" srcset="{A}img/almond-blossoms-900.webp 900w, {A}img/almond-blossoms-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 58vw" alt="" width="1600" height="1309" fetchpriority="high"></div>
+  <div class="hero-art"><img src="{A}img/almond-blossoms-1600.webp" srcset="{A}img/almond-blossoms-900.webp 900w, {A}img/almond-blossoms-1200.webp 1200w, {A}img/almond-blossoms-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 58vw" alt="" width="1600" height="1309" fetchpriority="high"></div>
   <div class="wrap"><div class="hero-copy">
     <h1 id="hero-h"><span class="line">Guilherme</span> <span class="line"><em>Candeias</em> Martins</span></h1>
     <p class="sub">{e(sub)}</p>
@@ -221,7 +262,7 @@ def home(lang, depth):
     <ul class="seeking-list">{seek_li}</ul>
     <div class="actions">{email_btn(lang)}{ghost(LINKEDIN, "LinkedIn")}</div>
   </div>
-  <figure class="portrait reveal"><img src="{A}img/profile.webp" alt="Guilherme Candeias Martins" width="800" height="1000" loading="lazy"></figure>
+  <figure class="portrait reveal"><img src="{A}img/profile.webp" srcset="{A}img/profile-480.webp 480w, {A}img/profile.webp 800w" sizes="(max-width: 859px) min(420px, 92vw), 360px" alt="Guilherme Candeias Martins" width="800" height="1000" loading="lazy" decoding="async"></figure>
 </div></section>
 <section class="section band" aria-labelledby="hl-h"><div class="wrap">
   <div class="section-head"><h2 id="hl-h">{e(h_hl)}</h2></div>
@@ -613,14 +654,14 @@ def about(lang, depth):
   <div class="entry-rail"><span class="when">{e(y)}</span><span>{e(place)}</span></div>
   <div class="entry-body"><div class="entry-title small"><h3>{e(t.rstrip(":"))}<span class="sr-only">:</span></h3></div><p>{e(txt)}</p><div class="linkrow">{"".join(links)}</div></div>
 </article>''' for t, place, y, txt, links in ex)
-    ph = "".join(f'<figure><img src="{A}img/{f}.webp" alt="" width="800" height="1000" loading="lazy"><figcaption><strong>{e(k.rstrip(":"))}<span class="sr-only">:</span></strong> {e(v)}</figcaption></figure>' for f, k, v in photos)
+    ph = "".join(f'<figure><img src="{A}img/{f}.webp" srcset="{A}img/{f}-480.webp 480w, {A}img/{f}.webp 800w" sizes="(max-width: 759px) 92vw, 360px" alt="" width="800" height="1000" loading="lazy" decoding="async"><figcaption><strong>{e(k.rstrip(":"))}<span class="sr-only">:</span></strong> {e(v)}</figcaption></figure>' for f, k, v in photos)
     body = f'''<header class="page-head"><div class="wrap about-intro">
   <div style="display:grid;gap:var(--space-5)">
     <p class="eyebrow label">{e(NAV[lang]["about"])}</p>
     <h1>{e(h1)}</h1>
     <p class="lead">{e(opening)}</p>
   </div>
-  <figure class="portrait"><img src="{A}img/profile.webp" alt="Guilherme Candeias Martins" width="800" height="1000" loading="lazy"></figure>
+  <figure class="portrait"><img src="{A}img/profile.webp" srcset="{A}img/profile-480.webp 480w, {A}img/profile.webp 800w" sizes="(max-width: 859px) min(420px, 92vw), 360px" alt="Guilherme Candeias Martins" width="800" height="1000" loading="lazy" decoding="async"></figure>
 </div></header>
 <section class="section band" aria-labelledby="drives-h"><div class="wrap">
   <div class="entry reveal"><div class="entry-rail"></div><div class="entry-body">
@@ -685,6 +726,24 @@ def contact(lang, depth):
 BUILDERS = {"home": home, "experience": experience, "projects": projects, "education": education, "about": about, "contact": contact}
 
 
+def write_seo_files(out_root):
+    """sitemap.xml (with EN/PT alternates) and robots.txt."""
+    import datetime
+    today = datetime.date.today().isoformat()
+    urls = []
+    for lang in ("en", "pt"):
+        for page in PAGES:
+            alts = "".join(f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{SITE}/{page_path(l, page)}"/>'
+                           for l, h in (("en", "en"), ("pt", "pt-PT"), ("en", "x-default")))
+            urls.append(f"  <url>\n    <loc>{SITE}/{page_path(lang, page)}</loc>\n    <lastmod>{today}</lastmod>{alts}\n  </url>")
+    with open(os.path.join(out_root, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + "\n".join(urls) + "\n</urlset>\n")
+    with open(os.path.join(out_root, "robots.txt"), "w", encoding="utf-8") as f:
+        f.write(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n")
+    print("wrote sitemap.xml, robots.txt")
+
+
 def build(out_root):
     for lang in ("en", "pt"):
         for page in PAGES:
@@ -708,3 +767,4 @@ if __name__ == "__main__":
         build(dest)
     else:
         build(ROOT)
+        write_seo_files(ROOT)
