@@ -18,7 +18,7 @@
   if (btn && panel) {
     btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
-    window.addEventListener('resize', function () { if (window.innerWidth > 1080) setMenu(false); });
+    window.addEventListener('resize', function () { if (getComputedStyle(btn).display === 'none') setMenu(false); });
   }
 
 })();

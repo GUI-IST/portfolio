@@ -297,16 +297,16 @@ Every design choice is recorded here. **Status:** *decided* means Guilherme chos
 | 3 | 2026-11-16 | No brand kit file exists; the brand palette is built from his likes: green, brown, *Almond Blossoms*, *Sunflowers* | The brand kit did not arrive; he chose "build from my likes" | Guilherme | Decided |
 | 4 | 2026-11-16 | Old site's pink `#ff80ab` and Bebas Neue are retired | Replaced by the new brand (decisions 3 and 5) | Guilherme | Decided |
 | 5 | 2026-11-16 | Fonts: Fraunces (headings) + Inter (body and UI) | Chosen from three options | Guilherme | Decided |
-| 6 | 2026-11-16 | Dark theme only, on the Walnut canvas | Follows ORYZO; brown is a brand colour | Claude | Proposed |
-| 7 | 2026-11-16 | Palette values: Walnut, Bark, Moss, Blossom, Cork chosen; Sage, Almond Sky, Branch sampled from `almond_blossoms.png`; Sunflower chosen (no image file) | Turns the stated likes into tokens with ≥4.5:1 text contrast | Claude | Proposed |
-| 8 | 2026-11-16 | Email button: Blossom filled pill, Sunflower on hover/focus | The main action needs to stand out, but ORYZO forbids the accent as a fill and allows one filled button | Claude | Proposed |
-| 9 | 2026-11-16 | Headings in mixed-case Fraunces; UPPERCASE Inter only for labels | ORYZO's all-caps rule clashes with a serif display | Claude | Proposed |
-| 10 | 2026-11-16 | Sections at content height (hero ~88svh); body 17px, not ORYZO's 29px | Long bilingual copy; readability | Claude | Proposed |
-| 11 | 2026-11-16 | Profile, hobby photos and logos are used despite ORYZO's "no people" rule; logos sit on Blossom tiles | Approved assets in CONTEXT.md; visibility on a dark canvas | Claude | Proposed |
-| 12 | 2026-11-16 | `almond_blossoms.png` is the single hero painting, compressed to WebP ≤ 400 KB | One painting per site (Structured/monopo); the source is 23 MB | Claude | Proposed |
-| 13 | 2026-11-16 | Links are always underlined; minimum text size 13px (labels) and 15px (meta) | Accessibility over monopo's underline-free links and ORYZO's 8px text | Claude | Proposed |
-| 14 | 2026-11-16 | Separate URLs per language (`/` and `/pt/`) rather than a JS-only toggle | Each language can rank for its own searches (COPY.md) | Claude | Proposed |
-| 15 | 2026-11-16 | Radius vocabulary: pill (999px), 12px panels, 0px everything else | One system instead of five | Claude | Proposed |
+| 6 | 2026-11-16 | Dark theme only, on the Walnut canvas | Follows ORYZO; brown is a brand colour | Claude | Accepted (applied by the build request) |
+| 7 | 2026-11-16 | Palette values: Walnut, Bark, Moss, Blossom, Cork chosen; Sage, Almond Sky, Branch sampled from `almond_blossoms.png`; Sunflower chosen (no image file) | Turns the stated likes into tokens with ≥4.5:1 text contrast | Claude | Accepted (applied by the build request) |
+| 8 | 2026-11-16 | Email button: Blossom filled pill, Sunflower on hover/focus | The main action needs to stand out, but ORYZO forbids the accent as a fill and allows one filled button | Claude | Accepted (applied by the build request) |
+| 9 | 2026-11-16 | Headings in mixed-case Fraunces; UPPERCASE Inter only for labels | ORYZO's all-caps rule clashes with a serif display | Claude | Accepted (applied by the build request) |
+| 10 | 2026-11-16 | Sections at content height (hero ~88svh); body 17px, not ORYZO's 29px | Long bilingual copy; readability | Claude | Accepted (applied by the build request) |
+| 11 | 2026-11-16 | Profile, hobby photos and logos are used despite ORYZO's "no people" rule; logos sit on Blossom tiles | Approved assets in CONTEXT.md; visibility on a dark canvas | Claude | Accepted (applied by the build request) |
+| 12 | 2026-11-16 | `almond_blossoms.png` is the single hero painting, compressed to WebP ≤ 400 KB | One painting per site (Structured/monopo); the source is 23 MB | Claude | Accepted (applied by the build request) |
+| 13 | 2026-11-16 | Links are always underlined; minimum text size 13px (labels) and 15px (meta) | Accessibility over monopo's underline-free links and ORYZO's 8px text | Claude | Accepted (applied by the build request) |
+| 14 | 2026-11-16 | Separate URLs per language (`/` and `/pt/`) rather than a JS-only toggle | Each language can rank for its own searches (COPY.md) | Claude | Accepted (applied by the build request) |
+| 15 | 2026-11-16 | Radius vocabulary: pill (999px), 12px panels, 0px everything else | One system instead of five | Claude | Accepted (applied by the build request) |
 | 16 | 2026-11-16 | Very faint film-grain texture over the walnut canvas (7% opacity, fixed) | Adds a painted, darkroom feel without a gradient or shadow | Claude (build) | Proposed |
 | 17 | 2026-11-16 | Fraunces and Inter are self-hosted in `assets/fonts/` instead of linked from Google Fonts | "No third-party embeds": the site makes zero requests to other hosts | Claude (build) | Proposed |
 | 18 | 2026-11-16 | Reveal motion is a scroll-driven glide (CSS `animation-timeline: view()`), and content is always visible at rest | A JS fade-in would leave link previews and thumbnails blank | Claude (build) | Proposed |
@@ -314,3 +314,7 @@ Every design choice is recorded here. **Status:** *decided* means Guilherme chos
 | 20 | 2026-11-16 | Logos appear only where the repo has the file (SiliconGate, GOLP, IT, AEIST, IST); TU Delft, Celera, Sentinel and its partners appear as text | Never invent logos | Claude (build) | Proposed |
 | 21 | 2026-11-16 | UI text not in COPY.md is limited to navigation chrome: "Skip to content", "Menu", "EN/PT", and the short wordmark "G. C. Martins" on phones | Needed for accessibility and the phone layout; carries no claims | Claude (build) | Proposed |
 | 22 | 2026-11-16 | Pages are generated by `tools/build_site.py`; `tools/check_copy.py` verifies every COPY.md sentence appears verbatim on its page | Keeps the site and COPY.md in step | Claude (build) | Proposed |
+| 23 | 2026-11-16 | The nav collapses to the Menu button below 1260px (English) and 1440px (Portuguese), not 960px (§5.1); nav labels never wrap | At laptop widths the six labels wrapped onto two lines, worst in Portuguese | Claude (build review) | Proposed |
+| 24 | 2026-11-16 | Home hero has no eyebrow, and its buttons sit in the "What I'm looking for" block right below it, not in the hero (§5.5); the scroll cue is an arrow with an accessible label, no visible "Scroll" text | The eyebrow text isn't in COPY.md, and COPY.md puts the buttons after the list; the header email button stays visible above the fold | Claude (build review) | Proposed |
+| 25 | 2026-11-16 | On Experience, the active-language mark and the quote's left rule can both be Sunflower in one viewport | §5.2 and §5.11 each ask for Sunflower; the "one per viewport" rule can't hold for both. Tell me which to change if it matters | Claude (build review) | Proposed |
+| 26 | 2026-11-16 | Focus ring has square corners | Keeps to the three-radius vocabulary (decision 15) | Claude (build review) | Proposed |
