@@ -1,0 +1,14 @@
+# Deploy only the built site. Everything else (notes, tools, source images, old site files) stays private.
+/*
+!/index.html
+!/favicon.ico
+!/robots.txt
+!/sitemap.xml
+!/vercel.json
+!/assets
+!/experience
+!/projects
+!/education
+!/about
+!/contact
+!/pt

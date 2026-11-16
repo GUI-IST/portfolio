@@ -1,588 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guilherme Martins | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- Add this meta tag to force CSS reloading and prevent caching -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <!-- Add emergency image size fix stylesheet -->
-    <style>
-        .hobby-image, .profile-image {
-            max-width: 180px !important;
-            max-height: 180px !important;
-            width: 180px !important;
-            height: 180px !important;
-            object-fit: cover !important;
-            overflow: hidden !important;
-        }
-        
-        .profile-image {
-            max-width: 280px !important;
-            max-height: 280px !important;
-            width: 280px !important;
-            height: 280px !important;
-        }
-        
-        .hobby-image-container, .floating-profile {
-            width: 180px !important;
-            height: 180px !important;
-            max-width: 180px !important;
-            max-height: 180px !important;
-            overflow: hidden !important;
-        }
-        
-        .floating-profile {
-            width: 280px !important;
-            height: 280px !important;
-            max-width: 280px !important;
-            max-height: 280px !important;
-        }
-        
-        @media (max-width: 768px) {
-            .floating-profile, .profile-image {
-                width: 220px !important;
-                height: 220px !important;
-                max-width: 220px !important;
-                max-height: 220px !important;
-            }
-        }
-        
-        /* Fix for blob-shaped images to prevent square clipping */
-        .hobby-image-container {
-            width: 260px !important; /* Increased from 220px for larger images */
-            height: 260px !important;
-            max-width: 260px !important;
-            max-height: 260px !important;
-            overflow: visible !important; /* Must be visible to prevent clipping */
-            position: relative !important;
-            margin: 0 auto 40px !important; /* Increased bottom margin */
-            background: transparent !important;
-        }
-        
-        .hobby-image {
-            width: 200px !important; /* Increased from 160px */
-            height: 200px !important;
-            max-width: 200px !important;
-            max-height: 200px !important;
-            position: absolute !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            object-fit: cover !important;
-            margin: 0 !important;
-            border: 3px solid rgba(255, 255, 255, 0.2) !important;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 128, 171, 0.4) !important;
-        }
-        
-        .floating-profile {
-            width: 320px !important;
-            height: 320px !important;
-            max-width: 320px !important;
-            max-height: 320px !important;
-            overflow: visible !important;
-        }
-        
-        .profile-image {
-            width: 260px !important;
-            height: 260px !important;
-            max-width: 260px !important;
-            max-height: 260px !important;
-            position: absolute !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            object-fit: cover !important;
-            border: 3px solid rgba(255, 255, 255, 0.2) !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 128, 171, 0.5) !important;
-        }
-        
-        /* Hobby card needs more space */
-        .hobby-card {
-            padding: 45px 25px !important; /* Increased top padding from 35px to 45px */
-            margin-bottom: 30px !important; /* Increased from 20px */
-            overflow: visible !important;
-        }
-        
-        @media (max-width: 768px) {
-            .floating-profile {
-                width: 260px !important;
-                height: 260px !important;
-            }
-            
-            .profile-image {
-                width: 220px !important;
-                height: 220px !important;
-            }
-        }
-    </style>
-    
-    <!-- Link to external imagefixes CSS -->
-    <link rel="stylesheet" href="imagefixes.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guilherme Candeias Martins | Electrical Engineer, MSc TU Delft</title>
+<meta name="description" content="Guilherme Candeias Martins, Electrical and Computer Engineer and MSc student in Microelectronics at TU Delft, with a year of semiconductor test experience. Open to 2027 internships and thesis projects.">
+<link rel="canonical" href="https://portfolio-guicm.vercel.app/">
+<link rel="alternate" hreflang="en" href="https://portfolio-guicm.vercel.app/">
+<link rel="alternate" hreflang="pt-PT" href="https://portfolio-guicm.vercel.app/pt/">
+<link rel="alternate" hreflang="x-default" href="https://portfolio-guicm.vercel.app/">
+<meta name="theme-color" content="#16100a">
+<meta property="og:site_name" content="Guilherme Candeias Martins">
+<meta property="og:title" content="Guilherme Candeias Martins | Electrical Engineer, MSc TU Delft">
+<meta property="og:description" content="Guilherme Candeias Martins, Electrical and Computer Engineer and MSc student in Microelectronics at TU Delft, with a year of semiconductor test experience. Open to 2027 internships and thesis projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://portfolio-guicm.vercel.app/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta property="og:image" content="https://portfolio-guicm.vercel.app/assets/img/og-en.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Guilherme Candeias Martins · MSc Electrical Engineering, TU Delft">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Guilherme Candeias Martins | Electrical Engineer, MSc TU Delft">
+<meta name="twitter:description" content="Guilherme Candeias Martins, Electrical and Computer Engineer and MSc student in Microelectronics at TU Delft, with a year of semiconductor test experience. Open to 2027 internships and thesis projects.">
+<meta name="twitter:image" content="https://portfolio-guicm.vercel.app/assets/img/og-en.jpg">
+<link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="./assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="./assets/img/apple-touch-icon.png">
+<link rel="preload" href="./assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="./assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="./assets/css/site.css"><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Guilherme Candeias Martins", "url": "https://portfolio-guicm.vercel.app/", "image": "https://portfolio-guicm.vercel.app/assets/img/profile.webp", "jobTitle": "Electrical and Computer Engineer", "email": "mailto:gcandeiasmarti@tudelft.nl", "address": {"@type": "PostalAddress", "addressLocality": "Delft", "addressCountry": "NL"}, "affiliation": {"@type": "CollegeOrUniversity", "name": "Technische Universiteit Delft"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Instituto Superior Técnico"}, "knowsLanguage": ["pt", "en", "es"], "sameAs": ["https://www.linkedin.com/in/guilherme-candeias-martins/"]}</script>
 </head>
 <body>
-    <div class="background-container">
-        <div class="background-image" id="background"></div>
-        <div class="overlay"></div>
-    </div>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about" class="nav-link" data-en="About" data-pt="Sobre">About</a></li>
-                <li><a href="#education" class="nav-link" data-en="Education" data-pt="Educação">Education</a></li>
-                <li><a href="#experience" class="nav-link" data-en="Experience" data-pt="Experiência">Experience</a></li>
-                <li><a href="#projects" class="nav-link" data-en="Projects" data-pt="Projetos">Projects</a></li>
-                <li><a href="#skills" class="nav-link" data-en="Skills" data-pt="Competências">Skills</a></li>
-                <li><a href="#volunteering" class="nav-link" data-en="Volunteering" data-pt="Voluntariado">Volunteering</a></li>
-                <li><a href="#hobbies" class="nav-link" data-en="Hobbies" data-pt="Hobbies">Hobbies</a></li>
-                <li><a href="#contact" class="nav-link" data-en="Contact" data-pt="Contacto">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="language-toggle">
-            <button id="lang-en" class="lang-btn active">EN</button>
-            <span class="lang-divider">|</span>
-            <button id="lang-pt" class="lang-btn">PT</button>
-        </div>
-        <!-- Mobile Menu Toggle -->
-        <div class="mobile-menu-toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <!-- Background decorative elements -->
-        <div class="menu-background-elements">
-            <div class="menu-bg-circle"></div>
-            <div class="menu-bg-circle"></div>
-            <div class="menu-bg-circle"></div>
-        </div>
-        
-        <!-- Dedicated close button -->
-        <div class="close-menu-btn">
-            <span></span>
-        </div>
-        
-        <div class="mobile-menu-links">
-            <a href="#about" class="mobile-nav-link" data-en="About" data-pt="Sobre">About</a>
-            <a href="#education" class="mobile-nav-link" data-en="Education" data-pt="Educação">Education</a>
-            <a href="#experience" class="mobile-nav-link" data-en="Experience" data-pt="Experiência">Experience</a>
-            <a href="#projects" class="mobile-nav-link" data-en="Projects" data-pt="Projetos">Projects</a>
-            <a href="#skills" class="mobile-nav-link" data-en="Skills" data-pt="Competências">Skills</a>
-            <a href="#volunteering" class="mobile-nav-link" data-en="Volunteering" data-pt="Voluntariado">Volunteering</a>
-            <a href="#hobbies" class="mobile-nav-link" data-en="Hobbies" data-pt="Hobbies">Hobbies</a>
-            <a href="#contact" class="mobile-nav-link" data-en="Contact" data-pt="Contacto">Contact</a>
-        </div>
-        
-        <!-- Language toggle in mobile menu -->
-        <div class="mobile-language-toggle">
-            <button id="mobile-lang-en" class="lang-btn active">EN</button>
-            <span class="lang-divider">|</span>
-            <button id="mobile-lang-pt" class="lang-btn">PT</button>
-        </div>
-    </div>
-
-    <main>
-        <section id="hero" class="fullscreen">
-            <div class="content-wrap">
-                <div class="name-3d-container">
-                    <div class="name-3d-scene">
-                        <div class="name-part first-name">GUILHERME</div>
-                        <div class="name-part middle-name">CANDEIAS</div>
-                        <div class="name-part last-name">MARTINS</div>
-                        <div class="assembled-name">GUILHERME CANDEIAS MARTINS</div>
-                    </div>
-                </div>
-                <p class="subtitle" data-en="Electrical and Computer Engineer" data-pt="Engenheiro Eletrotécnico e de Computadores">Electrical and Computer Engineer</p>
-                <div class="location-details">
-                    <span>Cascais, Portugal</span>
-                </div>
-                <div class="scroll-indicator">
-                    <span data-en="Scroll to explore" data-pt="Scroll para explorar">Scroll to explore</span>
-                    <div class="arrow">↓</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="about" class="fullscreen">
-            <div class="content-wrap">
-                <div class="floating-profile-container">
-                    <div class="floating-profile">
-                        <img src="./perfil.jpg" alt="Guilherme Martins" class="profile-image" width="280" height="280">
-                        <div class="profile-glow"></div>
-                    </div>
-                </div>
-                <h2 class="section-title" data-en="About Me" data-pt="Sobre Mim">About Me</h2>
-                <div class="about-content">
-                    <p data-en="I'm a 21-year-old Electrical and Computer Engineer from Instituto Superior Técnico, where I completed my Bachelor's degree." data-pt="Sou um Engenheiro Eletrotécnico e de Computadores de 21 anos do Instituto Superior Técnico, onde concluí a minha Licenciatura.">I'm a 21-year-old Electrical and Computer Engineer from Instituto Superior Técnico, where I completed my Bachelor's degree.</p>
-                    
-                    <p data-en="Driven by curiosity and a passion for continuous learning, I'm currently developing my skills through two internships, one in semiconductor testing and validation at SiliconGate, and another in quantum simulation research at GOLP – IPFN." data-pt="Impulsionado pela curiosidade e paixão pela aprendizagem contínua, estou atualmente a desenvolver as minhas competências através de dois estágios, um em testes e validação de semicondutores na SiliconGate, e outro em investigação de simulação quântica no GOLP – IPFN.">Driven by curiosity and a passion for continuous learning, I'm currently developing my skills through two internships, one in semiconductor testing and validation at SiliconGate, and another in quantum simulation research at GOLP – IPFN.</p>
-                    
-                    <p data-en="I'm deeply interested in fields that bridge hardware, physics, and computation, such as <span class='accent-text'>Quantum Engineering</span>, <span class='accent-text'>Semiconductors</span>, and <span class='accent-text'>Advanced Electronic Systems</span>. I enjoy tackling complex problems, learning from multidisciplinary teams, and contributing to meaningful projects that push technology forward." data-pt="Tenho um profundo interesse em áreas que unem hardware, física e computação, como <span class='accent-text'>Engenharia Quântica</span>, <span class='accent-text'>Semicondutores</span> e <span class='accent-text'>Sistemas Eletrónicos Avançados</span>. Gosto de enfrentar problemas complexos, aprender com equipas multidisciplinares e contribuir para projetos significativos que fazem avançar a tecnologia.">I'm deeply interested in fields that bridge hardware, physics, and computation, such as <span class='accent-text'>Quantum Engineering</span>, <span class='accent-text'>Semiconductors</span>, and <span class='accent-text'>Advanced Electronic Systems</span>. I enjoy tackling complex problems, learning from multidisciplinary teams, and contributing to meaningful projects that push technology forward.</p>
-                    
-                    <p data-en="Above all, I'm motivated by the idea of turning theoretical knowledge into practical solutions and of growing every day as an engineer and as a person." data-pt="Acima de tudo, sou motivado pela ideia de transformar conhecimento teórico em soluções práticas e de crescer todos os dias como engenheiro e como pessoa.">Above all, I'm motivated by the idea of turning theoretical knowledge into practical solutions and of growing every day as an engineer and as a person.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Education" data-pt="Educação">Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="date" data-en="Sep 2022 - Jul 2025" data-pt="Set 2022 - Jul 2025">Sep 2022 - Jul 2025</div>
-                        <div class="institution-container">
-                            <img src="IST_Logo.png" alt="IST Logo" class="org-logo">
-                            <div class="institution">Instituto Superior Técnico</div>
-                        </div>
-                        <div class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</div>
-                        <div class="description" data-en="BSc in Electrical and Computer Engineering | Grade: 16/20" data-pt="BSc em Engenharia Eletrotécnica e de Computadores | Média: 16">BSc in Electrical and Computer Engineering | Grade: 16/20</div>
-                        <div class="course-link"><a href="https://tecnico.ulisboa.pt/en/education/courses/masters-programmes/electrical-and-computer-engineering/" target="_blank" class="contact-link" data-en="Course Information" data-pt="Informação do Curso">Course Information</a></div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="date">2019 - 2022</div>
-                        <div class="institution" data-en="São João do Estoril High School" data-pt="Liceu de São João do Estoril">São João do Estoril High School</div>
-                        <div class="location">Cascais, Portugal</div>
-                        <div class="description" data-en="Class Representative & Honor Student | Grade: 19/20" data-pt="Delegado de turma & Aluno de Honra | Média: 19">Class Representative & Honor Student | Grade: 19/20</div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="date">Before 2019</div>
-                        <div class="institution" data-en="Amor de Deus School" data-pt="Colégio Amor de Deus">Amor de Deus School</div>
-                        <div class="location">Cascais, Portugal</div>
-                        <div class="description" data-en="Honor Student" data-pt="Aluno de Honra">Honor Student</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Experience" data-pt="Experiência">Experience</h2>
-                <div class="experience-grid">
-                    <div class="experience-card">
-                        <h3>
-                            <img src="silicongate.png" alt="SiliconGate Logo" class="org-logo">
-                            <span data-en="Test Engineer Intern - SiliconGate" data-pt="Estagiário de Engenharia de Testes - SiliconGate">Test Engineer Intern - SiliconGate</span>
-                        </h3>
-                        <p class="period" data-en="Aug 2025 - Present" data-pt="Ago 2025 - Presente">Aug 2025 - Present</p>
-                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="At SiliconGate, I work in the Test & Laboratory team, focusing on the validation and characterization of semiconductor IP devices for power management. My tasks include developing and automating test setups, performing hardware measurements, soldering and assembling circuits, and writing code to control and analyze test systems. This experience has strengthened my skills in electronics, programming, and practical lab work." data-pt="Na SiliconGate, trabalho na equipa de Teste e Laboratório, focando-me na validação e caracterização de dispositivos IP de semicondutores para gestão de energia. As minhas tarefas incluem desenvolver e automatizar configurações de teste, realizar medições de hardware, soldar e montar circuitos, e escrever código para controlar e analisar sistemas de teste. Esta experiência fortaleceu as minhas competências em eletrónica, programação e trabalho prático de laboratório.">At SiliconGate, I work in the Test & Laboratory team, focusing on the validation and characterization of semiconductor IP devices for power management. My tasks include developing and automating test setups, performing hardware measurements, soldering and assembling circuits, and writing code to control and analyze test systems. This experience has strengthened my skills in electronics, programming, and practical lab work.</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3>
-                            <img src="golp.png" alt="GOLP Logo" class="org-logo">
-                            <span data-en="Research Intern - GOLP (Group for Lasers and Plasmas) - IPFN" data-pt="Estagiário de Investigação - GOLP (Grupo para Lasers e Plasmas) - IPFN">Research Intern - GOLP (Group for Lasers and Plasmas) - IPFN</span>
-                        </h3>
-                        <p class="period" data-en="Sep 2025 - Present" data-pt="Set 2025 - Presente">Sep 2025 - Present</p>
-                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="At GOLP, I'm conducting research on quantum simulation of Maxwell's equations, exploring the intersection between quantum physics and electromagnetism. Throughout this project, I've deepened my understanding of Hamiltonian mechanics, quantum systems, and numerical modeling, gaining valuable insight into how fundamental physics can be simulated and experimentally studied." data-pt="No GOLP, estou a conduzir investigação sobre simulação quântica das equações de Maxwell, explorando a interseção entre física quântica e eletromagnetismo. Ao longo deste projeto, aprofundei a minha compreensão de mecânica Hamiltoniana, sistemas quânticos e modelação numérica, ganhando uma visão valiosa sobre como a física fundamental pode ser simulada e estudada experimentalmente.">At GOLP, I'm conducting research on quantum simulation of Maxwell's equations, exploring the intersection between quantum physics and electromagnetism. Throughout this project, I've deepened my understanding of Hamiltonian mechanics, quantum systems, and numerical modeling, gaining valuable insight into how fundamental physics can be simulated and experimentally studied.</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3>
-                            <img src="it.png" alt="IT Logo" class="org-logo">
-                            Instituto de Telecomunicações
-                        </h3>
-                        <p class="period" data-en="Feb 2025 - Jul 2025" data-pt="Fev 2025 - Jul 2025">Feb 2025 - Jul 2025</p>
-                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="Assisting in the development of an <span class='accent-text'>Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment</span> with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses." data-pt="Auxiliando no desenvolvimento de uma <span class='accent-text'>Câmara Atmosférica para uma experiência de Distribuição de Chaves Quânticas (QKD)</span> com Pedro Mendes, permitindo o estudo dos efeitos de turbulência em sinais quânticos e clássicos. Também participo em reuniões semanais do Departamento de Quântica e Fotônica, acompanhando o progresso de 8 projetos. Tomo notas sobre os desenvolvimentos de cada projeto e aprendo sobre as aplicações práticas das tecnologias quânticas e fotônicas em projetos e teses do mundo real.">Assisting in the development of an Atmospheric Chamber for a Quantum Key Distribution (QKD) experiment with Pedro Mendes, enabling the study of turbulence effects on quantum and classical signals. I also participate in weekly meetings of the Quantum and Photonics Department, tracking the progress of 8 ongoing projects. I take notes on the developments of each project and learn about the practical applications of quantum and photonics technologies in real-world projects and theses.</p>
-                    </div>
-                    <div class="experience-card">
-                        <h3>
-                            <img src="AEIST.png" alt="AEIST Logo" class="org-logo">
-                            <span data-en="IST Student Association (AEIST)" data-pt="Associação de Estudantes do IST (AEIST)">IST Student Association (AEIST)</span>
-                        </h3>
-                        <p class="period" data-en="Oct 2024 - Sep 2025" data-pt="Out 2024 - Set 2025">Oct 2024 - Sep 2025</p>
-                        <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                        <p class="description" data-en="Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities." data-pt="Colaborador para Relações Empresariais: Desenvolvi e fomentei relacionamentos com organizações externas, garantindo com sucesso financiamento e patrocínios para apoiar as atividades da AEIST.">Corporate Relations Collaborator: Developed and fostered relationships with external organizations, successfully securing funding and sponsorships to support AEIST activities.</p>
-                        <p class="skills-gained" data-en="Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation." data-pt="Habilidades adquiridas: Desenvolvimento de Parcerias, Comunicação, Gestão de Projetos, Negociação de Vendas.">Skills gained: Partnership Development, Communication, Project Management, Sales Negotiation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Projects & Achievements" data-pt="Projetos & Conquistas">Projects & Achievements</h2>
-                <div class="project-featured">
-                    <h3 data-en="Anti-Drone Detection System" data-pt="Sistema de Detecção Anti-Drone">Anti-Drone Detection System</h3>
-                    <p class="period" data-en="Dec 2024 - Present" data-pt="Dez 2024 - Presente">Dec 2024 - Present</p>
-                    <p class="location" data-en="Lisbon, Portugal" data-pt="Lisboa, Portugal">Lisbon, Portugal</p>
-                    <p class="description" data-en="I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats." data-pt="Lidero uma equipe que desenvolve um Sistema de Detecção Anti-Drone para Jammers de Comunicação como parte do meu projeto final de licenciatura no Instituto Superior Técnico. O nosso sistema utiliza <span class='accent-text'>machine learning</span> para identificar e distinguir drones de outros objetos voadores com precisão, aumentando a segurança em áreas sensíveis. Este projeto está a ser desenvolvido em colaboração com a <span class='accent-text'>Força Aérea Portuguesa</span>, <span class='accent-text'>Thales</span> e <span class='accent-text'>Mauser</span>, combinando expertise e recursos para alcançar resultados impactantes. O nosso objetivo é fornecer às forças de segurança uma ferramenta confiável e eficiente que fortaleça a sua capacidade de detectar e responder a potenciais ameaças de drones.">I'm leading a team developing an Anti-Drone Detection System for Communication Jamming as part of my bachelor's final year project at Instituto Superior Técnico. Our system leverages <span class='accent-text'>machine learning</span> to accurately identify and distinguish drones from other flying objects, enhancing security in sensitive areas. This project is being developed in collaboration with the <span class='accent-text'>Portuguese Air Force</span>, <span class='accent-text'>Thales</span>, and <span class='accent-text'>Mauser</span>, combining expertise and resources to achieve impactful results. Our goal is to provide security forces with a reliable, efficient tool that strengthens their ability to detect and respond to potential drone threats.</p>
-                    <p class="project-link"><a href="https://sentinel-anti-drone.vercel.app/" target="_blank" class="contact-link" data-en="Project Website" data-pt="Website do Projeto">Project Website</a></p>
-                </div>
-                <div class="achievements-grid">
-                    <div class="achievement-item">
-                        <div class="achievement-title" data-en="IST Academic Merit Diploma" data-pt="Diploma de Mérito Acadêmico do IST">IST Academic Merit Diploma</div>
-                        <div class="year">2022/2023</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title" data-en="BONDALTI & Amélia de Mello Foundation Scholarship" data-pt="Bolsa BONDALTI & Fundação Amélia de Mello">BONDALTI & Amélia de Mello Foundation Scholarship</div>
-                        <div class="year">2023/2024 & 2024/2025</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title" data-en="Santander Scholarship - Técnico-Santander" data-pt="Bolsa Santander - Técnico-Santander">Santander Scholarship - Técnico-Santander</div>
-                        <div class="year">2022/2023</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title" data-en="School Merit Scholarship - Alcabideche Parish" data-pt="Bolsa de Mérito Escolar - Freguesia de Alcabideche">School Merit Scholarship - Alcabideche Parish</div>
-                        <div class="year">2022</div>
-                    </div>
-                    <div class="achievement-item">
-                        <div class="achievement-title" data-en="School Merit Award - Cascais City Council" data-pt="Prêmio de Mérito Escolar - Câmara Municipal de Cascais">School Merit Award - Cascais City Council</div>
-                        <div class="year">2022</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Skills & Languages" data-pt="Competências & Idiomas">Skills & Languages</h2>
-                <div class="skills-container">
-                    <div class="skills-column">
-                        <h3 data-en="Technical Skills" data-pt="Competências Técnicas">Technical Skills</h3>
-                        <ul class="skills-list">
-                            <li data-en="Programming: C, C++, Python, Assembly, Java" data-pt="Programação: C, C++, Python, Assembly, Java">Programming: C, C++, Python, Assembly, Java</li>
-                            <li>LaTeX (Overleaf)</li>
-                            <li>Excel</li>
-                            <li>Matlab</li>
-                            <li data-en="Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra" data-pt="Engenharia Eletrotécnica: Propagação e Radiação de Ondas Eletromagnéticas, Telecomunicações, Análise de Circuitos, Arquitetura de Computadores, Algoritmos e Estruturas de Dados, Cálculo Diferencial e Integral, Álgebra Linear">Electrical Engineering: Propagation and Radiation of Electromagnetic Waves, Telecommunications, Circuit Analysis, Computer Architecture, Algorithms and Data Structures, Differential and Integral Calculus, Linear Algebra</li>
-                        </ul>
-                    </div>
-                    <div class="skills-column">
-                        <h3 data-en="Soft Skills" data-pt="Competências Pessoais">Personal Skills</h3>
-                        <ul class="skills-list">
-                            <li data-en="Leadership" data-pt="Liderança">Leadership</li>
-                            <li data-en="Communication" data-pt="Comunicação">Communication</li>
-                            <li data-en="Conflict Resolution" data-pt="Resolução de Conflitos">Conflict Resolution</li>
-                            <li data-en="Teamwork" data-pt="Trabalho em Equipe">Teamwork</li>
-                            <li data-en="Proactivity" data-pt="Proatividade">Proactivity</li>
-                            <li data-en="Analytical Thinking" data-pt="Pensamento Analítico">Analytical Thinking</li>
-                            <li data-en="Adaptability and Flexibility" data-pt="Adaptabilidade e Flexibilidade">Adaptability and Flexibility</li>
-                            <li data-en="Problem Solving" data-pt="Resolução de Problemas">Problem Solving</li>
-                            <li data-en="Learning Agility" data-pt="Agilidade de Aprendizagem">Learning Agility</li>
-                        </ul>
-                    </div>
-                    <div class="skills-column">
-                        <h3 data-en="Languages" data-pt="Idiomas">Languages</h3>
-                        <ul class="skills-list">
-                            <li data-en="Portuguese: Native" data-pt="Português: Nativo">Portuguese: Native</li>
-                            <li data-en="English: Proficient (C1)" data-pt="Inglês: Proficiente (C1)">English: Proficient (C1)</li>
-                            <li data-en="Spanish: Basic Fluency" data-pt="Espanhol: Fluência Básica">Spanish: Basic Fluency</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="volunteering" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Volunteering" data-pt="Voluntariado">Volunteering</h2>
-                <div class="volunteering-cards">
-                    <div class="volunteering-card">
-                        <h3 data-en="Tutoring" data-pt="Tutoria">Tutoring</h3>
-                        <p class="period" data-en="May 2024 - Present" data-pt="Maio 2024 - Presente">May 2024 - Present</p>
-                        <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
-                        <p class="description" data-en="I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically." data-pt="Tenho estado ativamente envolvido num projeto de tutoria voluntária, onde forneço apoio educacional a cerca de 15 crianças, desde o pré-escolar até o ensino secundário. Esta experiência tem me desafiado a pensar de diferentes maneiras para explicar eficazmente conceitos fundamentais adaptados à compreensão de cada criança. Ao longo desta jornada, descobri a minha paixão pelo ensino, o que desempenhou um papel significativo na minha decisão de fazer um ano sabático, não apenas para explorar novas experiências, mas também para dedicar tempo a partilhar conhecimento e ajudar outros a crescer academicamente.">I have been actively involved in a volunteer tutoring project, where I provide educational support to around 15 children, ranging from preschool to secondary school. This experience has challenged me to think in different ways to effectively explain fundamental concepts tailored to each child's understanding. Throughout this journey, I discovered my passion for teaching, which played a significant role in my decision to take a gap year, not only to explore new experiences but also to dedicate time to sharing knowledge and helping others grow academically.</p>
-                    </div>
-                    <div class="volunteering-card">
-                        <h3>Cascais Jovem</h3>
-                        <p class="period" data-en="2021 - Present" data-pt="2021 - Presente">2021 - Present</p>
-                        <p class="location" data-en="Cascais, Portugal" data-pt="Cascais, Portugal">Cascais, Portugal</p>
-                        <p class="description" data-en="I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement." data-pt="Participei como voluntário em várias iniciativas organizadas pela Cascais Jovem, contribuindo para o bom funcionamento de diversos eventos e programas comunitários. O meu envolvimento incluiu papéis na Conferência de Segurança e Saúde Ocupacional, onde forneci apoio logístico e auxiliei na organização do evento; no Festival das Crianças, interagindo com crianças e famílias para garantir uma experiência positiva; na Iniciativa Praias Seguras, apoiando esforços para promover a segurança nas praias e a consciência ambiental; e nas Eleições Portuguesas, auxiliando na organização e coordenação dos processos eleitorais, entre outros. Através destas iniciativas, desenvolvi fortes competências de trabalho em equipa, comunicação e resolução de problemas, enquanto ganhava experiência valiosa em apoio a eventos e envolvimento comunitário.">I have participated as a volunteer in several initiatives organized by Cascais Jovem, contributing to the smooth running of various events and community programs. My involvement has included roles in the Occupational Safety and Health Conference, where I provided logistical support and assisted with event organization; the Children's Festival, engaging with children and families to ensure a positive experience; the Safe Beaches Initiative, supporting efforts to promote beach safety and environmental awareness; and the Portuguese Elections, assisting in the organization and coordination of electoral processes, among others. Through these initiatives, I have developed strong teamwork, communication, and problem-solving skills, while gaining valuable experience in event support and community engagement.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="hobbies" class="fullscreen">
-            <div class="content-wrap">
-                <h2 class="section-title" data-en="Hobbies" data-pt="Hobbies">Hobbies</h2>
-                <div class="hobbies-container">
-                    <div class="hobby-card">
-                        <div class="hobby-image-container">
-                            <!-- Fix image paths with proper relative URLs for GitHub Pages -->
-                            <img src="./guitar.jpg" alt="Guilherme playing guitar" class="hobby-image" width="160" height="160">
-                            <div class="hobby-glow"></div>
-                        </div>
-                        <h3 data-en="<span class='accent-text'>Guitarist</span>" data-pt="<span class='accent-text'>Guitarrista</span>">Guitarist</h3>
-                        <p data-en="Own Band - 4 Concerts" data-pt="Banda Própria - 4 Concertos">Own Band - 4 Concerts</p>
-                    </div>
-                    <div class="hobby-card">
-                        <div class="hobby-image-container">
-                            <img src="./travel.png" alt="Guilherme traveling" class="hobby-image" width="180" height="180">
-                            <div class="hobby-glow"></div>
-                        </div>
-                        <h3 data-en="<span class='accent-text'>Traveler</span>" data-pt="<span class='accent-text'>Viajante</span>">Traveler</h3>
-                        <p data-en="Visited 16 countries on 4 different continents" data-pt="Visitei 16 países em 4 continentes diferentes">Visited 16 countries on 4 different continents</p>
-                    </div>
-                    <div class="hobby-card">
-                        <div class="hobby-image-container">
-                            <img src="./gym.JPG" alt="Guilherme fitness" class="hobby-image" width="180" height="180">
-                            <div class="hobby-glow"></div>
-                        </div>
-                        <h3 data-en="<span class='accent-text'>Physical Exercise</span>" data-pt="<span class='accent-text'>Exercício Físico</span>">Physical Exercise</h3>
-                        <p data-en="Climbing, Gym, Padel, Sailing" data-pt="Escalada, Ginásio, Padel, Vela">Climbing, Gym, Padel, Sailing</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="fullscreen">
-    <div class="content-wrap">
-        <h2 class="section-title" data-en="Contact" data-pt="Contacto">Contact</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <a href="mailto:guimartins2004@gmail.com" class="contact-link">
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
-                                <path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/>
-                            </svg>
-                        </span>
-                        <span class="detail">guimartins2004@gmail.com</span>
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" class="contact-link">
-                        <span class="icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#ff80ab" class="linkedin-icon">
-                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                            </svg>
-                        </span>
-                        <span class="detail">LinkedIn</span>
-                    </a>
-                </div>
-            </div>
-            <!-- Contact form removed as requested -->
-        </div>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="./"><span class="full">Guilherme Candeias Martins</span><span class="short">G. C. Martins</span></a>
+  <nav class="nav-links" aria-label="Main"><a class="label" href="./" aria-current="page">Home</a><a class="label" href="./experience/">Experience</a><a class="label" href="./projects/">Projects</a><a class="label" href="./education/">Education &amp; Skills</a><a class="label" href="./about/">About</a><a class="label" href="./contact/">Contact</a></nav>
+  <div class="header-tools"><nav class="lang label " aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="./pt/" hreflang="pt-PT" lang="pt-PT">PT</a></nav><a class="btn btn-email compact" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a>
+    <button class="menu-btn label" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </div>
+</div></header>
+<div class="menu-panel" id="menu-panel" hidden><div class="wrap">
+  <nav aria-label="Main"><ul><li><a href="./" aria-current="page">Home</a></li><li><a href="./experience/">Experience</a></li><li><a href="./projects/">Projects</a></li><li><a href="./education/">Education &amp; Skills</a></li><li><a href="./about/">About</a></li><li><a href="./contact/">Contact</a></li></ul></nav>
+  <div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a><nav class="lang label " aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="./pt/" hreflang="pt-PT" lang="pt-PT">PT</a></nav></div>
+</div></div>
+<main id="main">
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-art"><img src="./assets/img/almond-blossoms-1600.webp" srcset="./assets/img/almond-blossoms-900.webp 900w, ./assets/img/almond-blossoms-1200.webp 1200w, ./assets/img/almond-blossoms-1600.webp 1600w" sizes="(max-width: 860px) 100vw, 58vw" alt="" width="1600" height="1309" fetchpriority="high"></div>
+  <div class="wrap"><div class="hero-copy">
+    <h1 id="hero-h"><span class="line">Guilherme</span> <span class="line"><em>Candeias</em> Martins</span></h1>
+    <p class="sub">Electrical and Computer Engineer · MSc Electrical Engineering (Microelectronics, quantum themed), TU Delft</p>
+    <p class="loc meta">Based in Delft, the Netherlands · from Cascais, Portugal</p>
+    <p class="opening">I&#x27;m an electrical engineer doing an MSc in Microelectronics at TU Delft, on a quantum-themed track. Before Delft, I spent a year testing and characterizing power-management chips in a semiconductor lab in Lisbon. I&#x27;m interested in where hardware, physics and computation meet.</p>
+  </div></div>
+  <a class="scroll-cue" href="#seeking" aria-label="What I&#x27;m looking for"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v11M4 9l4 4 4-4"/></svg></a>
 </section>
-
-    </main>
-
-    <footer>
-        <p data-en="&copy; 2025 Guilherme Martins. All rights reserved." data-pt="&copy; 2025 Guilherme Martins. Todos os direitos reservados.">&copy; 2025 Guilherme Martins. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
-    <script src="debug.js"></script>
-    <script>
-        // Force image size fix after page load
-        window.addEventListener('load', function() {
-            // Fix all hobby images
-            document.querySelectorAll('.hobby-image').forEach(img => {
-                img.style.width = '200px'; // Increased from 180px
-                img.style.height = '200px'; // Increased from 180px
-                img.style.maxWidth = '200px'; // Increased from 180px
-                img.style.maxHeight = '200px'; // Increased from 180px
-                img.style.objectFit = 'cover';
-                img.setAttribute('width', '200'); // Increased from 180
-                img.setAttribute('height', '200'); // Increased from 180
-            });
-            
-            // Fix profile image
-            const profileImg = document.querySelector('.profile-image');
-            if (profileImg) {
-                profileImg.style.width = '280px';
-                profileImg.style.height = '280px';
-                profileImg.style.maxWidth = '280px';
-                profileImg.style.maxHeight = '280px';
-                profileImg.style.objectFit = 'cover';
-                profileImg.setAttribute('width', '280');
-                profileImg.setAttribute('height', '280');
-            }
-            
-            console.log('Emergency image size fix applied');
-        });
-    </script>
-    <script>
-    // Force floating animations on all hobby images
-    window.addEventListener('load', function() {
-        // Wait a moment to ensure other scripts have run
-        setTimeout(function() {
-            const animations = [
-                'floatHobby1 8s ease-in-out infinite',
-                'floatHobby2 9s ease-in-out infinite 0.5s',
-                'floatHobby3 7.5s ease-in-out infinite 1s'
-            ];
-            
-            document.querySelectorAll('.hobby-image').forEach((img, index) => {
-                img.style.animation = animations[index % 3];
-                img.style.position = 'absolute';
-                img.style.top = '50%';
-                img.style.left = '50%';
-                img.style.transform = 'translate(-50%, -50%)';
-                
-                console.log(`Force-applied animation to hobby image ${index + 1}`);
-            });
-        }, 1000);
-    });
-    </script>
-    <!-- Add a dedicated script to force floating animations on hobby images -->
-<script>
-    // Force floating animations on all hobby images with direct styling
-    function forceHobbyImageAnimations() {
-        // Animations similar to profile image but with different timing and movement
-        const hobbyImages = document.querySelectorAll('.hobby-image');
-        
-        // Guitar image (first hobby)
-        if (hobbyImages[0]) {
-            hobbyImages[0].style.borderRadius = '40% 60% 70% 30% / 40% 50% 60% 50%';
-            hobbyImages[0].style.animation = 'floatHobby1 8s ease-in-out infinite';
-            hobbyImages[0].style.position = 'absolute';
-            hobbyImages[0].style.top = '50%';
-            hobbyImages[0].style.left = '50%';
-            hobbyImages[0].style.transform = 'translate(-50%, -50%)';
-        }
-        
-        // Travel image (second hobby)
-        if (hobbyImages[1]) {
-            hobbyImages[1].style.borderRadius = '60% 40% 30% 70% / 50% 60% 40% 50%';
-            hobbyImages[1].style.animation = 'floatHobby2 9s ease-in-out infinite 0.5s';
-            hobbyImages[1].style.position = 'absolute';
-            hobbyImages[1].style.top = '50%';
-            hobbyImages[1].style.left = '50%';
-            hobbyImages[1].style.transform = 'translate(-50%, -50%)';
-        }
-        
-        // Gym image (third hobby)
-        if (hobbyImages[2]) {
-            hobbyImages[2].style.borderRadius = '50% 50% 35% 65% / 65% 35% 50% 50%';
-            hobbyImages[2].style.animation = 'floatHobby3 7.5s ease-in-out infinite 1s';
-            hobbyImages[2].style.position = 'absolute';
-            hobbyImages[2].style.top = '50%';
-            hobbyImages[2].style.left = '50%';
-            hobbyImages[2].style.transform = 'translate(-50%, -50%)';
-        }
-        
-        console.log('Forced hobby image animations directly');
-    }
-    
-    // Apply immediately
-    forceHobbyImageAnimations();
-    
-    // Also apply after a delay to ensure it works after other scripts
-    setTimeout(forceHobbyImageAnimations, 500);
-    setTimeout(forceHobbyImageAnimations, 1000);
-    setTimeout(forceHobbyImageAnimations, 2000);
-    
-    // Apply on load
-    window.addEventListener('load', function() {
-        forceHobbyImageAnimations();
-        setTimeout(forceHobbyImageAnimations, 500);
-    });
-</script>
+<section class="section" id="seeking" aria-labelledby="seek-h"><div class="wrap seeking">
+  <div class="reveal">
+    <div class="section-head"><h2 id="seek-h">What I&#x27;m looking for</h2></div>
+    <ul class="seeking-list"><li>An industry internship and MSc thesis from summer 2027</li><li>A part-time or student role alongside my MSc</li><li>Research collaborations with academic groups</li></ul>
+    <div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+  <figure class="portrait reveal"><img src="./assets/img/profile.webp" srcset="./assets/img/profile-480.webp 480w, ./assets/img/profile.webp 800w" sizes="(max-width: 859px) min(420px, 92vw), 360px" alt="Guilherme Candeias Martins" width="800" height="1000" loading="lazy" decoding="async"></figure>
+</div></section>
+<section class="section band" aria-labelledby="hl-h"><div class="wrap">
+  <div class="section-head"><h2 id="hl-h">Highlights</h2></div>
+  <ol class="highlights reveal"><li><span class="num" aria-hidden="true">01</span><h3>A year in semiconductor test.</h3><p>About 1,500 hours of hands-on lab work in the Test &amp; Laboratory team at SiliconGate and Celera Semiconductor: validating power-management IP, automating test setups and writing Python instrument drivers.</p><a class="arrow-link label" href="./experience/">See my experience <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li><li><span class="num" aria-hidden="true">02</span><h3>A quantum-themed MSc at TU Delft.</h3><p>MSc in Electrical Engineering on the Microelectronics track, with courses such as Semiconductor Devices and Circuits for Quantum and Superconducting Quantum Sensors for Astronomy.</p><a class="arrow-link label" href="./education/">See my education <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li><li><span class="num" aria-hidden="true">03</span><h3>Volunteering since 2021.</h3><p>Volunteer tutor to about 15 children, and a volunteer with Cascais Jovem at community events, a beach-safety campaign and national elections.</p><a class="arrow-link label" href="./about/">More about me <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></li></ol>
+</div></section>
+<section class="next reveal" aria-labelledby="next-h"><div class="wrap">
+  <hr class="divider">
+  <h2 id="next-h">Let&#x27;s talk</h2>
+  <p class="lead">If you have an internship, a thesis project, a student role or a research idea in microelectronics, semiconductor test or quantum hardware, I&#x27;d be glad to hear from you.</p>
+  <div class="row"><div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a></div></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="footer-grid">
+    <span>© 2026 Guilherme Candeias Martins</span>
+    <span class="contacts"><a href="mailto:gcandeiasmarti@tudelft.nl">gcandeiasmarti@tudelft.nl</a><a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <nav class="lang label " aria-label="Language"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="./pt/" hreflang="pt-PT" lang="pt-PT">PT</a></nav>
+  </div>
+</div></footer>
+<script src="./assets/js/site.js" defer></script>
 </body>
 </html>
