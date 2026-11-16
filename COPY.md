@@ -6,7 +6,6 @@ Page copy for the six-page site, in English and Portuguese (European Portuguese,
 - First person throughout. Past tense for everything that has ended; only the TU Delft MSc is current.
 - **Main action on every page:** an "Email me" button → `mailto:gcandeiasmarti@tudelft.nl`. Secondary: LinkedIn.
 - Never publish: the Gmail address, any phone number, Prof. Santos's contact details, or the full recommendation letter.
-- `[[PLACEHOLDER: …]]` marks something still to be supplied.
 - "Target searches" are the phrases each page is written to match. No search volumes or rankings are claimed.
 
 **Navigation**
