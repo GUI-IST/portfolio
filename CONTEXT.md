@@ -49,8 +49,25 @@ Facts the website is to be built from. Everything here was confirmed by the site
 ### Technische Universiteit Delft (TU Delft): Delft, the Netherlands
 - **MSc Electrical Engineering**, Microelectronics track, quantum themed
 - **Aug 2026 – Present**
-- Coursework so far: Electronic Device Fundamentals (EE4C14, semiconductor device physics)
-- Next semester *(as of Nov 2026)*: Semiconductor Devices and Circuits for Quantum; Advanced Semiconductor Devices; Advanced Materials & Characterization; Microfabrication Fundamentals; Superconducting Quantum Sensors for Astronomy; Fundamentals of Photonic Integrated Circuits
+- **Course plan by quarter** (each course 5 ECTS) *(as of Nov 2026)*:
+
+  | Quarter | Course | Code |
+  |---|---|---|
+  | Q1 | Electromagnetics | EE4C05 |
+  | Q1 | Electronic Device Fundamentals | EE4C14 |
+  | Q1 | Circuit Fundamentals | EE4790 |
+  | Q2 | Fundamentals of Photonic Integrated Circuits | EE4780 |
+  | Q2 | Microfabrication Fundamentals | EE4855 |
+  | Q2 | Sensors & Actuators | EE4860 |
+  | Q3 | Semiconductor Devices and Circuits for Quantum | EE4970 |
+  | Q3 | Advanced Semiconductor Devices | EE4865 |
+  | Q3 | Interdisciplinary Challenge | EE4001-IC |
+  | Q4 | Superconducting Quantum Sensors for Astronomy | EE4996 |
+  | Q4 | Advanced Materials & Characterization | EE4875 |
+  | Q4 | Deep Dive | EE4002-DD |
+
+  - **Interdisciplinary Challenge (Q3):** the topic is not decided yet (options not yet announced). It is likely to be either *Reliability of Devices* or a *PCB project*, with no preference between them. Show it on the site as "topic to be announced", not as either option.
+  - **Deep Dive (Q4):** the topic is not decided yet (options not yet announced). It is likely to be *Packaging & Heterogeneous Integration* (preferred) or *Image Sensors*. Show it as "topic to be announced", or as "Packaging & Heterogeneous Integration (planned)" only if clearly marked as planned.
 - The programme's final year is built around industry experience.
 - Link: TU Delft MSc Electrical Engineering programme page (**URL to be supplied**)
 
