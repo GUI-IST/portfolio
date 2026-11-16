@@ -420,7 +420,7 @@ An exchange about sharing music across countries, with young people from Portuga
 [Link: photos and videos on Instagram → https://www.instagram.com/songs_born_on_migration_route/]
 
 **LAGI: Local Action, Global Impact:** Llinars del Vallès (Barcelona), Spain · 20–27 May 2026
-An exchange that used the performing arts and sensory practices to explore how local actions connect to global environmental and social challenges. `[[CONFIRM: number of participants and countries, and what the group created]]`
+46 young people from six countries used the performing arts and sensory practices to explore how local actions connect to global environmental and social challenges. Together we created installations, photo-performances and live presentations.
 [Links: https://www.instagram.com/incateatre/ · https://www.naturkultur.eu/en/youth-exchange-lagi-local-action-global-impact-20-27-05-2026-llinars-del-valles-barcelona-spain/]
 
 #### Outside the lab (H2)
@@ -465,7 +465,7 @@ Um intercâmbio sobre a partilha de música entre países, com jovens de Portuga
 [Link: fotografias e vídeos no Instagram → https://www.instagram.com/songs_born_on_migration_route/]
 
 **LAGI: Local Action, Global Impact:** Llinars del Vallès (Barcelona), Espanha · 20–27 de maio de 2026
-Um intercâmbio que usou as artes performativas e práticas sensoriais para explorar a ligação entre as ações locais e os desafios ambientais e sociais globais. `[[CONFIRMAR: número de participantes e países, e o que o grupo criou]]`
+46 jovens de seis países usaram as artes performativas e práticas sensoriais para explorar a ligação entre as ações locais e os desafios ambientais e sociais globais. Criámos em conjunto instalações, fotoperformances e apresentações ao vivo.
 [Links: https://www.instagram.com/incateatre/ · https://www.naturkultur.eu/en/youth-exchange-lagi-local-action-global-impact-20-27-05-2026-llinars-del-valles-barcelona-spain/]
 
 #### Fora do laboratório (H2)
@@ -524,8 +524,6 @@ Sou estudante de mestrado em microeletrónica na TU Delft, com um ano de experi�
 
 ---
 
-## Open items
+## Notes
 
-1. Confirm the LAGI details marked `[[CONFIRM]]` on the About page (taken from the call for participants).
-2. Check the spelling of **Şükrü Deviren** and the title ("president of the Gemlik municipality") on the About page.
-3. Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.
+- Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.

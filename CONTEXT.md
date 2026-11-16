@@ -198,13 +198,13 @@ Validation and characterization of semiconductor IP devices for power management
 ### Songs Born on the Migration Road: Bursa, Türkiye
 - **8–17 May 2026**
 - Exchange about sharing music between countries, with participants from Portugal, Italy, Romania and Türkiye.
-- Performed at a care home for elderly people, and at the municipality of Gemlik for its president, Şükrü Deviren (spelling and title to be confirmed).
+- Performed at a care home for elderly people, and at the municipality of Gemlik for its president, Şükrü Deviren (confirmed).
 - Proof (photos and videos): https://www.instagram.com/songs_born_on_migration_route/
 
 ### LAGI: Local Action, Global Impact: Llinars del Vallès (Barcelona), Spain
 - **20–27 May 2026** · Guilherme took part.
 - Youth exchange using the performing arts and sensory practices to explore how local actions connect to global environmental and social challenges.
-- *To confirm before publishing:* the call for participants mentioned 46 participants aged 18–25 from six countries, co-creating installations, photo-performances and live presentations.
+- 46 young people (aged 18–25) from six countries; together they created installations, photo-performances and live presentations (confirmed).
 - Links: https://www.instagram.com/incateatre/ · https://www.naturkultur.eu/en/youth-exchange-lagi-local-action-global-impact-20-27-05-2026-llinars-del-valles-barcelona-spain/
 
 ---
@@ -214,10 +214,3 @@ Validation and characterization of semiconductor IP devices for power management
 - **Guitar:** own band, 6 concerts
 - **Travel:** has visited 18 countries on 4 continents
 - **Physical exercise:** climbing, gym, padel, sailing
-
----
-
-## 10. Open items
-
-- LAGI participant details (see section 8).
-- Spelling and title of Şükrü Deviren (see section 8).
