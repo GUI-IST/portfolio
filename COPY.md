@@ -178,10 +178,10 @@ Validei e caracterizei IP de semicondutores para gestão de energia em silício.
 - Git usado diariamente em todo o código de drivers e testes.
 - **Equipamento:** Keithley SourceMeters (SMU), medidor LCR, amplificadores de potência de laboratório, osciloscópios e pontas de corrente, geradores de formas de onda arbitrárias e de funções, frequencímetro, analisador de fontes de sinal, fontes DC programáveis, cargas eletrónicas e programáveis, carregadores de baterias, relés, JTAG/IJTAG, sistema de thermal stream.
 
-**Recomendação** (citação no original em inglês):
-> "[…] Guilherme quickly integrated into the team and took an active role in hands-on development tasks. He learned the automated characterization test flow, contributed to the development of Python test scripts, and carried out PCB device soldering with care and precision."
+**Recomendação** (tradução do original em inglês):
+> «[…] O Guilherme integrou-se rapidamente na equipa e teve um papel ativo em tarefas práticas de desenvolvimento. Aprendeu o fluxo automático de testes de caracterização, contribuiu para o desenvolvimento de scripts de teste em Python e soldou dispositivos em PCB com cuidado e precisão.»
 >
-> "What stands out most in Guilherme is his eagerness to learn and his resilience when confronted with technical difficulties. He does not stop at the first obstacle; instead, he seeks solutions with determination and intellectual curiosity […]"
+> «O que mais se destaca no Guilherme é a sua vontade de aprender e a sua resiliência perante dificuldades técnicas. Não para no primeiro obstáculo; em vez disso, procura soluções com determinação e curiosidade intelectual […]»
 >
 > **Marcelino Santos**, Professor Catedrático, IST – Universidade de Lisboa · antigo CTO e cofundador da SiliconGate
 
@@ -315,7 +315,7 @@ I'm an MSc Electrical Engineering student at TU Delft, on the Microelectronics t
 **MSc Electrical Engineering**, Microelectronics track, quantum themed · Delft, the Netherlands · Aug 2026 – present
 Example courses: Electronic Device Fundamentals, Semiconductor Devices and Circuits for Quantum, Advanced Semiconductor Devices, Microfabrication Fundamentals, Fundamentals of Photonic Integrated Circuits, Superconducting Quantum Sensors for Astronomy.
 The programme's final year is built around industry experience.
-[Link: Programme details → `[[PLACEHOLDER: TU Delft MSc Electrical Engineering URL]]`]
+[Link: Programme details → https://www.tudelft.nl/onderwijs/opleidingen/masters/ee/msc-electrical-engineering]
 
 #### Instituto Superior Técnico (IST), University of Lisbon (H2)
 **BSc Electrical and Computer Engineering** · Lisbon, Portugal · Sep 2022 – Jul 2025 · **Final grade 16/20**
@@ -354,7 +354,7 @@ Estou a fazer o mestrado em Engenharia Eletrotécnica na TU Delft, na especializ
 **Mestrado em Engenharia Eletrotécnica**, especialização em Microeletrónica, vertente quântica · Delft, Países Baixos · ago. 2026 – presente
 Exemplos de unidades curriculares: Electronic Device Fundamentals, Semiconductor Devices and Circuits for Quantum, Advanced Semiconductor Devices, Microfabrication Fundamentals, Fundamentals of Photonic Integrated Circuits, Superconducting Quantum Sensors for Astronomy.
 O último ano do mestrado está organizado em torno da experiência na indústria.
-[Link: Detalhes do curso → `[[PLACEHOLDER: TU Delft MSc Electrical Engineering URL]]`]
+[Link: Detalhes do curso → https://www.tudelft.nl/onderwijs/opleidingen/masters/ee/msc-electrical-engineering]
 
 #### Instituto Superior Técnico (IST), Universidade de Lisboa (H2)
 **Licenciatura em Engenharia Eletrotécnica e de Computadores** · Lisboa, Portugal · set. 2022 – jul. 2025 · **Média final 16/20**
@@ -413,7 +413,7 @@ I volunteered at many Cascais Jovem initiatives:
 #### Erasmus+ youth exchanges (H2)
 **SINCRON SUSTENABIL:** Apuseni Mountains, Romania · Oct 2025
 A one-week sustainability programme in a multinational team, with hands-on solar cooking, rainwater harvesting, composting and natural-material building.
-*[Photos · Youthpass: `[[PLACEHOLDER: photo/Youthpass files]]`]*
+[Links: https://www.instagram.com/lunca.muresului.youth.asoc/ · https://www.instagram.com/p/DPMvnFLiKdE/]
 
 **Songs Born on the Migration Road:** Bursa, Türkiye · 8–17 May 2026
 An exchange about sharing music across countries, with young people from Portugal, Italy, Romania and Türkiye. We performed at a care home for elderly people and at the Gemlik municipality for its president, Şükrü Deviren.
@@ -458,7 +458,7 @@ Fui voluntário em várias iniciativas da Cascais Jovem:
 #### Intercâmbios Erasmus+ (H2)
 **SINCRON SUSTENABIL:** Montes Apuseni, Roménia · out. 2025
 Um programa de uma semana sobre sustentabilidade, numa equipa multinacional, com prática de cozinha solar, recolha de água da chuva, compostagem e construção com materiais naturais.
-*[Fotografias · Youthpass: `[[PLACEHOLDER: ficheiros de fotografias/Youthpass]]`]*
+[Links: https://www.instagram.com/lunca.muresului.youth.asoc/ · https://www.instagram.com/p/DPMvnFLiKdE/]
 
 **Songs Born on the Migration Road:** Bursa, Turquia · 8–17 de maio de 2026
 Um intercâmbio sobre a partilha de música entre países, com jovens de Portugal, Itália, Roménia e Turquia. Atuámos num lar de idosos e no município de Gemlik, para o seu presidente, Şükrü Deviren.
@@ -526,8 +526,6 @@ Sou estudante de mestrado em microeletrónica na TU Delft, com um ano de experi�
 
 ## Open items
 
-1. TU Delft MSc Electrical Engineering programme URL (Education page).
-2. Erasmus+ photos and Youthpass file(s) for SINCRON SUSTENABIL (About page).
-3. Confirm the LAGI details marked `[[CONFIRM]]` on the About page (taken from the call for participants).
-4. Check the spelling of **Şükrü Deviren** and his title ("president of the Gemlik municipality") on the About page.
-5. Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.
+1. Confirm the LAGI details marked `[[CONFIRM]]` on the About page (taken from the call for participants).
+2. Check the spelling of **Şükrü Deviren** and the title ("president of the Gemlik municipality") on the About page.
+3. Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.
