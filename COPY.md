@@ -102,7 +102,7 @@ Se tem um estágio, um tema de tese, uma vaga para estudante ou uma ideia de inv
 
 ### EN
 
-- **Title tag:** Experience: Semiconductor Test Engineer Intern & Quantum Research | Guilherme Candeias Martins
+- **Title tag:** Semiconductor Test & Quantum Research | Guilherme Martins
 - **Meta description:** A year as a semiconductor test engineer intern characterizing power-management ICs, writing PyVISA instrument drivers, plus research on quantum simulation of Maxwell's equations.
 
 **H1:** Experience in semiconductor test and quantum research
@@ -111,7 +111,7 @@ I spent a year as a semiconductor test engineer intern, characterizing power-man
 
 #### Test Engineer Intern, Test & Laboratory team (H2)
 **SiliconGate → Celera Semiconductor** · Lisbon, Portugal · Aug 2025 – Jul 2026 · Full time
-*Celera Semiconductor bought SiliconGate during my internship. I was at SiliconGate from Aug 2025 to Jun 2026 and continued with the same team under Celera Semiconductor from Jun to Jul 2026.*
+*Celera Semiconductor bought SiliconGate. I was at SiliconGate from Aug 2025 to Jun 2026 and continued with the same team under Celera Semiconductor from Jun to Jul 2026.*
 
 **Summary:**
 I validated and characterized power-management semiconductor IP on silicon. I built and automated test setups, made hardware measurements, soldered and assembled circuits, and wrote code to control and analyze the test systems.
@@ -128,9 +128,9 @@ I validated and characterized power-management semiconductor IP on silicon. I bu
 - **Equipment:** Keithley SourceMeters (SMU), LCR meter, laboratory power amplifiers, oscilloscopes and current probes, arbitrary waveform and function generators, frequency counter, signal source analyzer, programmable DC power supplies, electronic and programmable loads, battery chargers, relays, JTAG/IJTAG, thermal stream system.
 
 **Recommendation** (pull quote):
-> "Guilherme quickly integrated into the team and took an active role in hands-on development tasks. He learned the automated characterization test flow, contributed to the development of Python test scripts, and carried out PCB device soldering with care and precision."
+> "[…] Guilherme quickly integrated into the team and took an active role in hands-on development tasks. He learned the automated characterization test flow, contributed to the development of Python test scripts, and carried out PCB device soldering with care and precision."
 >
-> "What stands out most in Guilherme is his eagerness to learn and his resilience when confronted with technical difficulties. He does not stop at the first obstacle; instead, he seeks solutions with determination and intellectual curiosity."
+> "What stands out most in Guilherme is his eagerness to learn and his resilience when confronted with technical difficulties. He does not stop at the first obstacle; instead, he seeks solutions with determination and intellectual curiosity […]"
 >
 > **Marcelino Santos**, Full Professor, IST – Universidade de Lisboa · former CTO and co-founder, SiliconGate
 
@@ -153,7 +153,7 @@ I'm looking for an industry internship and MSc thesis from summer 2027, a part-t
 
 ### PT
 
-- **Title tag:** Experiência: Estágio em Teste de Semicondutores e Investigação Quântica | Guilherme Candeias Martins
+- **Title tag:** Experiência em Teste de Semicondutores | Guilherme Martins
 - **Meta description:** Um ano como estagiário de engenharia de testes de semicondutores, a caracterizar circuitos integrados de gestão de energia e a desenvolver drivers PyVISA, e investigação em simulação quântica das equações de Maxwell.
 
 **H1:** Experiência em teste de semicondutores e investigação quântica
@@ -162,7 +162,7 @@ Passei um ano como estagiário de engenharia de testes de semicondutores, a cara
 
 #### Estagiário de Engenharia de Testes, equipa de Teste e Laboratório (H2)
 **SiliconGate → Celera Semiconductor** · Lisboa, Portugal · ago. 2025 – jul. 2026 · Tempo inteiro
-*A Celera Semiconductor comprou a SiliconGate durante o meu estágio. Estive na SiliconGate de agosto de 2025 a junho de 2026 e continuei na mesma equipa, já como Celera Semiconductor, de junho a julho de 2026.*
+*A Celera Semiconductor comprou a SiliconGate. Estive na SiliconGate de agosto de 2025 a junho de 2026 e continuei na mesma equipa, já como Celera Semiconductor, de junho a julho de 2026.*
 
 **Resumo:**
 Validei e caracterizei IP de semicondutores para gestão de energia em silício. Montei e automatizei bancadas de teste, fiz medições de hardware, soldei e montei circuitos, e escrevi código para controlar e analisar os sistemas de teste.
@@ -178,10 +178,10 @@ Validei e caracterizei IP de semicondutores para gestão de energia em silício.
 - Git usado diariamente em todo o código de drivers e testes.
 - **Equipamento:** Keithley SourceMeters (SMU), medidor LCR, amplificadores de potência de laboratório, osciloscópios e pontas de corrente, geradores de formas de onda arbitrárias e de funções, frequencímetro, analisador de fontes de sinal, fontes DC programáveis, cargas eletrónicas e programáveis, carregadores de baterias, relés, JTAG/IJTAG, sistema de thermal stream.
 
-**Recomendação** (citação; tradução do original em inglês):
-> «O Guilherme integrou-se rapidamente na equipa e teve um papel ativo em tarefas práticas de desenvolvimento. Aprendeu o fluxo automático de testes de caracterização, contribuiu para o desenvolvimento de scripts de teste em Python e soldou dispositivos em PCB com cuidado e precisão.»
+**Recomendação** (citação no original em inglês):
+> "[…] Guilherme quickly integrated into the team and took an active role in hands-on development tasks. He learned the automated characterization test flow, contributed to the development of Python test scripts, and carried out PCB device soldering with care and precision."
 >
-> «O que mais se destaca no Guilherme é a sua vontade de aprender e a sua resiliência perante dificuldades técnicas. Não para no primeiro obstáculo; procura soluções com determinação e curiosidade intelectual.»
+> "What stands out most in Guilherme is his eagerness to learn and his resilience when confronted with technical difficulties. He does not stop at the first obstacle; instead, he seeks solutions with determination and intellectual curiosity […]"
 >
 > **Marcelino Santos**, Professor Catedrático, IST – Universidade de Lisboa · antigo CTO e cofundador da SiliconGate
 
@@ -211,7 +211,7 @@ Procuro um estágio na indústria e uma tese de mestrado a partir do verão de 2
 
 ### EN
 
-- **Title tag:** Projects: Sentinel Anti-Drone Detection System | Guilherme Candeias Martins
+- **Title tag:** Sentinel Anti-Drone Detection System | Guilherme Martins
 - **Meta description:** Sentinel, a machine-learning anti-drone detection system built with the Portuguese Air Force, Thales and Mauser, plus my scholarships and awards.
 
 **H1:** Projects: Sentinel, an anti-drone detection system
@@ -227,11 +227,11 @@ BSc final-year project, Instituto Superior Técnico · Lisbon · Dec 2024 – Ju
 
 **How it works** (H3)
 - Detection model: YOLO v11, first trained on about 10,000 images and then refined to separate drones from other flying objects.
-- Hardware: a Raspberry Pi 5 running the system, with servo-driven rotors that turn the camera to follow a target.
-- Prototype: fully assembled and integrated by May 2025, with the frame fabricated by metalwork and cutting.
+- Hardware: built with components including a Raspberry Pi 5, with servo motors that control the camera's orientation so it can follow a target.
+- Prototype: full system integration reached in May 2025; the complete prototype was assembled and fabricated through metalwork and cutting by June 2025.
 
 **My role** (H3)
-As project manager, I coordinated the project, managed the team and led our work with the partners. I organized and ran the team's meetings and agendas, including meetings with the Portuguese Air Force at its headquarters. I also produced the project's presentation materials and explanatory video.
+As project manager, I coordinated the project, managed the team and led our work with the partners. I organized the meetings and agendas documented on the project site, including a meeting at the Portuguese Air Force's facilities in June 2025. I also produced the project's presentations and explanatory video.
 
 **Partners:** Portuguese Air Force · Thales · Mauser · Instituto Superior Técnico
 
@@ -254,7 +254,7 @@ If your team works on detection, embedded systems or hardware projects with real
 
 ### PT
 
-- **Title tag:** Projetos: Sentinel, Sistema Anti-Drone | Guilherme Candeias Martins
+- **Title tag:** Sentinel: Sistema Anti-Drone | Guilherme Candeias Martins
 - **Meta description:** Sentinel, um sistema de deteção de drones com machine learning desenvolvido com a Força Aérea Portuguesa, a Thales e a Mauser, e as minhas bolsas e prémios.
 
 **H1:** Projetos: Sentinel, um sistema anti-drone
@@ -270,11 +270,11 @@ Projeto final de licenciatura, Instituto Superior Técnico · Lisboa · dez. 202
 
 **Como funciona** (H3)
 - Modelo de deteção: YOLO v11, treinado inicialmente com cerca de 10 000 imagens e depois afinado para distinguir drones de outros objetos voadores.
-- Hardware: um Raspberry Pi 5 a correr o sistema, com rotores acionados por servomotores que orientam a câmara para seguir o alvo.
-- Protótipo: totalmente montado e integrado em maio de 2025, com estrutura fabricada por serralharia e corte.
+- Hardware: construído com componentes que incluem um Raspberry Pi 5, com servomotores que controlam a orientação da câmara para seguir o alvo.
+- Protótipo: integração completa do sistema em maio de 2025; o protótipo final foi montado e fabricado com trabalho de serralharia e corte até junho de 2025.
 
 **O meu papel** (H3)
-Como gestor de projeto, coordenei o projeto, geri a equipa e liderei o trabalho com os parceiros. Organizei e conduzi as reuniões e agendas da equipa, incluindo reuniões com a Força Aérea Portuguesa nas suas instalações. Produzi também os materiais de apresentação e o vídeo explicativo do projeto.
+Como gestor de projeto, coordenei o projeto, geri a equipa e liderei o trabalho com os parceiros. Organizei as reuniões e agendas documentadas no site do projeto, incluindo uma reunião nas instalações da Força Aérea Portuguesa em junho de 2025. Produzi também as apresentações e o vídeo explicativo do projeto.
 
 **Parceiros:** Força Aérea Portuguesa · Thales · Mauser · Instituto Superior Técnico
 
@@ -304,7 +304,7 @@ Se a sua equipa trabalha em sistemas de deteção, sistemas embebidos ou projeto
 
 ### EN
 
-- **Title tag:** Education & Skills: TU Delft MSc Microelectronics, IST ECE | Guilherme Candeias Martins
+- **Title tag:** Education: TU Delft MSc & IST ECE | Guilherme Martins
 - **Meta description:** MSc Electrical Engineering student (Microelectronics, quantum themed) at TU Delft and Instituto Superior Técnico electrical and computer engineering graduate. Skills: Python, PyVISA, Cadence Virtuoso, Qiskit.
 
 **H1:** Education and skills
@@ -343,7 +343,7 @@ My MSc's final year is built around industry experience. From summer 2027, I'm l
 
 ### PT
 
-- **Title tag:** Formação e Competências: Mestrado TU Delft, Licenciatura IST | Guilherme Candeias Martins
+- **Title tag:** Formação: Mestrado TU Delft e IST | Guilherme Martins
 - **Meta description:** Estudante de mestrado em Engenharia Eletrotécnica (Microeletrónica, vertente quântica) na TU Delft e licenciado em Engenharia Eletrotécnica e de Computadores pelo IST. Competências: Python, PyVISA, Cadence Virtuoso, Qiskit.
 
 **H1:** Formação e competências
@@ -389,7 +389,7 @@ O último ano do meu mestrado está organizado em torno da experiência na indú
 
 ### EN
 
-- **Title tag:** About Guilherme Candeias Martins: Volunteering, Erasmus+ & Music
+- **Title tag:** About Guilherme Candeias Martins: Volunteering & Erasmus+
 - **Meta description:** About Guilherme Candeias Martins, an engineer from Cascais: volunteer tutor, Cascais Jovem volunteer, three Erasmus+ youth exchanges, band guitarist and traveller to 18 countries.
 
 **H1:** About me
@@ -420,7 +420,7 @@ An exchange about sharing music across countries, with young people from Portuga
 [Link: photos and videos on Instagram → https://www.instagram.com/songs_born_on_migration_route/]
 
 **LAGI: Local Action, Global Impact:** Llinars del Vallès (Barcelona), Spain · 20–27 May 2026
-46 young people from six countries used the performing arts and sensory practices to explore how local actions connect to global environmental and social challenges. Together we created installations, photo-performances and live presentations.
+An exchange that used the performing arts and sensory practices to explore how local actions connect to global environmental and social challenges. `[[CONFIRM: number of participants and countries, and what the group created]]`
 [Links: https://www.instagram.com/incateatre/ · https://www.naturkultur.eu/en/youth-exchange-lagi-local-action-global-impact-20-27-05-2026-llinars-del-valles-barcelona-spain/]
 
 #### Outside the lab (H2)
@@ -434,12 +434,12 @@ Whether it's about engineering, music, volunteering or Erasmus+, I'm happy to ta
 
 ### PT
 
-- **Title tag:** Sobre Guilherme Candeias Martins: Voluntariado, Erasmus+ e Música
+- **Title tag:** Sobre Guilherme Candeias Martins: Voluntariado e Erasmus+
 - **Meta description:** Sobre Guilherme Candeias Martins, engenheiro de Cascais: explicador voluntário, voluntário da Cascais Jovem, três intercâmbios Erasmus+, guitarrista na sua própria banda e viajante por 18 países.
 
 **H1:** Sobre mim
 **Abertura:**
-Sou o Guilherme Candeias Martins, engenheiro de 22 anos, natural de Cascais e a viver agora em Delft. Fora do laboratório, faço voluntariado em Cascais há vários anos e participei em três intercâmbios Erasmus+. Toco guitarra na minha própria banda.
+Sou o Guilherme Candeias Martins, engenheiro de 22 anos, natural de Cascais e a viver agora em Delft. Fora do laboratório, fiz voluntariado em Cascais durante vários anos e participei em três intercâmbios Erasmus+. Toco guitarra na minha própria banda.
 
 #### O que me move (H2)
 Motivam-me os problemas difíceis, trabalhar com pessoas com competências diferentes das minhas e transformar a teoria em algo que funciona na prática. Quero continuar a crescer todos os dias, como engenheiro e como pessoa.
@@ -465,7 +465,7 @@ Um intercâmbio sobre a partilha de música entre países, com jovens de Portuga
 [Link: fotografias e vídeos no Instagram → https://www.instagram.com/songs_born_on_migration_route/]
 
 **LAGI: Local Action, Global Impact:** Llinars del Vallès (Barcelona), Espanha · 20–27 de maio de 2026
-46 jovens de seis países usaram as artes performativas e práticas sensoriais para explorar a ligação entre as ações locais e os desafios ambientais e sociais globais. Criámos em conjunto instalações, fotoperformances e apresentações ao vivo.
+Um intercâmbio que usou as artes performativas e práticas sensoriais para explorar a ligação entre as ações locais e os desafios ambientais e sociais globais. `[[CONFIRMAR: número de participantes e países, e o que o grupo criou]]`
 [Links: https://www.instagram.com/incateatre/ · https://www.naturkultur.eu/en/youth-exchange-lagi-local-action-global-impact-20-27-05-2026-llinars-del-valles-barcelona-spain/]
 
 #### Fora do laboratório (H2)
@@ -481,17 +481,17 @@ Seja sobre engenharia, música, voluntariado ou Erasmus+, terei todo o gosto em 
 
 ## 6. Contact: `/contact`
 
-**Target searches:** contact Guilherme Candeias Martins · Guilherme Martins email · microelectronics intern Netherlands · semiconductor test intern Delft
-**PT:** contacto Guilherme Candeias Martins · estágio microeletrónica Países Baixos
+**Target searches:** contact Guilherme Candeias Martins · Guilherme Martins email · microelectronics internship · semiconductor test internship
+**PT:** contacto Guilherme Candeias Martins · estágio microeletrónica
 
 ### EN
 
-- **Title tag:** Contact Guilherme Candeias Martins | Microelectronics Intern, Delft
-- **Meta description:** Contact Guilherme Candeias Martins, a TU Delft microelectronics MSc student in the Netherlands with semiconductor test experience, about internships, thesis projects, student roles or research.
+- **Title tag:** Contact Guilherme Candeias Martins | MSc Student, TU Delft
+- **Meta description:** Contact Guilherme Candeias Martins, a microelectronics MSc student at TU Delft with semiconductor test experience, about a microelectronics or semiconductor test internship, a thesis, a student role or research.
 
 **H1:** Contact me
 **Opening:**
-I'm a microelectronics MSc student in Delft with a year of semiconductor test experience, looking for an internship in the Netherlands. The best way to reach me is by email, and I'll get back to you.
+I'm a microelectronics MSc student at TU Delft with a year of semiconductor test experience, looking for a microelectronics or semiconductor test internship from summer 2027. The best way to reach me is by email, and I'll get back to you.
 
 **Email me about** (H2)
 - An industry internship and MSc thesis from summer 2027
@@ -505,12 +505,12 @@ I'm a microelectronics MSc student in Delft with a year of semiconductor test ex
 
 ### PT
 
-- **Title tag:** Contacto: Guilherme Candeias Martins | Estágio em Microeletrónica
-- **Meta description:** Contacte Guilherme Candeias Martins, estudante de mestrado em microeletrónica na TU Delft, nos Países Baixos, com experiência em teste de semicondutores, sobre estágios, teses, trabalho para estudantes ou investigação.
+- **Title tag:** Contacto: Guilherme Candeias Martins | Mestrado TU Delft
+- **Meta description:** Contacte Guilherme Candeias Martins, estudante de mestrado em microeletrónica na TU Delft com experiência em teste de semicondutores, sobre estágios, teses, trabalho para estudantes ou investigação.
 
 **H1:** Contacto
 **Abertura:**
-Sou estudante de mestrado em microeletrónica em Delft, com um ano de experiência em teste de semicondutores, e procuro um estágio nos Países Baixos. A melhor forma de me contactar é por email, e eu respondo.
+Sou estudante de mestrado em microeletrónica na TU Delft, com um ano de experiência em teste de semicondutores, e procuro um estágio em microeletrónica ou teste de semicondutores a partir do verão de 2027. A melhor forma de me contactar é por email, e eu respondo.
 
 **Escreva-me sobre** (H2)
 - Um estágio na indústria e uma tese de mestrado a partir do verão de 2027
@@ -528,5 +528,6 @@ Sou estudante de mestrado em microeletrónica em Delft, com um ano de experiênc
 
 1. TU Delft MSc Electrical Engineering programme URL (Education page).
 2. Erasmus+ photos and Youthpass file(s) for SINCRON SUSTENABIL (About page).
-3. Check the spelling of **Şükrü Deviren** and his title ("president of the Gemlik municipality") on the About page.
-4. Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.
+3. Confirm the LAGI details marked `[[CONFIRM]]` on the About page (taken from the call for participants).
+4. Check the spelling of **Şükrü Deviren** and his title ("president of the Gemlik municipality") on the About page.
+5. Portuguese names of the Cascais Jovem events, school honours and the AEIST role are taken from the old site's PT text.
