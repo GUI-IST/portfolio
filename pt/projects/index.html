@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sentinel: Sistema Anti-Drone | Guilherme Candeias Martins</title>
+<meta name="description" content="Sentinel, um sistema de deteção de drones com machine learning desenvolvido com a Força Aérea Portuguesa, a Thales e a Mauser, e as minhas bolsas e prémios.">
+<meta name="theme-color" content="#16100a">
+<meta property="og:title" content="Sentinel: Sistema Anti-Drone | Guilherme Candeias Martins">
+<meta property="og:description" content="Sentinel, um sistema de deteção de drones com machine learning desenvolvido com a Força Aérea Portuguesa, a Thales e a Mauser, e as minhas bolsas e prémios.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<link rel="alternate" hreflang="en" href="../../projects/">
+<link rel="alternate" hreflang="pt-PT" href="../../pt/projects/">
+<link rel="alternate" hreflang="x-default" href="../../projects/">
+<link rel="preload" href="../../assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar para o conteúdo</a>
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="../../pt/"><span class="full">Guilherme Candeias Martins</span><span class="short">G. C. Martins</span></a>
+  <nav class="nav-links" aria-label="Principal"><a class="label" href="../../pt/">Início</a><a class="label" href="../../pt/experience/">Experiência</a><a class="label" href="../../pt/projects/" aria-current="page">Projetos</a><a class="label" href="../../pt/education/">Formação e Competências</a><a class="label" href="../../pt/about/">Sobre mim</a><a class="label" href="../../pt/contact/">Contacto</a></nav>
+  <div class="header-tools"><nav class="lang label " aria-label="Idioma"><a href="../../projects/" hreflang="en" lang="en">EN</a><span class="sep" aria-hidden="true"></span><a href="../../pt/projects/" hreflang="pt-PT" lang="pt-PT" aria-current="true">PT</a></nav><a class="btn btn-email compact" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Envie-me um email</a>
+    <button class="menu-btn label" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </div>
+</div></header>
+<div class="menu-panel" id="menu-panel" hidden><div class="wrap">
+  <nav aria-label="Principal"><ul><li><a href="../../pt/">Início</a></li><li><a href="../../pt/experience/">Experiência</a></li><li><a href="../../pt/projects/" aria-current="page">Projetos</a></li><li><a href="../../pt/education/">Formação e Competências</a></li><li><a href="../../pt/about/">Sobre mim</a></li><li><a href="../../pt/contact/">Contacto</a></li></ul></nav>
+  <div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Envie-me um email</a><nav class="lang label " aria-label="Idioma"><a href="../../projects/" hreflang="en" lang="en">EN</a><span class="sep" aria-hidden="true"></span><a href="../../pt/projects/" hreflang="pt-PT" lang="pt-PT" aria-current="true">PT</a></nav></div>
+</div></div>
+<main id="main">
+<header class="page-head"><div class="wrap">
+  <p class="eyebrow label">Projetos</p>
+  <h1>Projetos: Sentinel, um sistema <span class="nw">anti-drone</span></h1>
+  <p class="lead">No meu projeto final de licenciatura no Instituto Superior Técnico, fui gestor de projeto do Sentinel, uma equipa de seis pessoas que desenvolveu um sistema de deteção de drones com machine learning. Trabalhámos com a Força Aérea Portuguesa, a Thales e a Mauser.</p>
+</div></header>
+<section class="section" style="padding-top:0"><div class="wrap entries">
+<hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"><span class="when">dez. 2024 – jul. 2025</span><span class="">Lisboa</span><span class="">Projeto final de licenciatura, Instituto Superior Técnico</span><span>Função: <strong>Gestor de Projeto</strong>, equipa de seis</span></div>
+  <div class="entry-body sentinel">
+    <div class="entry-title"><h2>Sentinel: deteção de drones para sistemas de interferência de comunicações</h2></div>
+    <div class="prose">
+      <p><strong>O problema.</strong> Os drones são cada vez mais usados em atividades ilícitas, como a entrada em espaço aéreo restrito e a vigilância não autorizada. As forças de segurança precisam de uma forma fiável de os detetar e dar o alerta.</p>
+      <p><strong>O que construímos.</strong> Um sistema com câmaras que vigia o espaço aéreo e deteta drones em tempo real com visão computacional e machine learning. Distingue drones de outros objetos, como aves, e continua a seguir o drone depois de o detetar. Assim, um jammer ou antena direcional mantém-se apontado para uma possível neutralização. Uma aplicação web mostra o estado do sistema e envia alertas imediatos com fotografia e hora.</p>
+    </div>
+    <div class="two-col">
+      <div><h3 class="sub-h">Como funciona</h3><ul class="dots"><li>Modelo de deteção: YOLO v11, treinado inicialmente com cerca de 10 000 imagens e depois afinado para distinguir drones de outros objetos voadores.</li><li>Hardware: construído com componentes que incluem um Raspberry Pi 5, com servomotores que controlam a orientação da câmara para seguir o alvo.</li><li>Protótipo: integração completa do sistema em maio de 2025; o protótipo final foi montado e fabricado com trabalho de serralharia e corte até junho de 2025.</li></ul></div>
+      <div><h3 class="sub-h">O meu papel</h3><p>Como gestor de projeto, coordenei o projeto, geri a equipa e liderei o trabalho com os parceiros. Organizei as reuniões e agendas documentadas no site do projeto, incluindo uma reunião nas instalações da Força Aérea Portuguesa em junho de 2025. Produzi também as apresentações e o vídeo explicativo do projeto.</p></div>
+    </div>
+    <div class="partners"><span class="label" style="color:var(--color-sage)">Parceiros:</span> <span class="tag">Força Aérea Portuguesa</span><span class="tag">Thales</span><span class="tag">Mauser</span><span class="tag">Instituto Superior Técnico</span></div>
+    <div><h3 class="sub-h">Provas</h3><ul class="links"><li>Site do projeto, com a equipa, o cronograma e dados ao vivo: <a class="ext" href="https://sentinel-anti-drone.vercel.app/" target="_blank" rel="noopener">sentinel-anti-drone.vercel.app<svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4.5 2.5h5v5M9.5 2.5l-7 7"/></svg></a></li><li>Vídeo explicativo (YouTube, incorporado no site do projeto)</li><li>Proposta de projeto, pitch deck intercalar e pitch deck final (no site do projeto)</li><li>14 publicações semanais de progresso, de fevereiro a junho de 2025 (blog do projeto)</li></ul></div>
+  </div>
+</article>
+<hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"></div>
+  <div class="entry-body">
+    <div class="entry-title"><h2>Bolsas e prémios</h2></div>
+    <ul class="awards"><li><strong>Diploma de Mérito Académico do IST:</strong><span class="year">2022/2023</span></li><li><strong>Bolsa BONDALTI &amp; Fundação Amélia de Mello:</strong><span class="year">2023/2024 e 2024/2025</span></li><li><strong>Bolsa Santander (Técnico Santander):</strong><span class="year">2022/2023</span></li><li><strong>Bolsa de Mérito Escolar, Junta de Freguesia de Alcabideche:</strong><span class="year">2022</span></li><li><strong>Prémio de Mérito Escolar, Câmara Municipal de Cascais:</strong><span class="year">2022</span></li></ul>
+  </div>
+</article>
+</div></section>
+<section class="next reveal" aria-labelledby="next-h"><div class="wrap">
+  <hr class="divider">
+  <h2 id="next-h">Está a trabalhar em algo parecido?</h2>
+  <p class="lead">Se a sua equipa trabalha em sistemas de deteção, sistemas embebidos ou projetos de hardware com parceiros reais, gostaria de saber mais.</p>
+  <div class="row"><div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Envie-me um email</a></div><a class="next-link label" href="../../pt/education/">A seguir: Formação e Competências <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="footer-grid">
+    <span>© 2026 Guilherme Candeias Martins</span>
+    <span class="contacts"><a href="mailto:gcandeiasmarti@tudelft.nl">gcandeiasmarti@tudelft.nl</a><a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <nav class="lang label " aria-label="Idioma"><a href="../../projects/" hreflang="en" lang="en">EN</a><span class="sep" aria-hidden="true"></span><a href="../../pt/projects/" hreflang="pt-PT" lang="pt-PT" aria-current="true">PT</a></nav>
+  </div>
+</div></footer>
+<script src="../../assets/js/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Semiconductor Test &amp; Quantum Research | Guilherme Martins</title>
+<meta name="description" content="A year as a semiconductor test engineer intern characterizing power-management ICs, writing PyVISA instrument drivers, plus research on quantum simulation of Maxwell&#x27;s equations.">
+<meta name="theme-color" content="#16100a">
+<meta property="og:title" content="Semiconductor Test &amp; Quantum Research | Guilherme Martins">
+<meta property="og:description" content="A year as a semiconductor test engineer intern characterizing power-management ICs, writing PyVISA instrument drivers, plus research on quantum simulation of Maxwell&#x27;s equations.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<link rel="alternate" hreflang="en" href="../experience/">
+<link rel="alternate" hreflang="pt-PT" href="../pt/experience/">
+<link rel="alternate" hreflang="x-default" href="../experience/">
+<link rel="preload" href="../assets/fonts/fraunces-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap">
+  <a class="wordmark" href="../"><span class="full">Guilherme Candeias Martins</span><span class="short">G. C. Martins</span></a>
+  <nav class="nav-links" aria-label="Main"><a class="label" href="../">Home</a><a class="label" href="../experience/" aria-current="page">Experience</a><a class="label" href="../projects/">Projects</a><a class="label" href="../education/">Education &amp; Skills</a><a class="label" href="../about/">About</a><a class="label" href="../contact/">Contact</a></nav>
+  <div class="header-tools"><nav class="lang label " aria-label="Language"><a href="../experience/" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="../pt/experience/" hreflang="pt-PT" lang="pt-PT">PT</a></nav><a class="btn btn-email compact" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a>
+    <button class="menu-btn label" type="button" aria-expanded="false" aria-controls="menu-panel">Menu</button>
+  </div>
+</div></header>
+<div class="menu-panel" id="menu-panel" hidden><div class="wrap">
+  <nav aria-label="Main"><ul><li><a href="../">Home</a></li><li><a href="../experience/" aria-current="page">Experience</a></li><li><a href="../projects/">Projects</a></li><li><a href="../education/">Education &amp; Skills</a></li><li><a href="../about/">About</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
+  <div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a><nav class="lang label " aria-label="Language"><a href="../experience/" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="../pt/experience/" hreflang="pt-PT" lang="pt-PT">PT</a></nav></div>
+</div></div>
+<main id="main">
+<header class="page-head"><div class="wrap">
+  <p class="eyebrow label">Experience</p>
+  <h1>Experience in semiconductor test and quantum research</h1>
+  <p class="lead">I spent a year as a semiconductor test engineer intern, characterizing power-management ICs and automating lab instruments in Python. I also did research on the quantum simulation of Maxwell&#x27;s equations.</p>
+</div></header>
+<section class="section" style="padding-top:0"><div class="wrap entries">
+<hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"><span class="when">Aug 2025 – Jul 2026</span><span class="">Lisbon, Portugal</span><span class="">Full time</span></div>
+  <div class="entry-body">
+    <div class="entry-title"><span class="logo-tile"><img src="../assets/img/logo-silicongate.png" alt="SiliconGate" height="28" loading="lazy"></span><h2>Test Engineer Intern, Test &amp; Laboratory team</h2></div>
+    <p class="org"><strong>SiliconGate → Celera Semiconductor</strong></p>
+    <p class="note">Celera Semiconductor bought SiliconGate. I was at SiliconGate from Aug 2025 to Jun 2026 and continued with the same team under Celera Semiconductor from Jun to Jul 2026.</p>
+    <p><span class="sr-only">Summary: </span>I validated and characterized power-management semiconductor IP on silicon. I built and automated test setups, made hardware measurements, soldered and assembled circuits, and wrote code to control and analyze the test systems.</p>
+    <details class="more">
+      <summary class="btn btn-ghost">Show full technical detail <svg class="chev" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3.5 6l4.5 4.5L12.5 6"/></svg></summary>
+      <div class="panel"><ul class="dots"><li>About 1,500 hours of hands-on lab work.</li><li>Characterization of power-management IP: startup sequencing, line transients, AC and DC measurements, and temperature-dependent tests with a thermal stream system.</li><li>Powering fragile engineering samples safely: sequencing supplies to each block of the IC through relays and programmable sources, sourcing and measuring with Keithley SourceMeter units.</li><li>Trimming on-chip clock, temperature, voltage and current settings through JTAG/IJTAG, and controlling electronic and programmable loads during measurements.</li><li><strong>Python instrument drivers:</strong> I wrote drivers for two arbitrary waveform generators, working from their programming manuals (SCPI over GPIB with PyVISA). They handle binary waveform upload, multi-segment sequences with trigger and marker logic, hardware limit checks and input validation, and include a GUI instrument panel. Both drivers are integrated into the company&#x27;s automated test framework.</li><li>Adapting the team&#x27;s existing Python processing and plotting code (pandas, Matplotlib) to each new instrument and sample, so results stayed organized and consistent.</li><li>Hand-soldering and assembling test circuits, including small SMD components under a microscope.</li><li>Git used daily for all driver and test code.</li><li><strong>Equipment:</strong> Keithley SourceMeters (SMU), LCR meter, laboratory power amplifiers, oscilloscopes and current probes, arbitrary waveform and function generators, frequency counter, signal source analyzer, programmable DC power supplies, electronic and programmable loads, battery chargers, relays, JTAG/IJTAG, thermal stream system.</li></ul></div>
+    </details>
+    <figure class="quote">
+      <p class="quote-kicker label">Recommendation</p>
+      <blockquote><p>“[…] Guilherme quickly integrated into the team and took an active role in hands-on development tasks. He learned the automated characterization test flow, contributed to the development of Python test scripts, and carried out PCB device soldering with care and precision.”</p><p>“What stands out most in Guilherme is his eagerness to learn and his resilience when confronted with technical difficulties. He does not stop at the first obstacle; instead, he seeks solutions with determination and intellectual curiosity […]”</p></blockquote>
+      <figcaption class="meta"><strong class="who">Marcelino Santos</strong>, Full Professor, IST – Universidade de Lisboa · former CTO and co-founder, SiliconGate</figcaption>
+    </figure>
+  </div>
+</article>
+<hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"><span class="when">Sep 2025 – Mar 2026</span></div>
+  <div class="entry-body">
+    <div class="entry-title"><span class="logo-tile"><img src="../assets/img/logo-golp.png" alt="GOLP" height="28" loading="lazy"></span><h2>Research Intern, GOLP (Group for Lasers and Plasmas), IPFN</h2></div>
+    <p class="org">Instituto Superior Técnico, University of Lisbon</p><p>I researched the quantum simulation of Maxwell&#x27;s equations, where quantum physics meets electromagnetism. The work deepened my understanding of Hamiltonian mechanics, quantum systems and numerical modeling, and of how fundamental physics can be simulated and studied.</p>
+  </div>
+</article><hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"><span class="when">Feb 2025 – Jul 2025</span></div>
+  <div class="entry-body">
+    <div class="entry-title"><span class="logo-tile"><img src="../assets/img/logo-it.png" alt="Instituto de Telecomunicações" height="28" loading="lazy"></span><h2>Quantum and Photonics Department, Instituto de Telecomunicações</h2></div>
+    <p class="org">Instituto Superior Técnico, University of Lisbon</p><p>I attended the department&#x27;s weekly meetings, following 8 research projects and taking notes on their progress. It taught me how quantum and photonics technologies are applied in real projects and theses.</p>
+  </div>
+</article><hr class="divider">
+<article class="entry reveal">
+  <div class="entry-rail"><span class="when">Oct 2024 – Sep 2025</span><span class="">Lisbon</span></div>
+  <div class="entry-body">
+    <div class="entry-title"><span class="logo-tile"><img src="../assets/img/logo-aeist.png" alt="AEIST" height="28" loading="lazy"></span><h2>Business Relations Collaborator, Students&#x27; Association of IST (AEIST)</h2></div>
+    <p>I built relationships with external organizations and secured funding and sponsorships for the association&#x27;s activities.</p><p class="note">Skills: partnership development, communication, project management, sales negotiation.</p>
+  </div>
+</article>
+</div></section>
+<section class="next reveal" aria-labelledby="next-h"><div class="wrap">
+  <hr class="divider">
+  <h2 id="next-h">Need someone in your lab?</h2>
+  <p class="lead">I&#x27;m looking for an industry internship and MSc thesis from summer 2027, a part-time role alongside my studies, or a research collaboration.</p>
+  <div class="row"><div class="actions"><a class="btn btn-email" href="mailto:gcandeiasmarti@tudelft.nl"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="3.5" width="13" height="9" rx="0"/><path d="M2 4l6 5 6-5"/></svg>Email me</a></div><a class="next-link label" href="../projects/">Next: Projects <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div class="footer-grid">
+    <span>© 2026 Guilherme Candeias Martins</span>
+    <span class="contacts"><a href="mailto:gcandeiasmarti@tudelft.nl">gcandeiasmarti@tudelft.nl</a><a href="https://www.linkedin.com/in/guilherme-candeias-martins/" target="_blank" rel="noopener">LinkedIn</a></span>
+    <nav class="lang label " aria-label="Language"><a href="../experience/" hreflang="en" lang="en" aria-current="true">EN</a><span class="sep" aria-hidden="true"></span><a href="../pt/experience/" hreflang="pt-PT" lang="pt-PT">PT</a></nav>
+  </div>
+</div></footer>
+<script src="../assets/js/site.js" defer></script>
+</body>
+</html>
